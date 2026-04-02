@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Button from '../../components/Button.astro';
+import { url } from '../../lib/urls';
 
 export async function getStaticPaths() {
   const cases = await getCollection('cases');
@@ -78,7 +79,7 @@ const { Content } = await caseStudy.render();
           van significante groei in organisch verkeer.
         </p>
         <div class="mt-8">
-          <Button href="/contact" variant="primary" size="lg">
+          <Button href={url('/contact')} variant="primary" size="lg">
             Plan een gesprek
           </Button>
         </div>

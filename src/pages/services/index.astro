@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import BentoGrid from '../../components/BentoGrid.astro';
 import { getCollection } from 'astro:content';
+import { url } from '../../lib/urls';
 
 const services = await getCollection('services');
 const sortedServices = services.sort((a, b) => a.data.order - b.data.order);
@@ -34,7 +35,7 @@ const sortedServices = services.sort((a, b) => a.data.order - b.data.order);
             title={service.data.title}
             description={service.data.description}
             icon={service.data.icon}
-            href={`/services/${service.slug}`}
+            href={url(`/services/${service.slug}`)}
             featured={service.data.featured}
           />
         ))}

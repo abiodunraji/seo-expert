@@ -5,6 +5,7 @@ import ServiceCard from '../components/ServiceCard.astro';
 import BentoGrid from '../components/BentoGrid.astro';
 import Button from '../components/Button.astro';
 import { getCollection } from 'astro:content';
+import { url } from '../lib/urls';
 
 // Get services from content collection
 const services = await getCollection('services');
@@ -26,7 +27,7 @@ const clientLogos = [
     title="De Strategische Architect voor Zoekmachine Dominantie"
     subtitle="Technical SEO, Content Architectuur & GEO voor de merken van morgen. Ik help ondernemingen groeien door strategische zoekmachine zichtbaarheid."
     ctaText="Start je Project"
-    ctaHref="/contact"
+    ctaHref={url('/contact')}
   />
 
   <!-- Services Bento Grid -->
@@ -51,7 +52,7 @@ const clientLogos = [
             title={service.data.title}
             description={service.data.description}
             icon={service.data.icon}
-            href={`/services/${service.slug}`}
+            href={url(`/services/${service.slug}`)}
             featured={service.data.featured}
           />
         ))}
@@ -99,10 +100,10 @@ const clientLogos = [
           Ik help je graag met een strategie die past bij jouw ambitie.
         </p>
         <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <Button href="/contact" variant="primary" size="lg">
+          <Button href={url('/contact')} variant="primary" size="lg">
             Contact opnemen
           </Button>
-          <Button href="/services" variant="outline" size="lg">
+          <Button href={url('/services')} variant="outline" size="lg">
             Bekijk diensten
           </Button>
         </div>

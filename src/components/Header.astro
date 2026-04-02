@@ -1,10 +1,12 @@
 ---
+import { url } from '../lib/urls';
+
 const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
-  { href: '/cases', label: 'Cases' },
-  { href: '/over', label: 'Over' },
-  { href: '/contact', label: 'Contact' },
+  { href: url('/'), label: 'Home' },
+  { href: url('/services'), label: 'Services' },
+  { href: url('/cases'), label: 'Cases' },
+  { href: url('/over'), label: 'Over' },
+  { href: url('/contact'), label: 'Contact' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -14,7 +16,7 @@ const currentPath = Astro.url.pathname;
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
     <div class="flex items-center justify-between h-16 lg:h-20">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 group">
+      <a href={url('/')} class="flex items-center gap-2 group">
         <span class="font-space font-bold text-xl lg:text-2xl text-offwhite group-hover:text-cyan transition-colors duration-300">
           IWAN
         </span>

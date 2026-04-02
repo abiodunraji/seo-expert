@@ -1,4 +1,6 @@
 ---
+import { url } from '../lib/urls';
+
 const currentYear = new Date().getFullYear();
 
 const socialLinks = [
@@ -8,11 +10,11 @@ const socialLinks = [
 ];
 
 const footerLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
-  { href: '/cases', label: 'Cases' },
-  { href: '/over', label: 'Over Iwan' },
-  { href: '/contact', label: 'Contact' },
+  { href: url('/'), label: 'Home' },
+  { href: url('/services'), label: 'Services' },
+  { href: url('/cases'), label: 'Cases' },
+  { href: url('/over'), label: 'Over Iwan' },
+  { href: url('/contact'), label: 'Contact' },
 ];
 ---
 
@@ -40,7 +42,7 @@ const footerLinks = [
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
       <!-- Brand -->
       <div class="lg:col-span-2">
-        <a href="/" class="block mb-4">
+        <a href={url('/')} class="block mb-4">
           <span class="font-space font-bold text-3xl text-offwhite">
             IWAN
           </span>
