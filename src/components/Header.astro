@@ -2,20 +2,26 @@
 import { url } from '../lib/urls';
 
 const navItems = [
-  { href: url('/'), label: 'Home' },
-  { href: url('/services'), label: 'Services' },
-  { href: url('/cases'), label: 'Cases' },
-  { href: url('/over'), label: 'Over' },
-  { href: url('/contact'), label: 'Contact' },
+  { path: '/', label: 'Home' },
+  { path: '/services', label: 'Services' },
+  { path: '/cases', label: 'Cases' },
+  { path: '/over', label: 'Over' },
+  { path: '/contact', label: 'Contact' },
 ];
 
-const currentPath = Astro.url.pathname.replace(/\/$/, '');
+// Normalize the current path: remove trailing slash and base path
+const rawPath = Astro.url.pathname;
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+const currentPath = rawPath.startsWith(basePath) 
+  ? rawPath.slice(basePath.length).replace(/\/$/, '') 
+  : rawPath.replace(/\/$/, '');
 
-function isActive(href: string): boolean {
-  if (href === url('/')) {
-    return currentPath === url('/');
+function isActive(path: string): boolean {
+  const normalizedPath = path.replace(/\/$/, '') || '/';
+  if (normalizedPath === '/') {
+    return currentPath === '' || currentPath === '/';
   }
-  return currentPath === href || currentPath.startsWith(href + '/');
+  return currentPath === normalizedPath || currentPath.startsWith(normalizedPath + '/');
 }
 ---
 
@@ -36,16 +42,16 @@ function isActive(href: string): boolean {
       <div class="hidden lg:flex items-center gap-8">
         {navItems.map((item) => (
           <a
-            href={item.href}
+            href={url(item.path)}
             class:list={[
               'font-mono text-sm uppercase tracking-wider transition-colors duration-300 relative',
-              isActive(item.href) 
+              isActive(item.path) 
                 ? 'text-cyan' 
                 : 'text-offwhite hover:text-cyan'
             ]}
           >
             {item.label}
-            {isActive(item.href) && (
+            {isActive(item.path) && (
               <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-cyan"></span>
             )}
           </a>
@@ -70,10 +76,10 @@ function isActive(href: string): boolean {
       <div class="px-4 py-4 space-y-4 border-t-2 border-cyan">
         {navItems.map((item) => (
           <a
-            href={item.href}
+            href={url(item.path)}
             class:list={[
               'block font-space text-2xl font-bold py-2 transition-colors duration-300',
-              isActive(item.href) 
+              isActive(item.path) 
                 ? 'text-cyan' 
                 : 'text-offwhite hover:text-cyan'
             ]}
