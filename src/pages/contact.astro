@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Contact"
+  description="Neem contact op met Iwan Stepanova voor een vrijblijvend gesprek over jouw SEO-groei."
+>
+  <!-- Hero Section -->
+  <section class="border-b-2 border-cyan">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        <!-- Content -->
+        <div>
+          <span class="font-mono text-sm text-cyan uppercase tracking-wider">
+            Contact
+          </span>
+          <h1 class="font-space font-bold text-4xl lg:text-5xl xl:text-6xl text-offwhite mt-4">
+            Laten we <span class="text-cyan">praten</span>
+          </h1>
+          <p class="font-inter text-lg text-slategray mt-6">
+            Klaar om jouw online zichtbaarheid naar een hoger niveau te tillen?
+            Plan een vrijblijvend gesprek en ontdek hoe ik jouw bedrijf kan helpen.
+          </p>
+          
+          <!-- Direct Contact Options -->
+          <div class="mt-12 space-y-4">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-surface brutal-border flex items-center justify-center">
+                <span class="font-mono text-sm text-cyan">✉</span>
+              </div>
+              <div>
+                <p class="font-mono text-xs text-slategray uppercase tracking-wider">
+                  Email
+                </p>
+                <p class="font-inter text-offwhite">
+                  [email@invoegen]
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-surface brutal-border flex items-center justify-center">
+                <span class="font-mono text-sm text-cyan">📱</span>
+              </div>
+              <div>
+                <p class="font-mono text-xs text-slategray uppercase tracking-wider">
+                  Telefoon
+                </p>
+                <p class="font-inter text-offwhite">
+                  [nummer invoegen]
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="bg-surface brutal-border p-8">
+          <form class="space-y-6">
+            <div>
+              <label for="name" class="font-mono text-xs text-cyan uppercase tracking-wider block mb-2">
+                Naam
+              </label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name"
+                class="w-full bg-oxford border-2 border-cyan px-4 py-3 font-inter text-offwhite placeholder-slategray focus:outline-none focus:bg-cyan/10"
+                placeholder="Jouw naam"
+                required
+              />
+            </div>
+            
+            <div>
+              <label for="email" class="font-mono text-xs text-cyan uppercase tracking-wider block mb-2">
+                Email
+              </label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email"
+                class="w-full bg-oxford border-2 border-cyan px-4 py-3 font-inter text-offwhite placeholder-slategray focus:outline-none focus:bg-cyan/10"
+                placeholder="jouw@email.nl"
+                required
+              />
+            </div>
+            
+            <div>
+              <label for="company" class="font-mono text-xs text-cyan uppercase tracking-wider block mb-2">
+                Bedrijf
+              </label>
+              <input 
+                type="text" 
+                id="company" 
+                name="company"
+                class="w-full bg-oxford border-2 border-cyan px-4 py-3 font-inter text-offwhite placeholder-slategray focus:outline-none focus:bg-cyan/10"
+                placeholder="Jouw bedrijf"
+              />
+            </div>
+            
+            <div>
+              <label for="message" class="font-mono text-xs text-cyan uppercase tracking-wider block mb-2">
+                Bericht
+              </label>
+              <textarea 
+                id="message" 
+                name="message"
+                rows="4"
+                class="w-full bg-oxford border-2 border-cyan px-4 py-3 font-inter text-offwhite placeholder-slategray focus:outline-none focus:bg-cyan/10"
+                placeholder="Vertel me over jouw uitdaging..."
+                required
+              ></textarea>
+            </div>
+            
+            <button 
+              type="submit"
+              class="w-full bg-cyan text-oxford font-mono uppercase tracking-wider py-4 brutal-border transition-all duration-300 hover:bg-offwhite hover:text-oxford"
+            >
+              Verzenden
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

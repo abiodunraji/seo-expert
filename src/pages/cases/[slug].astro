@@ -1,0 +1,88 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Button from '../../components/Button.astro';
+
+export async function getStaticPaths() {
+  const cases = await getCollection('cases');
+  return cases.map((caseStudy) => ({
+    params: { slug: caseStudy.slug },
+    props: { caseStudy },
+  }));
+}
+
+const { caseStudy } = Astro.props;
+const { Content } = await caseStudy.render();
+---
+
+<BaseLayout 
+  title={caseStudy.data.title}
+  description={caseStudy.data.summary}
+>
+  <!-- Hero Section -->
+  <section class="border-b-2 border-cyan">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <!-- Client Name -->
+      <span class="font-mono text-sm text-cyan uppercase tracking-wider">
+        {caseStudy.data.client}
+      </span>
+      
+      <!-- Title -->
+      <h1 class="font-space font-bold text-4xl lg:text-5xl xl:text-6xl text-offwhite mt-4">
+        {caseStudy.data.title}
+      </h1>
+      
+      <!-- Summary -->
+      <p class="font-inter text-lg text-slategray mt-6 max-w-2xl">
+        {caseStudy.data.summary}
+      </p>
+      
+      <!-- Results Grid -->
+      {caseStudy.data.results.length > 0 && (
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+          {caseStudy.data.results.map((result) => (
+            <div class="bg-surface brutal-border p-4 lg:p-6">
+              <span class="font-mono text-xs text-cyan uppercase tracking-wider block">
+                {result.metric}
+              </span>
+              <span class="font-space font-bold text-2xl lg:text-3xl text-offwhite mt-1">
+                {result.value}
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Content Sections -->
+  <section class="border-b-2 border-cyan">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="prose prose-invert prose-lg max-w-none">
+        <article class="font-inter text-offwhite">
+          <Content />
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-surface brutal-border p-8 lg:p-16 text-center">
+        <h2 class="font-space font-bold text-3xl lg:text-4xl text-offwhite">
+          Wil je vergelijkbare <span class="text-cyan">resultaten</span>?
+        </h2>
+        <p class="font-inter text-slategray mt-4 max-w-xl mx-auto">
+          Laten we bespreken hoe ik jouw bedrijf kan helpen met het behalen 
+          van significante groei in organisch verkeer.
+        </p>
+        <div class="mt-8">
+          <Button href="/contact" variant="primary" size="lg">
+            Plan een gesprek
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

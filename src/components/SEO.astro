@@ -1,0 +1,48 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  canonicalURL?: string;
+  image?: string;
+  type?: 'website' | 'article';
+}
+
+const { 
+  title, 
+  description = 'Technical SEO, Content Architectuur & GEO voor de merken van morgen.', 
+  canonicalURL,
+  image,
+  type = 'website'
+} = Astro.props;
+
+const siteTitle = 'Iwan Stepanova — SEO Expert';
+const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
+const defaultImage = '/images/og-default.jpg';
+const absoluteImage = image ? new URL(image, Astro.url.origin).toString() : new URL(defaultImage, Astro.url.origin).toString();
+const absoluteCanonical = canonicalURL ? new URL(canonicalURL, Astro.url.origin).toString() : Astro.url.href;
+---
+
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<meta name="author" content="Iwan Stepanova" />
+
+<!-- Open Graph -->
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content={type} />
+<meta property="og:url" content={absoluteCanonical} />
+<meta property="og:image" content={absoluteImage} />
+<meta property="og:site_name" content={siteTitle} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={absoluteImage} />
+
+<!-- Canonical -->
+<link rel="canonical" href={absoluteCanonical} />
+
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/favicon.svg" />

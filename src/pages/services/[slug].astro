@@ -1,0 +1,87 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Button from '../../components/Button.astro';
+
+export async function getStaticPaths() {
+  const services = await getCollection('services');
+  return services.map((service) => ({
+    params: { slug: service.slug },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+const { Content } = await service.render();
+---
+
+<BaseLayout 
+  title={service.data.title}
+  description={service.data.description}
+>
+  <!-- Hero Section -->
+  <section class="border-b-2 border-cyan">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        <!-- Content -->
+        <div>
+          <span class="font-mono text-sm text-cyan uppercase tracking-wider">
+            Service
+          </span>
+          <h1 class="font-space font-bold text-4xl lg:text-5xl xl:text-6xl text-offwhite mt-4">
+            {service.data.title}
+          </h1>
+          <p class="font-inter text-lg text-slategray mt-6">
+            {service.data.description}
+          </p>
+          
+          {service.data.featured && (
+            <div class="inline-block bg-cyan text-oxford px-4 py-1 mt-6 font-mono text-sm uppercase tracking-wider">
+              Aanbevolen
+            </div>
+          )}
+        </div>
+        
+        <!-- Decorative -->
+        <div class="hidden lg:flex items-center justify-center">
+          <div class="w-full aspect-square bg-surface brutal-border flex items-center justify-center">
+            <span class="font-space font-bold text-9xl text-cyan/20">
+              {service.data.order}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Sections -->
+  <section class="border-b-2 border-cyan">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="prose prose-invert prose-lg max-w-none">
+        <article class="font-inter text-offwhite">
+          <Content />
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-surface brutal-border p-8 lg:p-16 text-center">
+        <h2 class="font-space font-bold text-3xl lg:text-4xl text-offwhite">
+          Geïnteresseerd in <span class="text-cyan">{service.data.title}</span>?
+        </h2>
+        <p class="font-inter text-slategray mt-4 max-w-xl mx-auto">
+          Laten we bespreken hoe ik jouw bedrijf kan helpen met deze dienst.
+          Samen werken we aan jouw online groei.
+        </p>
+        <div class="mt-8">
+          <Button href="/contact" variant="primary" size="lg">
+            Plan een gesprek
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,84 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  showImage?: boolean;
+  imageAlt?: string;
+  ctaText?: string;
+  ctaHref?: string;
+}
+
+const { 
+  title, 
+  subtitle, 
+  showImage = true,
+  imageAlt = 'Iwan Stepanova',
+  ctaText = 'Start je Project',
+  ctaHref = '/contact'
+} = Astro.props;
+---
+
+<section class="relative overflow-hidden border-b-2 border-cyan">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute inset-0" style="background-image: linear-gradient(#00F5FF 1px, transparent 1px), linear-gradient(90deg, #00F5FF 1px, transparent 1px); background-size: 40px 40px;"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Text Content -->
+      <div class="space-y-6 lg:space-y-8">
+        <h1 class="font-space font-extrabold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-tight">
+          <span class="block text-offwhite">{title.split(' ').slice(0, 4).join(' ')}</span>
+          <span class="block text-cyan">{title.split(' ').slice(4).join(' ')}</span>
+        </h1>
+        
+        {subtitle && (
+          <p class="font-inter text-lg lg:text-xl text-slategray max-w-xl">
+            {subtitle}
+          </p>
+        )}
+
+        <a 
+          href={ctaHref}
+          class="inline-flex items-center justify-center font-mono uppercase tracking-wider bg-cyan text-oxford px-8 py-4 text-base brutal-border transition-all duration-300 hover:bg-offwhite hover:text-oxford hover:translate-x-1 hover:translate-y-1"
+        >
+          {ctaText}
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            class="w-5 h-5 ml-2"
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Image / Visual -->
+      {showImage && (
+        <div class="relative">
+          <!-- Decorative Frame -->
+          <div class="absolute -inset-4 border-2 border-cyan/30"></div>
+          <div class="absolute -inset-2 border border-cyan/60"></div>
+          
+          <!-- Image Placeholder -->
+          <div class="relative bg-surface aspect-[4/5] flex items-center justify-center brutal-border">
+            <div class="text-center p-8">
+              <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-cyan/20 flex items-center justify-center">
+                <span class="font-space font-bold text-5xl text-cyan">IS</span>
+              </div>
+              <p class="font-mono text-sm text-slategray uppercase tracking-wider">
+                {imageAlt}
+              </p>
+              <p class="font-inter text-xs text-slategray mt-2">
+                [Foto komt nog]
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</section>

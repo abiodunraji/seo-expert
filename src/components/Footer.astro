@@ -1,0 +1,108 @@
+---
+const currentYear = new Date().getFullYear();
+
+const socialLinks = [
+  { href: 'https://linkedin.com/in/iwanstepanova', label: 'LinkedIn' },
+  { href: 'https://twitter.com', label: 'Twitter' },
+  { href: 'https://instagram.com', label: 'Instagram' },
+];
+
+const footerLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
+  { href: '/cases', label: 'Cases' },
+  { href: '/over', label: 'Over Iwan' },
+  { href: '/contact', label: 'Contact' },
+];
+---
+
+<footer class="bg-surface border-t-2 border-cyan mt-auto">
+  <!-- Marquee Section -->
+  <div class="overflow-hidden border-b-2 border-cyan py-4">
+    <div class="animate-marquee whitespace-nowrap">
+      <span class="inline-block font-space text-5xl lg:text-7xl font-bold text-oxford mx-4">
+        IWAN STEPANOVA — SEO EXPERT — STRATEGISCHE ARCHITECT —
+      </span>
+      <span class="inline-block font-space text-5xl lg:text-7xl font-bold text-cyan mx-4">
+        IWAN STEPANOVA — SEO EXPERT — STRATEGISCHE ARCHITECT —
+      </span>
+      <span class="inline-block font-space text-5xl lg:text-7xl font-bold text-oxford mx-4">
+        IWAN STEPANOVA — SEO EXPERT — STRATEGISCHE ARCHITECT —
+      </span>
+      <span class="inline-block font-space text-5xl lg:text-7xl font-bold text-cyan mx-4">
+        IWAN STEPANOVA — SEO EXPERT — STRATEGISCHE ARCHITECT —
+      </span>
+    </div>
+  </div>
+
+  <!-- Footer Content -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
+      <!-- Brand -->
+      <div class="lg:col-span-2">
+        <a href="/" class="block mb-4">
+          <span class="font-space font-bold text-3xl text-offwhite">
+            IWAN
+          </span>
+          <span class="font-space font-bold text-3xl text-cyan">
+            STEPANOVA
+          </span>
+        </a>
+        <p class="font-inter text-slategray max-w-md">
+          De strategische architect voor zoekmachine dominantie. 
+          Technical SEO, Content Architectuur & GEO voor de merken van morgen.
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <h3 class="font-mono text-sm uppercase tracking-wider text-cyan mb-4">
+          Navigatie
+        </h3>
+        <ul class="space-y-3">
+          {footerLinks.map((link) => (
+            <li>
+              <a 
+                href={link.href} 
+                class="font-inter text-offwhite hover:text-cyan transition-colors duration-300"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div>
+        <h3 class="font-mono text-sm uppercase tracking-wider text-cyan mb-4">
+          Connect
+        </h3>
+        <ul class="space-y-3">
+          {socialLinks.map((link) => (
+            <li>
+              <a 
+                href={link.href} 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-inter text-offwhite hover:text-cyan transition-colors duration-300"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="border-t border-slategray mt-12 pt-8 flex flex-col lg:flex-row justify-between items-center gap-4">
+      <p class="font-mono text-sm text-slategray">
+        © {currentYear} Iwan Stepanova. All rights reserved.
+      </p>
+      <p class="font-mono text-sm text-cyan">
+        Built by Velora
+      </p>
+    </div>
+  </div>
+</footer>

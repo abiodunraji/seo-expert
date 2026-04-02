@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import BentoGrid from '../../components/BentoGrid.astro';
+import { getCollection } from 'astro:content';
+
+const services = await getCollection('services');
+const sortedServices = services.sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout 
+  title="Services"
+  description="Alle SEO-diensten van Iwan Stepanova: Strategie, Analyse, Content, Technical SEO, Off-page SEO, Local SEO en GEO."
+>
+  <!-- Hero Section -->
+  <section class="border-b-2 border-cyan">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="text-center mb-12 lg:mb-16">
+        <span class="font-mono text-sm text-cyan uppercase tracking-wider">
+          Diensten
+        </span>
+        <h1 class="font-space font-bold text-4xl lg:text-5xl xl:text-6xl text-offwhite mt-4">
+          Complete <span class="text-cyan">SEO-expertise</span>
+        </h1>
+        <p class="font-inter text-slategray mt-4 max-w-2xl mx-auto">
+          Van technische optimalisatie tot AI-gestuurde zoekmachine strategie.
+          Ik bied alle diensten om jouw merk online te laten domineren.
+        </p>
+      </div>
+
+      <BentoGrid columns={3} gap="md">
+        {sortedServices.map((service) => (
+          <ServiceCard 
+            title={service.data.title}
+            description={service.data.description}
+            icon={service.data.icon}
+            href={`/services/${service.slug}`}
+            featured={service.data.featured}
+          />
+        ))}
+      </BentoGrid>
+    </div>
+  </section>
+</BaseLayout>

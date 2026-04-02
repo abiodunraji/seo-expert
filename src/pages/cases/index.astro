@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseCard from '../../components/CaseCard.astro';
+import BentoGrid from '../../components/BentoGrid.astro';
+import { getCollection } from 'astro:content';
+
+const cases = await getCollection('cases');
+const sortedCases = cases.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<BaseLayout 
+  title="Cases"
+  description="Bekijk de resultaten die ik heb behaald voor mijn klanten. Van traffic groei tot conversie verbeteringen."
+>
+  <!-- Hero Section -->
+  <section class="border-b-2 border-cyan">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="text-center mb-12 lg:mb-16">
+        <span class="font-mono text-sm text-cyan uppercase tracking-wider">
+          Cases
+        </span>
+        <h1 class="font-space font-bold text-4xl lg:text-5xl xl:text-6xl text-offwhite mt-4">
+          Bewezen <span class="text-cyan">resultaten</span>
+        </h1>
+        <p class="font-inter text-slategray mt-4 max-w-2xl mx-auto">
+          Ontdek hoe ik mijn klanten heb geholpen met het behalen van 
+          significante groei in organisch verkeer en conversies.
+        </p>
+      </div>
+
+      {sortedCases.length > 0 ? (
+        <BentoGrid columns={2} gap="md">
+          {sortedCases.map((caseStudy) => (
+            <CaseCard 
+              client={caseStudy.data.client}
+              title={caseStudy.data.title}
+              summary={caseStudy.data.summary}
+              results={caseStudy.data.results}
+              href={`/cases/${caseStudy.slug}`}
+            />
+          ))}
+        </BentoGrid>
+      ) : (
+        <div class="text-center py-16">
+          <div class="bg-surface brutal-border p-8 lg:p-12 inline-block">
+            <p class="font-inter text-slategray">
+              Case studies worden binnenkort toegevoegd.
+            </p>
+            <p class="font-mono text-sm text-cyan mt-2">
+              [Content in bewerking]
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>

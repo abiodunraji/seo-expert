@@ -1,0 +1,17 @@
+---
+import type { ComponentProps } from 'astro/types';
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonicalURL?: string;
+  image?: string;
+}
+
+const { title, description, canonicalURL, image } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} canonicalURL={canonicalURL} image={image}>
+  <slot />
+</BaseLayout>
