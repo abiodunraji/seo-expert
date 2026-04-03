@@ -35,6 +35,18 @@ jobs:
         env:
           GITHUB_PAGES: 'true'
 
+      - name: Verify base path
+        run: |
+          echo "Checking dist folder for correct base path..."
+          grep -r "seo-expert" dist/ | head -5 || echo "WARNING: base path not found in build output"
+          ls -la dist/
+
+      - name: Verify base path
+        run: |
+          echo "Checking dist folder for correct base path..."
+          grep -r "seo-expert" dist/ | head -5 || echo "WARNING: base path not found in build output"
+          ls -la dist/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
