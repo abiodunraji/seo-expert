@@ -1,4 +1,6 @@
 ---
+import { url } from '../lib/urls';
+
 interface Props {
   title: string;
   subtitle?: string;
@@ -63,7 +65,7 @@ const {
           <div class="absolute inset-0 bg-cyan/5 rounded-3xl blur-3xl"></div>
           <div class="relative bg-surface rounded-3xl border border-white/5 overflow-hidden shadow-soft">
             <img 
-              src="/images/iwan.png" 
+              src={url('/images/iwan.png')} 
               alt={imageAlt} 
               class="w-full h-auto"
             />

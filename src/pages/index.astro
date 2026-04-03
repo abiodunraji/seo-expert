@@ -13,10 +13,10 @@ const sortedServices = services.sort((a, b) => a.data.order - b.data.order);
 
 // Client logos
 const clientLogos = [
-  { name: 'Client 1', src: '/images/clients/logo1.png' },
-  { name: 'Client 2', src: '/images/clients/logo2.png' },
-  { name: 'Client 3', src: '/images/clients/logo3.png' },
-  { name: 'Client 4', src: '/images/clients/logo4.png' },
+  { name: 'Client 1', src: url('/images/clients/logo1.png') },
+  { name: 'Client 2', src: url('/images/clients/logo2.png') },
+  { name: 'Client 3', src: url('/images/clients/logo3.png') },
+  { name: 'Client 4', src: url('/images/clients/logo4.png') },
 ];
 
 // Stats
@@ -80,52 +80,6 @@ const stats = [
       </div>
     </div>
   </section>
-
-  <script>
-    // Animate stats on scroll
-    const observerOptions = {
-      threshold: 0.5,
-      rootMargin: '0px'
-    };
-
-    const animateStats = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const statValues = entry.target.querySelectorAll('.stat-value');
-          statValues.forEach(stat => {
-            const target = parseInt(stat.getAttribute('data-target') || '0');
-            const duration = 2000;
-            const start = 0;
-            const startTime = performance.now();
-
-            const updateCount = (currentTime: number) => {
-              const elapsed = currentTime - startTime;
-              const progress = Math.min(elapsed / duration, 1);
-              
-              // Ease out cubic
-              const eased = 1 - Math.pow(1 - progress, 3);
-              const current = Math.floor(start + (target - start) * eased);
-              
-              stat.textContent = current.toString();
-              
-              if (progress < 1) {
-                requestAnimationFrame(updateCount);
-              }
-            };
-
-            requestAnimationFrame(updateCount);
-          });
-          observer.unobserve(entry.target);
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(animateStats, observerOptions);
-    const statsSection = document.querySelector('.stat-value')?.closest('section');
-    if (statsSection) {
-      observer.observe(statsSection);
-    }
-  </script>
 
   <script>
     // Animate stats on scroll

@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 const { service } = Astro.props;
 const { Content } = await service.render();
 
-const heroImage = service.data.image || `/images/services/${service.slug}.svg`;
+const heroImage = url(service.data.image || `/images/services/${service.slug}.svg`);
 
 const sections = [
   {
