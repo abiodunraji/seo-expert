@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+import { url } from '../lib/urls';
 ---
 
 <BaseLayout 
@@ -7,37 +9,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Leer Iwan Stepanova kennen — SEO expert met een strategische blik op zoekmachine optimalisatie en content architectuur."
 >
   <!-- Hero Section -->
-  <section class="border-b-2 border-cyan">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <!-- Content -->
         <div>
-          <span class="font-mono text-sm text-cyan uppercase tracking-wider">
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-cyan/70">
             Over mij
           </span>
-          <h1 class="font-space font-bold text-4xl lg:text-5xl xl:text-6xl text-offwhite mt-4">
+          <h1 class="font-space font-bold text-4xl lg:text-5xl xl:text-6xl text-offwhite mt-4 tracking-tight">
             Iwan <span class="text-cyan">Stepanova</span>
           </h1>
-          <p class="font-inter text-lg text-slategray mt-6">
+          <p class="font-inter text-lg text-slategray mt-6 leading-relaxed">
             Strategisch SEO architect met een passie voor groei. 
             Ik help ondernemingen om te domineren in zoekmachines door slimme strategieën 
             en toekomstbestendige technologieën.
           </p>
         </div>
         
-        <!-- Image Placeholder -->
+        <!-- Image -->
         <div class="relative">
-          <div class="absolute -inset-4 border-2 border-cyan/30"></div>
-          <div class="absolute -inset-2 border border-cyan/60"></div>
-          <div class="relative bg-surface aspect-square flex items-center justify-center brutal-border">
-            <div class="text-center">
-              <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-cyan/20 flex items-center justify-center">
-                <span class="font-space font-bold text-5xl text-cyan">IS</span>
-              </div>
-              <p class="font-mono text-sm text-slategray">
-                [Foto komt nog]
-              </p>
-            </div>
+          <div class="absolute inset-0 bg-cyan/5 rounded-3xl blur-3xl"></div>
+          <div class="relative bg-surface rounded-3xl border border-white/5 overflow-hidden shadow-soft">
+            <img 
+              src="/images/iwan.png" 
+              alt="Iwan Stepanova" 
+              class="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -45,13 +43,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- Background Section -->
-  <section class="border-b-2 border-cyan">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+  <section class="border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
       <div class="max-w-2xl">
-        <h2 class="font-space font-bold text-2xl lg:text-3xl text-offwhite mb-6">
+        <span class="font-mono text-xs uppercase tracking-[0.2em] text-cyan/70">
           Mijn achtergrond
+        </span>
+        <h2 class="font-space font-bold text-2xl lg:text-3xl text-offwhite mt-4 mb-6 tracking-tight">
+          Ervaring die het verschil maakt
         </h2>
-        <div class="font-inter text-slategray space-y-4">
+        <div class="font-inter text-slategray space-y-4 leading-relaxed">
           <p>
             Met jaren ervaring in SEO heb ik gezien hoe de industrie is veranderd. 
             Van traditionele trefwoorden tot AI-gestuurde zoekervaringen — 
@@ -67,46 +68,172 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- Values Section -->
-  <section class="py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <span class="font-mono text-sm text-cyan uppercase tracking-wider">
+  <section class="border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="text-center mb-16">
+        <span class="font-mono text-xs uppercase tracking-[0.2em] text-cyan/70">
           Waar ik voor sta
         </span>
-        <h2 class="font-space font-bold text-3xl lg:text-4xl text-offwhite mt-4">
+        <h2 class="font-space font-bold text-3xl lg:text-4xl text-offwhite mt-4 tracking-tight">
           Mijn <span class="text-cyan">waarden</span>
         </h2>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-surface brutal-border p-6">
+        <div class="card">
           <h3 class="font-space font-bold text-xl text-offwhite mb-3">
             Strategie eerst
           </h3>
-          <p class="font-inter text-slategray text-sm">
+          <p class="font-inter text-slategray text-sm leading-relaxed">
             Tactiek zonder strategie is als schieten in het donker. 
             Ik zorg voor een doordachte aanpak.
           </p>
         </div>
         
-        <div class="bg-surface brutal-border p-6">
+        <div class="card">
           <h3 class="font-space font-bold text-xl text-offwhite mb-3">
             Meetbare resultaten
           </h3>
-          <p class="font-inter text-slategray text-sm">
+          <p class="font-inter text-slategray text-sm leading-relaxed">
             Wat niet gemeten wordt, kan niet verbeterd worden. 
             Ik rapporteer over concrete groei.
           </p>
         </div>
         
-        <div class="bg-surface brutal-border p-6">
+        <div class="card">
           <h3 class="font-space font-bold text-xl text-offwhite mb-3">
             Toekomstbestendig
           </h3>
-          <p class="font-inter text-slategray text-sm">
+          <p class="font-inter text-slategray text-sm leading-relaxed">
             SEO verandert constant. 
             Ik zorg dat jouw merk klaar is voor wat komen gaat.
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise Section -->
+  <section class="border-t border-white/5 bg-surface/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="text-center mb-16">
+        <span class="font-mono text-xs uppercase tracking-[0.2em] text-cyan/70">
+          Expertise
+        </span>
+        <h2 class="font-space font-bold text-3xl lg:text-4xl text-offwhite mt-4 tracking-tight">
+          Wat ik <span class="text-cyan">beheers</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="card text-center">
+          <span class="font-space font-bold text-4xl lg:text-5xl text-cyan block mb-2">95%</span>
+          <span class="font-inter text-sm text-slategray">Technical SEO</span>
+        </div>
+        <div class="card text-center">
+          <span class="font-space font-bold text-4xl lg:text-5xl text-cyan block mb-2">90%</span>
+          <span class="font-inter text-sm text-slategray">Content Strategie</span>
+        </div>
+        <div class="card text-center">
+          <span class="font-space font-bold text-4xl lg:text-5xl text-cyan block mb-2">85%</span>
+          <span class="font-inter text-sm text-slategray">Link Building</span>
+        </div>
+        <div class="card text-center">
+          <span class="font-space font-bold text-4xl lg:text-5xl text-cyan block mb-2">92%</span>
+          <span class="font-inter text-sm text-slategray">GEO / AI Search</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach Section -->
+  <section class="border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="text-center mb-16">
+        <span class="font-mono text-xs uppercase tracking-[0.2em] text-cyan/70">
+          Werkwijze
+        </span>
+        <h2 class="font-space font-bold text-3xl lg:text-4xl text-offwhite mt-4 tracking-tight">
+          Hoe ik <span class="text-cyan">werk</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center md:text-left">
+          <span class="font-space font-bold text-5xl text-cyan/10 block mb-4">01</span>
+          <h3 class="font-space font-bold text-lg text-offwhite mb-2">Intake</h3>
+          <p class="font-inter text-sm text-slategray leading-relaxed">
+            We starten met een vrijblijvend gesprek om jouw doelen en uitdagingen te begrijpen.
+          </p>
+        </div>
+        <div class="text-center md:text-left">
+          <span class="font-space font-bold text-5xl text-cyan/10 block mb-4">02</span>
+          <h3 class="font-space font-bold text-lg text-offwhite mb-2">Analyse</h3>
+          <p class="font-inter text-sm text-slategray leading-relaxed">
+            Ik onderzoek je huidige situatie, concurrentie en groeikansen in detail.
+          </p>
+        </div>
+        <div class="text-center md:text-left">
+          <span class="font-space font-bold text-5xl text-cyan/10 block mb-4">03</span>
+          <h3 class="font-space font-bold text-lg text-offwhite mb-2">Strategie</h3>
+          <p class="font-inter text-sm text-slategray leading-relaxed">
+            Op basis van de analyse ontwikkel ik een op maat gemaakte strategie.
+          </p>
+        </div>
+        <div class="text-center md:text-left">
+          <span class="font-space font-bold text-5xl text-cyan/10 block mb-4">04</span>
+          <h3 class="font-space font-bold text-lg text-offwhite mb-2">Uitvoering</h3>
+          <p class="font-inter text-sm text-slategray leading-relaxed">
+            We implementeren de strategie en monitoren continu de resultaten.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools Section -->
+  <section class="border-t border-white/5 bg-surface/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="text-center mb-16">
+        <span class="font-mono text-xs uppercase tracking-[0.2em] text-cyan/70">
+          Tools & Technologie
+        </span>
+        <h2 class="font-space font-bold text-3xl lg:text-4xl text-offwhite mt-4 tracking-tight">
+          Mijn <span class="text-cyan">toolkit</span>
+        </h2>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="bg-surface border border-white/5 px-5 py-2.5 rounded-full font-inter text-sm text-slategray hover:text-cyan hover:border-cyan/20 transition-colors duration-300">Google Search Console</span>
+        <span class="bg-surface border border-white/5 px-5 py-2.5 rounded-full font-inter text-sm text-slategray hover:text-cyan hover:border-cyan/20 transition-colors duration-300">Google Analytics</span>
+        <span class="bg-surface border border-white/5 px-5 py-2.5 rounded-full font-inter text-sm text-slategray hover:text-cyan hover:border-cyan/20 transition-colors duration-300">Ahrefs</span>
+        <span class="bg-surface border border-white/5 px-5 py-2.5 rounded-full font-inter text-sm text-slategray hover:text-cyan hover:border-cyan/20 transition-colors duration-300">Screaming Frog</span>
+        <span class="bg-surface border border-white/5 px-5 py-2.5 rounded-full font-inter text-sm text-slategray hover:text-cyan hover:border-cyan/20 transition-colors duration-300">SEMrush</span>
+        <span class="bg-surface border border-white/5 px-5 py-2.5 rounded-full font-inter text-sm text-slategray hover:text-cyan hover:border-cyan/20 transition-colors duration-300">Google Tag Manager</span>
+        <span class="bg-surface border border-white/5 px-5 py-2.5 rounded-full font-inter text-sm text-slategray hover:text-cyan hover:border-cyan/20 transition-colors duration-300">Schema.org</span>
+        <span class="bg-surface border border-white/5 px-5 py-2.5 rounded-full font-inter text-sm text-slategray hover:text-cyan hover:border-cyan/20 transition-colors duration-300">PageSpeed Insights</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="relative bg-surface rounded-3xl border border-white/5 p-10 lg:p-16 text-center overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-cyan/5 rounded-full blur-[100px]"></div>
+        <div class="relative">
+          <h2 class="font-space font-bold text-3xl lg:text-4xl text-offwhite tracking-tight">
+            Klaar om te <span class="text-cyan">groeien</span>?
+          </h2>
+          <p class="font-inter text-slategray mt-4 max-w-xl mx-auto leading-relaxed">
+            Laten we samenwerken aan jouw online succes. 
+            Neem contact op voor een vrijblijvend gesprek.
+          </p>
+          <div class="mt-8">
+            <Button href={url('/contact/')} variant="primary" size="lg">
+              Neem contact op
+            </Button>
+          </div>
         </div>
       </div>
     </div>

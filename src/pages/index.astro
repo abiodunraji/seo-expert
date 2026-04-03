@@ -11,13 +11,20 @@ import { url } from '../lib/urls';
 const services = await getCollection('services');
 const sortedServices = services.sort((a, b) => a.data.order - b.data.order);
 
-// Client logos placeholder
+// Client logos
 const clientLogos = [
-  { name: 'Client 1', initials: 'C1' },
-  { name: 'Client 2', initials: 'C2' },
-  { name: 'Client 3', initials: 'C3' },
-  { name: 'Client 4', initials: 'C4' },
-  { name: 'Client 5', initials: 'C5' },
+  { name: 'Client 1', src: '/images/clients/logo1.png' },
+  { name: 'Client 2', src: '/images/clients/logo2.png' },
+  { name: 'Client 3', src: '/images/clients/logo3.png' },
+  { name: 'Client 4', src: '/images/clients/logo4.png' },
+];
+
+// Stats
+const stats = [
+  { value: '150+', label: 'Projecten voltooid' },
+  { value: '95%', label: 'Klanttevredenheid' },
+  { value: '3x', label: 'Gemiddelde groei' },
+  { value: '8+', label: 'Jaar ervaring' },
 ];
 ---
 
@@ -27,20 +34,156 @@ const clientLogos = [
     title="De Strategische Architect voor Zoekmachine Dominantie"
     subtitle="Technical SEO, Content Architectuur & GEO voor de merken van morgen. Ik help ondernemingen groeien door strategische zoekmachine zichtbaarheid."
     ctaText="Start je Project"
-    ctaHref={url('/contact')}
+    ctaHref={url('/contact/')}
   />
 
-  <!-- Services Bento Grid -->
-  <section class="border-b-2 border-cyan">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-      <div class="text-center mb-12 lg:mb-16">
-        <span class="font-mono text-sm text-cyan uppercase tracking-wider">
+  <!-- Stats Section -->
+  <section class="border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="text-center mb-12">
+        <span class="font-mono text-xs uppercase tracking-[0.2em] text-cyan/70">
+          Resultaten
+        </span>
+        <h2 class="font-space font-bold text-2xl lg:text-3xl text-offwhite mt-4 tracking-tight">
+          Cijfers die spreken
+        </h2>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div class="text-center">
+          <div class="flex items-baseline justify-center">
+            <span class="font-space font-bold text-5xl lg:text-6xl text-cyan stat-value" data-target="150">0</span>
+            <span class="font-space font-bold text-5xl lg:text-6xl text-cyan">+</span>
+          </div>
+          <span class="font-inter text-sm text-slategray mt-2 block">Projecten voltooid</span>
+        </div>
+        <div class="text-center">
+          <div class="flex items-baseline justify-center">
+            <span class="font-space font-bold text-5xl lg:text-6xl text-cyan stat-value" data-target="95">0</span>
+            <span class="font-space font-bold text-5xl lg:text-6xl text-cyan">%</span>
+          </div>
+          <span class="font-inter text-sm text-slategray mt-2 block">Klanttevredenheid</span>
+        </div>
+        <div class="text-center">
+          <div class="flex items-baseline justify-center">
+            <span class="font-space font-bold text-5xl lg:text-6xl text-cyan stat-value" data-target="3">0</span>
+            <span class="font-space font-bold text-5xl lg:text-6xl text-cyan">x</span>
+          </div>
+          <span class="font-inter text-sm text-slategray mt-2 block">Gemiddelde groei</span>
+        </div>
+        <div class="text-center">
+          <div class="flex items-baseline justify-center">
+            <span class="font-space font-bold text-5xl lg:text-6xl text-cyan stat-value" data-target="8">0</span>
+            <span class="font-space font-bold text-5xl lg:text-6xl text-cyan">+</span>
+          </div>
+          <span class="font-inter text-sm text-slategray mt-2 block">Jaar ervaring</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Animate stats on scroll
+    const observerOptions = {
+      threshold: 0.5,
+      rootMargin: '0px'
+    };
+
+    const animateStats = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const statValues = entry.target.querySelectorAll('.stat-value');
+          statValues.forEach(stat => {
+            const target = parseInt(stat.getAttribute('data-target') || '0');
+            const duration = 2000;
+            const start = 0;
+            const startTime = performance.now();
+
+            const updateCount = (currentTime: number) => {
+              const elapsed = currentTime - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              
+              // Ease out cubic
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = Math.floor(start + (target - start) * eased);
+              
+              stat.textContent = current.toString();
+              
+              if (progress < 1) {
+                requestAnimationFrame(updateCount);
+              }
+            };
+
+            requestAnimationFrame(updateCount);
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(animateStats, observerOptions);
+    const statsSection = document.querySelector('.stat-value')?.closest('section');
+    if (statsSection) {
+      observer.observe(statsSection);
+    }
+  </script>
+
+  <script>
+    // Animate stats on scroll
+    const observerOptions = {
+      threshold: 0.5,
+      rootMargin: '0px'
+    };
+
+    const animateStats = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const statValues = entry.target.querySelectorAll('.stat-value');
+          statValues.forEach(stat => {
+            const target = parseInt(stat.getAttribute('data-target') || '0');
+            const duration = 2000;
+            const start = 0;
+            const startTime = performance.now();
+
+            const updateCount = (currentTime: number) => {
+              const elapsed = currentTime - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              
+              // Ease out cubic
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = Math.floor(start + (target - start) * eased);
+              
+              stat.textContent = current.toString();
+              
+              if (progress < 1) {
+                requestAnimationFrame(updateCount);
+              }
+            };
+
+            requestAnimationFrame(updateCount);
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(animateStats, observerOptions);
+    const statsSection = document.querySelector('.stat-value')?.closest('section');
+    if (statsSection) {
+      observer.observe(statsSection);
+    }
+  </script>
+
+  <!-- Services Section -->
+  <section class="border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="text-center mb-16">
+        <span class="font-mono text-xs uppercase tracking-[0.2em] text-cyan/70">
           Diensten
         </span>
-        <h2 class="font-space font-bold text-3xl lg:text-4xl xl:text-5xl text-offwhite mt-4">
+        <h2 class="font-space font-bold text-3xl lg:text-4xl xl:text-5xl text-offwhite mt-4 tracking-tight">
           Jouw groei, <span class="text-cyan">mijn expertise</span>
         </h2>
-        <p class="font-inter text-slategray mt-4 max-w-2xl mx-auto">
+        <p class="font-inter text-slategray mt-4 max-w-2xl mx-auto leading-relaxed">
           Complete SEO-oplossingen van strategie tot uitvoering. 
           Kies de dienst die bij jouw uitdaging past.
         </p>
@@ -61,51 +204,60 @@ const clientLogos = [
   </section>
 
   <!-- Client Logo Wall -->
-  <section class="border-b-2 border-cyan bg-surface">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-      <div class="text-center mb-8">
-        <span class="font-mono text-sm text-cyan uppercase tracking-wider">
+  <section class="border-t border-white/5 bg-surface/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div class="text-center mb-10">
+        <span class="font-mono text-xs uppercase tracking-[0.2em] text-cyan/70">
           Vertrouwd door
         </span>
-        <h2 class="font-space font-bold text-xl lg:text-2xl text-offwhite mt-2">
+        <h2 class="font-space font-bold text-xl lg:text-2xl text-offwhite mt-3 tracking-tight">
           Ondernemingen die groeien
         </h2>
       </div>
 
-      <!-- Logo Grid (placeholder) -->
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
-        {clientLogos.map((client) => (
-          <div class="flex items-center justify-center p-4 opacity-50 hover:opacity-100 transition-opacity duration-300">
-            <div class="flex items-center gap-2">
-              <div class="w-10 h-10 brutal-border flex items-center justify-center">
-                <span class="font-mono text-sm text-cyan">{client.initials}</span>
-              </div>
-              <span class="font-inter text-sm text-slategray hidden md:block">{client.name}</span>
+      <!-- Logo Marquee -->
+      <div class="relative overflow-hidden">
+        <div class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-surface/50 to-transparent z-10"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-surface/50 to-transparent z-10"></div>
+        <div class="animate-marquee flex items-center gap-12">
+          {[...clientLogos, ...clientLogos].map((client, i) => (
+            <div class="flex-shrink-0 flex items-center justify-center px-6 py-4 opacity-40 hover:opacity-70 transition-opacity duration-300">
+              <img 
+                src={client.src} 
+                alt={client.name} 
+                class="max-h-10 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                loading="lazy"
+              />
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-surface brutal-border p-8 lg:p-16 text-center">
-        <h2 class="font-space font-bold text-3xl lg:text-4xl xl:text-5xl text-offwhite">
-          Laten we praten over <span class="text-cyan">jouw groei</span>
-        </h2>
-        <p class="font-inter text-slategray mt-4 max-w-xl mx-auto">
-          Klaar om je online zichtbaarheid te versterken? 
-          Ik help je graag met een strategie die past bij jouw ambitie.
-        </p>
-        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <Button href={url('/contact')} variant="primary" size="lg">
-            Contact opnemen
-          </Button>
-          <Button href={url('/services')} variant="outline" size="lg">
-            Bekijk diensten
-          </Button>
+  <section class="border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="relative bg-surface rounded-3xl border border-white/5 p-10 lg:p-16 text-center overflow-hidden">
+        <!-- Background Glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-cyan/5 rounded-full blur-[100px]"></div>
+        
+        <div class="relative">
+          <h2 class="font-space font-bold text-3xl lg:text-4xl xl:text-5xl text-offwhite tracking-tight">
+            Laten we praten over <span class="text-cyan">jouw groei</span>
+          </h2>
+          <p class="font-inter text-slategray mt-4 max-w-xl mx-auto leading-relaxed">
+            Klaar om je online zichtbaarheid te versterken? 
+            Ik help je graag met een strategie die past bij jouw ambitie.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href={url('/contact/')} variant="primary" size="lg">
+              Contact opnemen
+            </Button>
+            <Button href={url('/services/')} variant="outline" size="lg">
+              Bekijk diensten
+            </Button>
+          </div>
         </div>
       </div>
     </div>

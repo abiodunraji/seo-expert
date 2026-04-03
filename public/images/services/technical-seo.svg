@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#0D1117"/>
+  <rect x="0" y="0" width="800" height="600" fill="url(#grid)" opacity="0.05"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00F5FF" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <!-- Code brackets -->
+  <text x="300" y="340" font-family="monospace" font-size="120" fill="#00F5FF" opacity="0.6">&lt;/&gt;</text>
+  <!-- Decorative dots -->
+  <circle cx="200" cy="200" r="3" fill="#00F5FF" opacity="0.4"/>
+  <circle cx="600" cy="200" r="3" fill="#00F5FF" opacity="0.4"/>
+  <circle cx="200" cy="400" r="3" fill="#00F5FF" opacity="0.4"/>
+  <circle cx="600" cy="400" r="3" fill="#00F5FF" opacity="0.4"/>
+  <!-- Corner brackets -->
+  <path d="M 100 100 L 100 140 M 100 100 L 140 100" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
+  <path d="M 700 100 L 700 140 M 700 100 L 660 100" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
+  <path d="M 100 500 L 100 460 M 100 500 L 140 500" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
+  <path d="M 700 500 L 700 460 M 700 500 L 660 500" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
+  <text x="400" y="520" text-anchor="middle" font-family="monospace" font-size="14" fill="#00F5FF" opacity="0.5">TECHNICAL SEO</text>
+</svg>

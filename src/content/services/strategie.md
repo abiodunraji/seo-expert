@@ -2,6 +2,7 @@
 title: "Strategie"
 description: "Ik ontwikkel een complete SEO-roadmap die aansluit bij jouw bedrijfsdoelen en groeikansen. Geen losse tactieken, maar een duidelijke strategische visie."
 icon: "target"
+image: "/images/services/strategie.svg"
 order: 1
 featured: false
 ---

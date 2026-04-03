@@ -6,11 +6,16 @@ const services = defineCollection({
     title: z.string(),
     description: z.string(),
     icon: z.string(),
+    image: z.string().optional(),
     order: z.number(),
     featured: z.boolean().default(false),
   }),
 });
 
+// Cases collection - temporarily disabled, re-add later
+/*
+// Cases collection - temporarily disabled, re-add later
+/*
 const cases = defineCollection({
   type: 'content',
   schema: z.object({
@@ -27,8 +32,9 @@ const cases = defineCollection({
     featured: z.boolean().default(false),
   }),
 });
+*/
 
 export const collections = {
   services,
-  cases,
+  // cases,
 };

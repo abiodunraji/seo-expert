@@ -2,9 +2,10 @@
 interface Props {
   columns?: 2 | 3 | 4;
   gap?: 'sm' | 'md' | 'lg';
+  centerLastRow?: boolean;
 }
 
-const { columns = 3, gap = 'md' } = Astro.props;
+const { columns = 3, gap = 'md', centerLastRow = false } = Astro.props;
 
 const gridClasses = {
   2: 'grid-cols-1 sm:grid-cols-2',
@@ -19,6 +20,26 @@ const gapClasses = {
 };
 ---
 
-<div class:list={['grid', gridClasses[columns], gapClasses[gap]]}>
+<div class:list={['grid', gridClasses[columns], gapClasses[gap], centerLastRow && 'center-last-row']}>
   <slot />
 </div>
+
+<style>
+  .center-last-row > :last-child:nth-child(3n+1) {
+    grid-column: 2;
+  }
+  .center-last-row > :last-child:nth-child(3n+2) {
+    grid-column: 1 / span 2;
+    justify-self: center;
+    max-width: calc(50% - 0.75rem);
+  }
+  @media (min-width: 1024px) {
+    .center-last-row > :last-child:nth-child(3n+1) {
+      grid-column: 2;
+    }
+    .center-last-row > :last-child:nth-child(3n+2) {
+      grid-column: auto;
+      max-width: none;
+    }
+  }
+</style>

@@ -2,22 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Brutalist Design System */
 @layer base {
   :root {
-    --color-oxford: #1B263B;
+    --color-oxford: #0A0E17;
     --color-cyan: #00F5FF;
-    --color-offwhite: #F8FAFC;
-    --color-slategray: #94A3B8;
-    --color-surface: #162032;
+    --color-offwhite: #F0F4F8;
+    --color-slategray: #8892A4;
+    --color-surface: #111827;
+    --color-surface-light: #1A2332;
     
     --font-space: 'Space Grotesk', sans-serif;
     --font-inter: 'Inter', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
-    
-    --shadow-brutal: 4px 4px 0 #00F5FF;
-    --shadow-brutal-lg: 6px 6px 0 #00F5FF;
-    --shadow-brutal-sm: 2px 2px 0 #00F5FF;
   }
 }
 
@@ -34,7 +30,7 @@
     font-family: var(--font-inter);
     background-color: var(--color-oxford);
     color: var(--color-offwhite);
-    line-height: 1.6;
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -42,83 +38,90 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-space);
     font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
   }
 }
 
 @layer components {
-  .brutal-border {
-    border: 2px solid var(--color-cyan);
+  .card {
+    @apply bg-surface rounded-2xl border border-white/5 p-6 lg:p-8 transition-all duration-300;
   }
 
-  .brutal-border-thin {
-    border: 1px solid var(--color-cyan);
+  .card-hover {
+    @apply hover:border-cyan/30 hover:-translate-y-1;
   }
 
-  .brutal-shadow {
-    box-shadow: var(--shadow-brutal);
+  .card-hover:hover {
+    box-shadow: 0 0 30px rgba(0, 245, 255, 0.1);
   }
 
-  .brutal-shadow-hover {
-    transition: all 0.3s ease;
+  .section-divider {
+    @apply border-b border-white/5;
   }
 
-  .brutal-shadow-hover:hover {
-    box-shadow: var(--shadow-brutal);
-    transform: translate(-2px, -2px);
+  .section-label {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-cyan/70;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center font-mono text-sm uppercase tracking-wider bg-cyan text-oxford px-8 py-4 rounded-full transition-all duration-300 hover:bg-offwhite;
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 0 30px rgba(0, 245, 255, 0.1);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center font-mono text-sm uppercase tracking-wider border border-cyan/30 text-cyan px-8 py-4 rounded-full transition-all duration-300 hover:bg-cyan/10 hover:border-cyan;
+  }
+
+  .stat-number {
+    @apply font-space font-bold text-5xl lg:text-6xl text-cyan;
+  }
+
+  .stat-label {
+    @apply font-inter text-sm text-slategray mt-2;
   }
 }
 
 @layer utilities {
-  .text-oxford {
-    color: var(--color-oxford);
+  .text-gradient {
+    @apply bg-gradient-to-r from-cyan to-cyan/60 bg-clip-text text-transparent;
   }
 
-  .text-cyan {
-    color: var(--color-cyan);
+  .bg-gradient-radial {
+    background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
   }
 
-  .text-offwhite {
-    color: var(--color-offwhite);
+  .glow-border {
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.1);
   }
 
-  .text-slategray {
-    color: var(--color-slategray);
+  .shadow-glow {
+    box-shadow: 0 0 30px rgba(0, 245, 255, 0.1);
   }
 
-  .bg-oxford {
-    background-color: var(--color-oxford);
-  }
-
-  .bg-cyan {
-    background-color: var(--color-cyan);
-  }
-
-  .bg-offwhite {
-    background-color: var(--color-offwhite);
-  }
-
-  .bg-surface {
-    background-color: var(--color-surface);
-  }
-
-  .font-space {
-    font-family: var(--font-space);
-  }
-
-  .font-inter {
-    font-family: var(--font-inter);
-  }
-
-  .font-mono {
-    font-family: var(--font-mono);
+  .shadow-glow-lg {
+    box-shadow: 0 0 60px rgba(0, 245, 255, 0.15);
   }
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -126,8 +129,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
+  background: var(--color-surface-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
   background: var(--color-cyan);
-  border: 2px solid var(--color-oxford);
 }
 
 /* Focus States */
@@ -163,102 +170,41 @@
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes pulse {
+@keyframes float {
   0%, 100% {
-    opacity: 1;
+    transform: translateY(0);
   }
   50% {
-    opacity: 0.7;
+    transform: translateY(-10px);
   }
 }
 
-@keyframes borderGlow {
+@keyframes pulse-glow {
   0%, 100% {
-    border-color: var(--color-cyan);
-    box-shadow: 0 0 5px var(--color-cyan);
+    opacity: 0.4;
   }
   50% {
-    border-color: #00c8d4;
-    box-shadow: 0 0 15px var(--color-cyan);
+    opacity: 0.8;
   }
 }
 
-/* Animation Classes */
 .animate-fade-up {
   animation: fadeUp 0.6s ease-out forwards;
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.5s ease-out forwards;
-}
-
-.animate-slide-left {
-  animation: slideInLeft 0.6s ease-out forwards;
-}
-
-.animate-slide-right {
-  animation: slideInRight 0.6s ease-out forwards;
-}
-
-.animate-scale-in {
-  animation: scaleIn 0.5s ease-out forwards;
-}
-
 .animate-marquee {
-  animation: marquee 25s linear infinite;
+  animation: marquee 30s linear infinite;
 }
 
-.animate-pulse {
-  animation: pulse 2s ease-in-out infinite;
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
 
-.animate-border-glow {
-  animation: borderGlow 2s ease-in-out infinite;
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
 }
 
-/* Reveal on Scroll - Initial State */
+/* Reveal on Scroll */
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -270,40 +216,7 @@
   transform: translateY(0);
 }
 
-.reveal-left {
-  opacity: 0;
-  transform: translateX(-30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.reveal-left.revealed {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.reveal-right {
-  opacity: 0;
-  transform: translateX(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.reveal-right.revealed {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.reveal-scale {
-  opacity: 0;
-  transform: scale(0.95);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-.reveal-scale.revealed {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Staggered Animation Delays for Grid Items */
+/* Staggered Delays */
 .stagger-1 { animation-delay: 50ms; }
 .stagger-2 { animation-delay: 100ms; }
 .stagger-3 { animation-delay: 150ms; }
@@ -312,20 +225,6 @@
 .stagger-6 { animation-delay: 300ms; }
 .stagger-7 { animation-delay: 350ms; }
 .stagger-8 { animation-delay: 400ms; }
-.stagger-9 { animation-delay: 450ms; }
-.stagger-10 { animation-delay: 500ms; }
-
-/* Staggered Transition Delays for Reveal on Scroll */
-.stagger-transition-1 { transition-delay: 50ms; }
-.stagger-transition-2 { transition-delay: 100ms; }
-.stagger-transition-3 { transition-delay: 150ms; }
-.stagger-transition-4 { transition-delay: 200ms; }
-.stagger-transition-5 { transition-delay: 250ms; }
-.stagger-transition-6 { transition-delay: 300ms; }
-.stagger-transition-7 { transition-delay: 350ms; }
-.stagger-transition-8 { transition-delay: 400ms; }
-.stagger-transition-9 { transition-delay: 450ms; }
-.stagger-transition-10 { transition-delay: 500ms; }
 
 /* Prose for Markdown Content */
 .prose {
@@ -339,6 +238,7 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
   color: var(--color-offwhite);
+  letter-spacing: -0.02em;
 }
 
 .prose h3 {
@@ -354,6 +254,7 @@
   font-family: var(--font-inter);
   margin-bottom: 1rem;
   color: var(--color-slategray);
+  line-height: 1.8;
 }
 
 .prose ul {

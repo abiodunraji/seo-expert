@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#0D1117"/>
+  <rect x="0" y="0" width="800" height="600" fill="url(#grid)" opacity="0.05"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00F5FF" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <!-- Chart bars -->
+  <rect x="200" y="400" width="60" height="100" rx="2" fill="#00F5FF" opacity="0.2"/>
+  <rect x="280" y="320" width="60" height="180" rx="2" fill="#00F5FF" opacity="0.35"/>
+  <rect x="360" y="240" width="60" height="260" rx="2" fill="#00F5FF" opacity="0.5"/>
+  <rect x="440" y="180" width="60" height="320" rx="2" fill="#00F5FF" opacity="0.65"/>
+  <rect x="520" y="120" width="60" height="380" rx="2" fill="#00F5FF" opacity="0.8"/>
+  <!-- Trend line -->
+  <polyline points="230,390 310,310 390,230 470,170 550,110" stroke="#00F5FF" stroke-width="3" fill="none"/>
+  <circle cx="230" cy="390" r="5" fill="#00F5FF"/>
+  <circle cx="310" cy="310" r="5" fill="#00F5FF"/>
+  <circle cx="390" cy="230" r="5" fill="#00F5FF"/>
+  <circle cx="470" cy="170" r="5" fill="#00F5FF"/>
+  <circle cx="550" cy="110" r="5" fill="#00F5FF"/>
+  <!-- Corner brackets -->
+  <path d="M 100 100 L 100 140 M 100 100 L 140 100" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
+  <path d="M 700 100 L 700 140 M 700 100 L 660 100" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
+  <path d="M 100 500 L 100 460 M 100 500 L 140 500" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
+  <path d="M 700 500 L 700 460 M 700 500 L 660 500" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
+  <text x="400" y="520" text-anchor="middle" font-family="monospace" font-size="14" fill="#00F5FF" opacity="0.5">ANALYSE</text>
+</svg>

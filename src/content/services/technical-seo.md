@@ -2,6 +2,7 @@
 title: "Technical SEO"
 description: "De fundering van je website moet stevig staan. Ik optimaliseer de technische kant zodat zoekmachines je site vlekkeloos crawlen."
 icon: "code"
+image: "/images/services/technical-seo.svg"
 order: 4
 featured: false
 ---

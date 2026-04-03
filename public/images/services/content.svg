@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#0D1117"/>
+  <rect x="0" y="0" width="800" height="600" fill="url(#grid)" opacity="0.05"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00F5FF" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <!-- Document icon -->
+  <rect x="280" y="140" width="240" height="320" rx="4" stroke="#00F5FF" stroke-width="2" fill="none"/>
+  <!-- Lines of text -->
+  <line x1="320" y1="200" x2="480" y2="200" stroke="#00F5FF" stroke-width="2" opacity="0.6"/>
+  <line x1="320" y1="240" x2="460" y2="240" stroke="#00F5FF" stroke-width="2" opacity="0.4"/>
+  <line x1="320" y1="280" x2="480" y2="280" stroke="#00F5FF" stroke-width="2" opacity="0.5"/>
+  <line x1="320" y1="320" x2="440" y2="320" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
+  <line x1="320" y1="360" x2="480" y2="360" stroke="#00F5FF" stroke-width="2" opacity="0.4"/>
+  <!-- Pen -->
+  <line x1="460" y1="380" x2="520" y2="440" stroke="#00F5FF" stroke-width="3"/>
+  <polygon points="520,440 530,450 510,450" fill="#00F5FF"/>
+  <!-- Corner brackets -->
+  <path d="M 100 100 L 100 140 M 100 100 L 140 100" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
+  <path d="M 700 100 L 700 140 M 700 100 L 660 100" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
+  <path d="M 100 500 L 100 460 M 100 500 L 140 500" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
+  <path d="M 700 500 L 700 460 M 700 500 L 660 500" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
+  <text x="400" y="520" text-anchor="middle" font-family="monospace" font-size="14" fill="#00F5FF" opacity="0.5">CONTENT</text>
+</svg>

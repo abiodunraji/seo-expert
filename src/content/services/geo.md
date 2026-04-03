@@ -2,6 +2,7 @@
 title: "GEO"
 description: "De toekomst van SEO. Generative Engine Optimization — ik bereid je merk voor op AI-zoekmachines en conversational search."
 icon: "brain"
+image: "/images/services/geo.svg"
 order: 7
 featured: true
 ---

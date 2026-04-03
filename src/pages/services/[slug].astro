@@ -14,6 +14,39 @@ export async function getStaticPaths() {
 
 const { service } = Astro.props;
 const { Content } = await service.render();
+
+const heroImage = service.data.image || `/images/services/${service.slug}.svg`;
+
+const sections = [
+  {
+    title: 'Wat houdt het in?',
+    description: service.data.description,
+    image: heroImage,
+    imageAlt: `${service.data.title} illustratie`,
+    reverse: false,
+  },
+  {
+    title: 'Waarom dit belangrijk is',
+    description: 'In een competitieve digitale markt is het essentieel om voorop te lopen. Deze dienst helpt je om onderscheidend vermogen te creëren en duurzame groei te realiseren.',
+    image: heroImage,
+    imageAlt: `${service.data.title} aanpak`,
+    reverse: true,
+  },
+  {
+    title: 'Mijn aanpak',
+    description: 'Ik werk met een bewezen methodiek die resultaten levert. Van intake tot implementatie — elke stap is doordacht en meetbaar.',
+    image: heroImage,
+    imageAlt: `${service.data.title} proces`,
+    reverse: false,
+  },
+  {
+    title: 'Wat je kunt verwachten',
+    description: 'Transparante communicatie, meetbare resultaten en een partnership dat jouw bedrijf naar het volgende niveau tilt.',
+    image: heroImage,
+    imageAlt: `${service.data.title} resultaten`,
+    reverse: true,
+  },
+];
 ---
 
 <BaseLayout 
@@ -21,66 +54,117 @@ const { Content } = await service.render();
   description={service.data.description}
 >
   <!-- Hero Section -->
-  <section class="border-b-2 border-cyan">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <!-- Content -->
         <div>
-          <span class="font-mono text-sm text-cyan uppercase tracking-wider">
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-cyan/70">
             Service
           </span>
-          <h1 class="font-space font-bold text-4xl lg:text-5xl xl:text-6xl text-offwhite mt-4">
+          <h1 class="font-space font-bold text-4xl lg:text-5xl xl:text-6xl text-offwhite mt-4 tracking-tight">
             {service.data.title}
           </h1>
-          <p class="font-inter text-lg text-slategray mt-6">
+          <p class="font-inter text-lg text-slategray mt-6 leading-relaxed">
             {service.data.description}
           </p>
           
           {service.data.featured && (
-            <div class="inline-block bg-cyan text-oxford px-4 py-1 mt-6 font-mono text-sm uppercase tracking-wider">
+            <div class="inline-block bg-cyan/10 text-cyan px-4 py-1.5 mt-6 font-mono text-xs uppercase tracking-wider rounded-full border border-cyan/20">
               Aanbevolen
             </div>
           )}
         </div>
         
-        <!-- Decorative -->
-        <div class="hidden lg:flex items-center justify-center">
-          <div class="w-full aspect-square bg-surface brutal-border flex items-center justify-center">
-            <span class="font-space font-bold text-9xl text-cyan/20">
-              {service.data.order}
-            </span>
+        <!-- Hero Image -->
+        <div class="hidden lg:block">
+          <div class="relative">
+            <div class="absolute inset-0 bg-cyan/5 rounded-3xl blur-3xl"></div>
+            <div class="relative bg-surface rounded-3xl border border-white/5 overflow-hidden shadow-soft">
+              <img 
+                src={heroImage} 
+                alt={service.data.title}
+                class="w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Content Sections -->
-  <section class="border-b-2 border-cyan">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-      <div class="prose prose-invert prose-lg max-w-none">
-        <article class="font-inter text-offwhite">
-          <Content />
-        </article>
+  <!-- Alternating Content Sections -->
+  {sections.map((section, index) => (
+    <section class:list={[
+      'border-t border-white/5',
+      section.reverse && 'bg-surface/30'
+    ]}>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Text -->
+          <div class:list={[section.reverse && 'lg:order-2']}>
+            <span class="font-mono text-xs text-cyan/60 uppercase tracking-[0.2em]">
+              0{index + 1}
+            </span>
+            <h2 class="font-space font-bold text-2xl lg:text-3xl text-offwhite mt-2 mb-6 tracking-tight">
+              {section.title}
+            </h2>
+            <p class="font-inter text-slategray leading-relaxed">
+              {section.description}
+            </p>
+          </div>
+          
+          <!-- Image -->
+          <div class:list={[section.reverse && 'lg:order-1']}>
+            <div class="relative">
+              <div class="relative bg-surface rounded-2xl border border-white/5 overflow-hidden">
+                <img 
+                  src={section.image} 
+                  alt={section.imageAlt}
+                  class="w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- MDX Content Section -->
+  <section class="border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl">
+        <h2 class="font-space font-bold text-2xl lg:text-3xl text-offwhite mb-8 tracking-tight">
+          Details
+        </h2>
+        <div class="prose prose-invert prose-lg max-w-none">
+          <article class="font-inter text-offwhite">
+            <Content />
+          </article>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-surface brutal-border p-8 lg:p-16 text-center">
-        <h2 class="font-space font-bold text-3xl lg:text-4xl text-offwhite">
-          Geïnteresseerd in <span class="text-cyan">{service.data.title}</span>?
-        </h2>
-        <p class="font-inter text-slategray mt-4 max-w-xl mx-auto">
-          Laten we bespreken hoe ik jouw bedrijf kan helpen met deze dienst.
-          Samen werken we aan jouw online groei.
-        </p>
-        <div class="mt-8">
-          <Button href={url('/contact')} variant="primary" size="lg">
-            Plan een gesprek
-          </Button>
+  <section class="border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="relative bg-surface rounded-3xl border border-white/5 p-10 lg:p-16 text-center overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-cyan/5 rounded-full blur-[100px]"></div>
+        <div class="relative">
+          <h2 class="font-space font-bold text-3xl lg:text-4xl text-offwhite tracking-tight">
+            Geïnteresseerd in <span class="text-cyan">{service.data.title}</span>?
+          </h2>
+          <p class="font-inter text-slategray mt-4 max-w-xl mx-auto leading-relaxed">
+            Laten we bespreken hoe ik jouw bedrijf kan helpen met deze dienst.
+            Samen werken we aan jouw online groei.
+          </p>
+          <div class="mt-8">
+            <Button href={url('/contact/')} variant="primary" size="lg">
+              Plan een gesprek
+            </Button>
+          </div>
         </div>
       </div>
     </div>

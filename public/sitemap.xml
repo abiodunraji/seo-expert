@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sitemap generated for SEO Expert website -->
+<!-- Last updated: 2026-04-03 -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home Page - Highest Priority -->
+  <url>
+    <loc>https://iwanstepanova.com/</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://iwanstepanova.com/over</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://iwanstepanova.com/contact</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Services Index -->
+  <url>
+    <loc>https://iwanstepanova.com/services/</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Services Dynamic Pages - Update slugs as needed -->
+  <url>
+    <loc>https://iwanstepanova.com/services/seo-audit</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://iwanstepanova.com/services/keyword-research</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://iwanstepanova.com/services/on-page-optimization</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://iwanstepanova.com/services/link-building</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Cases - temporarily disabled, re-add later -->
+  <!--
+  <url>
+    <loc>https://iwanstepanova.com/cases/</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://iwanstepanova.com/cases/ecommerce-seo-success</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://iwanstepanova.com/images/cases/ecommerce-seo-success.png</image:loc>
+      <image:caption>E-commerce SEO Success Case Study</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://iwanstepanova.com/cases/local-business-growth</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://iwanstepanova.com/images/cases/local-business-growth.png</image:loc>
+      <image:caption>Local Business Growth Case Study</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://iwanstepanova.com/cases/technical-seo-optimization</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://iwanstepanova.com/images/cases/technical-seo-optimization.png</image:loc>
+      <image:caption>Technical SEO Optimization Case Study</image:caption>
+    </image:image>
+  </url>
+  -->
+
+  <!-- Home Page Images -->
+  <url>
+    <loc>https://iwanstepanova.com/</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://iwanstepanova.com/images/hero.png</image:loc>
+      <image:caption>SEO Expert Hero Image</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://iwanstepanova.com/images/logo.png</image:loc>
+      <image:caption>SEO Expert Logo</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Services Page Images -->
+  <url>
+    <loc>https://iwanstepanova.com/services/</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://iwanstepanova.com/images/services/overview.png</image:loc>
+      <image:caption>Services Overview</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
