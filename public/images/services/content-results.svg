@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3C210C" stroke-opacity="0.06" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="#FAF8F5"/>
+  <rect width="800" height="600" fill="url(#grid)"/>
+  <path d="M 30 30 L 60 30 M 30 30 L 30 60" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <path d="M 770 30 L 740 30 M 770 30 L 770 60" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <path d="M 30 570 L 60 570 M 30 570 L 30 540" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <path d="M 770 570 L 740 570 M 770 570 L 770 540" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <polygon points="350,280 420,260 420,300" fill="none" stroke="#3C210C" stroke-width="2.5"/>
+  <rect x="420" y="270" width="40" height="20" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <path d="M 460,265 Q 500,250 520,260" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <path d="M 460,280 Q 510,270 540,285" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <path d="M 460,295 Q 500,300 520,310" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <path d="M 520,260 Q 540,255 550,265" fill="none" stroke="#3C210C" stroke-width="1.5"/>
+  <path d="M 540,285 Q 560,280 570,295" fill="none" stroke="#3C210C" stroke-width="1.5"/>
+  <path d="M 520,310 Q 535,315 545,325" fill="none" stroke="#3C210C" stroke-width="1.5"/>
+  <text x="400" y="550" text-anchor="middle" font-family="monospace" font-size="14" fill="#3C210C">content - results</text>
+</svg>

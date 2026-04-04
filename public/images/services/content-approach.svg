@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3C210C" stroke-opacity="0.06" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="#FAF8F5"/>
+  <rect width="800" height="600" fill="url(#grid)"/>
+  <path d="M 30 30 L 60 30 M 30 30 L 30 60" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <path d="M 770 30 L 740 30 M 770 30 L 770 60" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <path d="M 30 570 L 60 570 M 30 570 L 30 540" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <path d="M 770 570 L 740 570 M 770 570 L 770 540" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <rect x="230" y="160" width="80" height="60" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <rect x="330" y="160" width="80" height="60" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <rect x="430" y="160" width="80" height="60" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <rect x="530" y="160" width="80" height="60" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <rect x="230" y="240" width="80" height="60" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <rect x="330" y="240" width="80" height="60" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <rect x="430" y="240" width="80" height="60" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <rect x="530" y="240" width="80" height="60" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <rect x="230" y="320" width="80" height="60" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <rect x="330" y="320" width="80" height="60" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <rect x="430" y="320" width="80" height="60" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <rect x="530" y="320" width="80" height="60" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <rect x="250" y="175" width="40" height="8" fill="#3C210C" opacity="0.4"/>
+  <rect x="350" y="175" width="40" height="8" fill="#3C210C" opacity="0.4"/>
+  <rect x="450" y="175" width="40" height="8" fill="#3C210C" opacity="0.4"/>
+  <rect x="250" y="255" width="40" height="8" fill="#3C210C" opacity="0.4"/>
+  <rect x="350" y="255" width="40" height="8" fill="#3C210C" opacity="0.4"/>
+  <rect x="450" y="255" width="40" height="8" fill="#3C210C" opacity="0.4"/>
+  <rect x="250" y="335" width="40" height="8" fill="#3C210C" opacity="0.4"/>
+  <rect x="350" y="335" width="40" height="8" fill="#3C210C" opacity="0.4"/>
+  <circle cx="470" cy="350" r="15" fill="none" stroke="#3C210C" stroke-width="2.5"/>
+  <text x="400" y="550" text-anchor="middle" font-family="monospace" font-size="14" fill="#3C210C">content - approach</text>
+</svg>

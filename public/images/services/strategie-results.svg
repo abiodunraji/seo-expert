@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#FAF8F5"/>
+  <rect x="0" y="0" width="800" height="600" fill="url(#grid)" opacity="0.03"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3C210C" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <path d="M 340 200 L 460 200 L 440 320 L 360 320Z" stroke="#3C210C" stroke-width="2" fill="#FFFFFF"/>
+  <rect x="380" y="320" width="40" height="30" fill="#FFFFFF" stroke="#3C210C" stroke-width="2"/>
+  <rect x="360" y="350" width="80" height="15" rx="4" fill="#FFFFFF" stroke="#3C210C" stroke-width="2"/>
+  <path d="M 340 220 C 300 220 300 280 340 280" stroke="#3C210C" stroke-width="2" fill="none"/>
+  <path d="M 460 220 C 500 220 500 280 460 280" stroke="#3C210C" stroke-width="2" fill="none"/>
+  <path d="M 400 240 L 405 255 L 420 255 L 408 265 L 412 280 L 400 270 L 388 280 L 392 265 L 380 255 L 395 255Z" fill="#3C210C" opacity="0.5"/>
+  <polyline points="250,400 300,360 350,380 400,320" stroke="#3C210C" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="400,310 410,325 390,325" fill="#3C210C"/>
+  <path d="M 100 100 L 100 140 M 100 100 L 140 100" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <path d="M 700 100 L 700 140 M 700 100 L 660 100" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <path d="M 100 500 L 100 460 M 100 500 L 140 500" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <path d="M 700 500 L 700 460 M 700 500 L 660 500" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <text x="400" y="520" text-anchor="middle" font-family="monospace" font-size="14" fill="#3C210C" opacity="0.4">RESULTATEN</text>
+</svg>

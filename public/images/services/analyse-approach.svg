@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3C210C" stroke-opacity="0.06" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="#FAF8F5"/>
+  <rect width="800" height="600" fill="url(#grid)"/>
+  <path d="M 30 30 L 60 30 M 30 30 L 30 60" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <path d="M 770 30 L 740 30 M 770 30 L 770 60" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <path d="M 30 570 L 60 570 M 30 570 L 30 540" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <path d="M 770 570 L 740 570 M 770 570 L 770 540" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <polygon points="300,140 500,140 460,220 340,220" fill="none" stroke="#3C210C" stroke-width="2.5"/>
+  <polygon points="340,220 460,220 440,300 360,300" fill="none" stroke="#3C210C" stroke-width="2.5"/>
+  <polygon points="360,300 440,300 420,380 380,380" fill="none" stroke="#3C210C" stroke-width="2.5"/>
+  <rect x="385" y="380" width="30" height="40" fill="none" stroke="#3C210C" stroke-width="2.5"/>
+  <line x1="400" y1="420" x2="400" y2="450" stroke="#3C210C" stroke-width="2"/>
+  <circle cx="400" cy="460" r="10" fill="none" stroke="#3C210C" stroke-width="2"/>
+  <line x1="350" y1="180" x2="450" y2="180" stroke="#3C210C" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="355" y1="260" x2="445" y2="260" stroke="#3C210C" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="370" y1="340" x2="430" y2="340" stroke="#3C210C" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <text x="400" y="550" text-anchor="middle" font-family="monospace" font-size="14" fill="#3C210C">analyse - approach</text>
+</svg>
