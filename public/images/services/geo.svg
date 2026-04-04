@@ -3,32 +3,32 @@
   <rect x="0" y="0" width="800" height="600" fill="url(#grid)" opacity="0.05"/>
   <defs>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00F5FF" stroke-width="1"/>
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3C210C" stroke-width="1"/>
     </pattern>
   </defs>
   <!-- Brain/AI icon -->
-  <circle cx="400" cy="280" r="80" stroke="#00F5FF" stroke-width="2" fill="none" opacity="0.3"/>
+  <circle cx="400" cy="280" r="80" stroke="#3C210C" stroke-width="2" fill="none" opacity="0.3"/>
   <!-- Neural network nodes -->
-  <circle cx="340" cy="220" r="12" fill="#00F5FF" opacity="0.6"/>
-  <circle cx="460" cy="220" r="12" fill="#00F5FF" opacity="0.6"/>
-  <circle cx="340" cy="340" r="12" fill="#00F5FF" opacity="0.6"/>
-  <circle cx="460" cy="340" r="12" fill="#00F5FF" opacity="0.6"/>
-  <circle cx="400" cy="280" r="16" fill="#00F5FF" opacity="0.8"/>
+  <circle cx="340" cy="220" r="12" fill="#3C210C" opacity="0.6"/>
+  <circle cx="460" cy="220" r="12" fill="#3C210C" opacity="0.6"/>
+  <circle cx="340" cy="340" r="12" fill="#3C210C" opacity="0.6"/>
+  <circle cx="460" cy="340" r="12" fill="#3C210C" opacity="0.6"/>
+  <circle cx="400" cy="280" r="16" fill="#3C210C" opacity="0.8"/>
   <!-- Connections -->
-  <line x1="352" y1="220" x2="384" y2="280" stroke="#00F5FF" stroke-width="1.5" opacity="0.4"/>
-  <line x1="448" y1="220" x2="416" y2="280" stroke="#00F5FF" stroke-width="1.5" opacity="0.4"/>
-  <line x1="352" y1="340" x2="384" y2="280" stroke="#00F5FF" stroke-width="1.5" opacity="0.4"/>
-  <line x1="448" y1="340" x2="416" y2="280" stroke="#00F5FF" stroke-width="1.5" opacity="0.4"/>
-  <line x1="340" y1="232" x2="340" y2="328" stroke="#00F5FF" stroke-width="1" opacity="0.2"/>
-  <line x1="460" y1="232" x2="460" y2="328" stroke="#00F5FF" stroke-width="1" opacity="0.2"/>
+  <line x1="352" y1="220" x2="384" y2="280" stroke="#3C210C" stroke-width="1.5" opacity="0.4"/>
+  <line x1="448" y1="220" x2="416" y2="280" stroke="#3C210C" stroke-width="1.5" opacity="0.4"/>
+  <line x1="352" y1="340" x2="384" y2="280" stroke="#3C210C" stroke-width="1.5" opacity="0.4"/>
+  <line x1="448" y1="340" x2="416" y2="280" stroke="#3C210C" stroke-width="1.5" opacity="0.4"/>
+  <line x1="340" y1="232" x2="340" y2="328" stroke="#3C210C" stroke-width="1" opacity="0.2"/>
+  <line x1="460" y1="232" x2="460" y2="328" stroke="#3C210C" stroke-width="1" opacity="0.2"/>
   <!-- Sparkle effects -->
-  <path d="M 250 180 L 255 170 L 260 180 L 255 190Z" fill="#00F5FF" opacity="0.4"/>
-  <path d="M 550 200 L 555 190 L 560 200 L 555 210Z" fill="#00F5FF" opacity="0.4"/>
-  <path d="M 280 400 L 285 390 L 290 400 L 285 410Z" fill="#00F5FF" opacity="0.4"/>
+  <path d="M 250 180 L 255 170 L 260 180 L 255 190Z" fill="#3C210C" opacity="0.4"/>
+  <path d="M 550 200 L 555 190 L 560 200 L 555 210Z" fill="#3C210C" opacity="0.4"/>
+  <path d="M 280 400 L 285 390 L 290 400 L 285 410Z" fill="#3C210C" opacity="0.4"/>
   <!-- Corner brackets -->
-  <path d="M 100 100 L 100 140 M 100 100 L 140 100" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
-  <path d="M 700 100 L 700 140 M 700 100 L 660 100" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
-  <path d="M 100 500 L 100 460 M 100 500 L 140 500" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
-  <path d="M 700 500 L 700 460 M 700 500 L 660 500" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
-  <text x="400" y="520" text-anchor="middle" font-family="monospace" font-size="14" fill="#00F5FF" opacity="0.5">GEO</text>
+  <path d="M 100 100 L 100 140 M 100 100 L 140 100" stroke="#3C210C" stroke-width="2" opacity="0.3"/>
+  <path d="M 700 100 L 700 140 M 700 100 L 660 100" stroke="#3C210C" stroke-width="2" opacity="0.3"/>
+  <path d="M 100 500 L 100 460 M 100 500 L 140 500" stroke="#3C210C" stroke-width="2" opacity="0.3"/>
+  <path d="M 700 500 L 700 460 M 700 500 L 660 500" stroke="#3C210C" stroke-width="2" opacity="0.3"/>
+  <text x="400" y="520" text-anchor="middle" font-family="monospace" font-size="14" fill="#3C210C" opacity="0.5">GEO</text>
 </svg>

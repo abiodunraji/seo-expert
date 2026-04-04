@@ -24,15 +24,15 @@ function isActive(path: string): boolean {
 }
 ---
 
-<header class="sticky top-0 z-50 bg-oxford/80 backdrop-blur-xl border-b border-white/5">
+<header class="sticky top-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-neutral-300">
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
     <div class="flex items-center justify-between h-16 lg:h-20">
       <!-- Logo -->
       <a href={url('/')} class="flex items-center gap-2 group">
-        <span class="font-space font-bold text-xl lg:text-2xl text-offwhite group-hover:text-cyan transition-colors duration-300">
+        <span class="font-sans font-bold text-xl lg:text-2xl text-primary group-hover:text-primary-light transition-colors duration-300">
           IWAN
         </span>
-        <span class="font-space font-bold text-xl lg:text-2xl text-cyan">
+        <span class="font-sans font-bold text-xl lg:text-2xl text-primary-light">
           STEPANOVA
         </span>
       </a>
@@ -43,10 +43,10 @@ function isActive(path: string): boolean {
           <a
             href={url(item.path)}
             class:list={[
-              'font-inter text-sm transition-colors duration-300 px-4 py-2 rounded-full',
+              'font-sans text-sm font-medium transition-colors duration-300 px-4 py-2 rounded-lg',
               isActive(item.path) 
-                ? 'text-cyan bg-cyan/10' 
-                : 'text-slategray hover:text-offwhite hover:bg-white/5'
+                ? 'text-primary bg-primary/10' 
+                : 'text-neutral-500 hover:text-primary hover:bg-neutral-100'
             ]}
           >
             {item.label}
@@ -57,7 +57,7 @@ function isActive(path: string): boolean {
       <!-- Mobile Menu Button -->
       <button
         type="button"
-        class="lg:hidden p-2 text-offwhite hover:text-cyan transition-colors duration-300"
+        class="lg:hidden p-2 text-primary hover:text-primary-light transition-colors duration-300"
         aria-label="Toggle menu"
         id="mobile-menu-btn"
       >
@@ -69,15 +69,15 @@ function isActive(path: string): boolean {
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden lg:hidden">
-      <div class="px-4 py-4 space-y-2 border-t border-white/5">
+      <div class="px-4 py-4 space-y-2 border-t border-neutral-300">
         {navItems.map((item) => (
           <a
             href={url(item.path)}
             class:list={[
-              'block font-inter text-lg py-3 px-4 rounded-xl transition-colors duration-300',
+              'block font-sans text-lg font-medium py-3 px-4 rounded-lg transition-colors duration-300',
               isActive(item.path) 
-                ? 'text-cyan bg-cyan/10' 
-                : 'text-slategray hover:text-offwhite hover:bg-white/5'
+                ? 'text-primary bg-primary/10' 
+                : 'text-neutral-500 hover:text-primary hover:bg-neutral-100'
             ]}
           >
             {item.label}

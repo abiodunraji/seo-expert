@@ -3,24 +3,24 @@
   <rect x="0" y="0" width="800" height="600" fill="url(#grid)" opacity="0.05"/>
   <defs>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00F5FF" stroke-width="1"/>
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3C210C" stroke-width="1"/>
     </pattern>
   </defs>
   <!-- Target icon -->
-  <circle cx="400" cy="280" r="120" stroke="#00F5FF" stroke-width="3" fill="none"/>
-  <circle cx="400" cy="280" r="80" stroke="#00F5FF" stroke-width="2" fill="none" opacity="0.6"/>
-  <circle cx="400" cy="280" r="40" stroke="#00F5FF" stroke-width="2" fill="none" opacity="0.3"/>
-  <circle cx="400" cy="280" r="8" fill="#00F5FF"/>
+  <circle cx="400" cy="280" r="120" stroke="#3C210C" stroke-width="3" fill="none"/>
+  <circle cx="400" cy="280" r="80" stroke="#3C210C" stroke-width="2" fill="none" opacity="0.6"/>
+  <circle cx="400" cy="280" r="40" stroke="#3C210C" stroke-width="2" fill="none" opacity="0.3"/>
+  <circle cx="400" cy="280" r="8" fill="#3C210C"/>
   <!-- Crosshairs -->
-  <line x1="400" y1="140" x2="400" y2="200" stroke="#00F5FF" stroke-width="2" opacity="0.4"/>
-  <line x1="400" y1="360" x2="400" y2="420" stroke="#00F5FF" stroke-width="2" opacity="0.4"/>
-  <line x1="260" y1="280" x2="320" y2="280" stroke="#00F5FF" stroke-width="2" opacity="0.4"/>
-  <line x1="480" y1="280" x2="540" y2="280" stroke="#00F5FF" stroke-width="2" opacity="0.4"/>
+  <line x1="400" y1="140" x2="400" y2="200" stroke="#3C210C" stroke-width="2" opacity="0.4"/>
+  <line x1="400" y1="360" x2="400" y2="420" stroke="#3C210C" stroke-width="2" opacity="0.4"/>
+  <line x1="260" y1="280" x2="320" y2="280" stroke="#3C210C" stroke-width="2" opacity="0.4"/>
+  <line x1="480" y1="280" x2="540" y2="280" stroke="#3C210C" stroke-width="2" opacity="0.4"/>
   <!-- Corner brackets -->
-  <path d="M 100 100 L 100 140 M 100 100 L 140 100" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
-  <path d="M 700 100 L 700 140 M 700 100 L 660 100" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
-  <path d="M 100 500 L 100 460 M 100 500 L 140 500" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
-  <path d="M 700 500 L 700 460 M 700 500 L 660 500" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
+  <path d="M 100 100 L 100 140 M 100 100 L 140 100" stroke="#3C210C" stroke-width="2" opacity="0.3"/>
+  <path d="M 700 100 L 700 140 M 700 100 L 660 100" stroke="#3C210C" stroke-width="2" opacity="0.3"/>
+  <path d="M 100 500 L 100 460 M 100 500 L 140 500" stroke="#3C210C" stroke-width="2" opacity="0.3"/>
+  <path d="M 700 500 L 700 460 M 700 500 L 660 500" stroke="#3C210C" stroke-width="2" opacity="0.3"/>
   <!-- Label -->
-  <text x="400" y="520" text-anchor="middle" font-family="monospace" font-size="14" fill="#00F5FF" opacity="0.5">STRATEGIE</text>
+  <text x="400" y="520" text-anchor="middle" font-family="monospace" font-size="14" fill="#3C210C" opacity="0.5">STRATEGIE</text>
 </svg>

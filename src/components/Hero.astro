@@ -20,22 +20,22 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative overflow-hidden py-20 lg:py-32">
+<section class="relative overflow-hidden py-20 lg:py-32 bg-surface-alt">
   <!-- Background Gradient -->
-  <div class="absolute inset-0 bg-gradient-radial from-cyan/5 via-transparent to-transparent opacity-50"></div>
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-cyan/5 rounded-full blur-[120px]"></div>
+  <div class="absolute inset-0 bg-gradient-radial from-accent/10 via-transparent to-transparent opacity-50"></div>
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[120px]"></div>
 
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
       <!-- Text Content -->
       <div class="space-y-6 lg:space-y-8">
-        <h1 class="font-space font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.1] tracking-tight">
-          <span class="block text-offwhite">{title.split(' ').slice(0, 4).join(' ')}</span>
-          <span class="block text-cyan">{title.split(' ').slice(4).join(' ')}</span>
+        <h1 class="font-sans font-semibold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.1] tracking-tight">
+          <span class="block text-primary">{title.split(' ').slice(0, 4).join(' ')}</span>
+          <span class="block text-primary-light">{title.split(' ').slice(4).join(' ')}</span>
         </h1>
         
         {subtitle && (
-          <p class="font-inter text-lg lg:text-xl text-slategray max-w-xl leading-relaxed">
+          <p class="font-sans text-lg lg:text-xl text-neutral-500 max-w-xl leading-relaxed">
             {subtitle}
           </p>
         )}
@@ -43,7 +43,7 @@ const {
         <div class="flex flex-wrap gap-4">
           <a 
             href={ctaHref}
-            class="inline-flex items-center justify-center font-mono text-sm uppercase tracking-wider bg-cyan text-oxford px-8 py-4 rounded-full transition-all duration-300 hover:bg-offwhite"
+            class="inline-flex items-center justify-center font-sans font-medium text-sm bg-primary text-white px-8 py-4 rounded-lg transition-all duration-300 hover:bg-primary-light hover:shadow-medium"
           >
             {ctaText}
             <svg 
@@ -62,8 +62,8 @@ const {
       <!-- Image / Visual -->
       {showImage && (
         <div class="relative">
-          <div class="absolute inset-0 bg-cyan/5 rounded-3xl blur-3xl"></div>
-          <div class="relative bg-surface rounded-3xl border border-white/5 overflow-hidden shadow-soft">
+          <div class="absolute inset-0 bg-accent/5 rounded-2xl blur-3xl"></div>
+          <div class="relative bg-surface rounded-2xl border border-neutral-300 overflow-hidden shadow-soft">
             <img 
               src={url('/images/iwan.png')} 
               alt={imageAlt} 
