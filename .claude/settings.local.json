@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.clarionhealth.com)",
+      "WebFetch(domain:myagency-wbs-miw.webflow.io)",
+      "Bash(npx astro:*)",
+      "Bash(npm run:*)"
+    ]
+  }
+}

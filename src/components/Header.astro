@@ -24,16 +24,16 @@ function isActive(path: string): boolean {
 }
 ---
 
-<header class="sticky top-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-neutral-300">
+<header class="sticky top-0 z-50 bg-surface/80 backdrop-blur-xl header-signal">
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
     <div class="flex items-center justify-between h-16 lg:h-20">
       <!-- Logo -->
-      <a href={url('/')} class="flex items-center gap-2 group">
-        <span class="font-sans font-bold text-xl lg:text-2xl text-primary group-hover:text-primary-light transition-colors duration-300">
-          IWAN
+      <a href={url('/')} class="flex items-center gap-1.5 group">
+        <span class="font-display italic text-xl lg:text-2xl text-primary group-hover:text-primary-light transition-colors duration-300">
+          Iwan
         </span>
-        <span class="font-sans font-bold text-xl lg:text-2xl text-primary-light">
-          STEPANOVA
+        <span class="font-sans font-bold text-xl lg:text-2xl text-primary-light tracking-tight">
+          Stepanova
         </span>
       </a>
 
@@ -43,10 +43,10 @@ function isActive(path: string): boolean {
           <a
             href={url(item.path)}
             class:list={[
-              'font-sans text-sm font-medium transition-colors duration-300 px-4 py-2 rounded-lg',
-              isActive(item.path) 
-                ? 'text-primary bg-primary/10' 
-                : 'text-neutral-500 hover:text-primary hover:bg-neutral-100'
+              'nav-signal font-sans text-sm font-medium transition-colors duration-300 px-4 py-2 rounded-lg',
+              isActive(item.path)
+                ? 'text-primary bg-accent/10'
+                : 'text-neutral-500 hover:text-primary hover:bg-neutral-100/70'
             ]}
           >
             {item.label}

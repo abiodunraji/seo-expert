@@ -20,18 +20,46 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative overflow-hidden py-20 lg:py-32 bg-surface-alt">
+<section class="relative overflow-hidden py-20 lg:py-32 bg-surface-alt dot-grid">
   <!-- Background Gradient -->
-  <div class="absolute inset-0 bg-gradient-radial from-accent/10 via-transparent to-transparent opacity-50"></div>
   <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[120px]"></div>
+
+  <!-- Constellation SVG motif (top-right, desktop only) -->
+  <svg class="hidden lg:block absolute top-12 right-16 pointer-events-none select-none" width="340" height="260" viewBox="0 0 340 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <!-- Primary edges from central node -->
+    <line x1="170" y1="130" x2="60"  y2="48"  stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0s"/>
+    <line x1="170" y1="130" x2="280" y2="62"  stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.1s"/>
+    <line x1="170" y1="130" x2="305" y2="185" stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.2s"/>
+    <line x1="170" y1="130" x2="120" y2="220" stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.3s"/>
+    <line x1="170" y1="130" x2="42"  y2="165" stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.4s"/>
+    <!-- Secondary cross-edges -->
+    <line x1="60"  y1="48"  x2="280" y2="62"  stroke="#C8A882" stroke-width="0.5"  opacity="0.18" class="constellation-line" style="animation-delay: 0.5s"/>
+    <line x1="60"  y1="48"  x2="42"  y2="165" stroke="#C8A882" stroke-width="0.5"  opacity="0.18" class="constellation-line" style="animation-delay: 0.52s"/>
+    <line x1="280" y1="62"  x2="305" y2="185" stroke="#C8A882" stroke-width="0.5"  opacity="0.18" class="constellation-line" style="animation-delay: 0.55s"/>
+    <line x1="42"  y1="165" x2="120" y2="220" stroke="#C8A882" stroke-width="0.5"  opacity="0.18" class="constellation-line" style="animation-delay: 0.58s"/>
+    <!-- Satellite spurs -->
+    <line x1="60"  y1="48"  x2="22"  y2="18"  stroke="#C8A882" stroke-width="0.5"  opacity="0.15" class="constellation-line" style="animation-delay: 0.65s"/>
+    <line x1="280" y1="62"  x2="328" y2="30"  stroke="#C8A882" stroke-width="0.5"  opacity="0.15" class="constellation-line" style="animation-delay: 0.7s"/>
+    <line x1="305" y1="185" x2="335" y2="238" stroke="#C8A882" stroke-width="0.5"  opacity="0.15" class="constellation-line" style="animation-delay: 0.75s"/>
+    <!-- Nodes -->
+    <circle cx="170" cy="130" r="4.5" fill="#C8A882" opacity="0.65" class="constellation-node" style="--node-opacity: 0.65; animation-delay: 0.15s"/>
+    <circle cx="60"  cy="48"  r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.5s"/>
+    <circle cx="280" cy="62"  r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.55s"/>
+    <circle cx="305" cy="185" r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.6s"/>
+    <circle cx="120" cy="220" r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.65s"/>
+    <circle cx="42"  cy="165" r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.7s"/>
+    <circle cx="22"  cy="18"  r="1.6" fill="#C8A882" opacity="0.30" class="constellation-node" style="--node-opacity: 0.30; animation-delay: 0.85s"/>
+    <circle cx="328" cy="30"  r="1.6" fill="#C8A882" opacity="0.30" class="constellation-node" style="--node-opacity: 0.30; animation-delay: 0.9s"/>
+    <circle cx="335" cy="238" r="1.6" fill="#C8A882" opacity="0.30" class="constellation-node" style="--node-opacity: 0.30; animation-delay: 0.95s"/>
+  </svg>
 
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
       <!-- Text Content -->
       <div class="space-y-6 lg:space-y-8">
-        <h1 class="font-sans font-semibold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.1] tracking-tight">
-          <span class="block text-primary">{title.split(' ').slice(0, 4).join(' ')}</span>
-          <span class="block text-primary-light">{title.split(' ').slice(4).join(' ')}</span>
+        <h1 class="font-semibold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.1] tracking-tight">
+          <span class="block font-display italic text-primary">{title.split(' ').slice(0, 3).join(' ')}</span>
+          <span class="block font-sans text-primary-light">{title.split(' ').slice(3).join(' ')}</span>
         </h1>
         
         {subtitle && (
@@ -41,9 +69,9 @@ const {
         )}
 
         <div class="flex flex-wrap gap-4">
-          <a 
+          <a
             href={ctaHref}
-            class="inline-flex items-center justify-center font-sans font-medium text-sm bg-primary text-white px-8 py-4 rounded-lg transition-all duration-300 hover:bg-primary-light hover:shadow-medium"
+            class="inline-flex items-center justify-center font-sans font-medium text-sm bg-primary text-white px-8 py-4 rounded-lg transition-all duration-300 hover:bg-primary-light hover:shadow-medium btn-amber-glow"
           >
             {ctaText}
             <svg 

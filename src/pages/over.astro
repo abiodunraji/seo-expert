@@ -4,36 +4,58 @@ import Button from '../components/Button.astro';
 import { url } from '../lib/urls';
 ---
 
-<BaseLayout 
+<BaseLayout
   title="Over Iwan Stepanova"
   description="Leer Iwan Stepanova kennen — SEO expert met een strategische blik op zoekmachine optimalisatie en content architectuur."
 >
   <!-- Hero Section -->
-  <section class="py-20 lg:py-28 bg-surface-alt">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="relative overflow-hidden py-20 lg:py-28 bg-surface-alt dot-grid">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-accent/5 rounded-full blur-[120px]"></div>
+
+    <!-- Constellation (desktop only) -->
+    <svg class="hidden lg:block absolute top-10 right-14 pointer-events-none select-none" width="280" height="220" viewBox="0 0 280 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <line x1="140" y1="110" x2="48"  y2="38"  stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0s"/>
+      <line x1="140" y1="110" x2="235" y2="55"  stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.1s"/>
+      <line x1="140" y1="110" x2="255" y2="158" stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.2s"/>
+      <line x1="140" y1="110" x2="95"  y2="188" stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.3s"/>
+      <line x1="140" y1="110" x2="32"  y2="140" stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.4s"/>
+      <line x1="48"  y1="38"  x2="235" y2="55"  stroke="#C8A882" stroke-width="0.5"  opacity="0.18" class="constellation-line" style="animation-delay: 0.5s"/>
+      <line x1="32"  y1="140" x2="95"  y2="188" stroke="#C8A882" stroke-width="0.5"  opacity="0.18" class="constellation-line" style="animation-delay: 0.55s"/>
+      <line x1="48"  y1="38"  x2="18"  y2="12"  stroke="#C8A882" stroke-width="0.5"  opacity="0.15" class="constellation-line" style="animation-delay: 0.65s"/>
+      <line x1="235" y1="55"  x2="270" y2="22"  stroke="#C8A882" stroke-width="0.5"  opacity="0.15" class="constellation-line" style="animation-delay: 0.7s"/>
+      <circle cx="140" cy="110" r="4.5" fill="#C8A882" opacity="0.65" class="constellation-node" style="--node-opacity: 0.65; animation-delay: 0.15s"/>
+      <circle cx="48"  cy="38"  r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.5s"/>
+      <circle cx="235" cy="55"  r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.55s"/>
+      <circle cx="255" cy="158" r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.6s"/>
+      <circle cx="95"  cy="188" r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.65s"/>
+      <circle cx="32"  cy="140" r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.7s"/>
+      <circle cx="18"  cy="12"  r="1.6" fill="#C8A882" opacity="0.30" class="constellation-node" style="--node-opacity: 0.30; animation-delay: 0.8s"/>
+      <circle cx="270" cy="22"  r="1.6" fill="#C8A882" opacity="0.30" class="constellation-node" style="--node-opacity: 0.30; animation-delay: 0.85s"/>
+    </svg>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <!-- Content -->
         <div>
-          <span class="font-mono text-xs uppercase tracking-[0.15em] text-primary-light">
-            Over mij
-          </span>
-          <h1 class="font-sans font-semibold text-4xl lg:text-5xl xl:text-6xl text-primary mt-4 tracking-tight">
-            Iwan <span class="text-primary-light">Stepanova</span>
+          <span class="section-label">Over mij</span>
+          <h1 class="font-semibold text-4xl lg:text-5xl xl:text-6xl mt-5 tracking-tight leading-[1.1]">
+            <span class="font-display italic text-primary block">Iwan</span>
+            <span class="font-sans text-primary-light block">Stepanova</span>
           </h1>
           <p class="font-sans text-lg text-neutral-500 mt-6 leading-relaxed">
-            Strategisch SEO architect met een passie voor groei. 
-            Ik help ondernemingen om te domineren in zoekmachines door slimme strategieën 
+            Strategisch SEO architect met een passie voor groei.
+            Ik help ondernemingen om te domineren in zoekmachines door slimme strategieën
             en toekomstbestendige technologieën.
           </p>
         </div>
-        
+
         <!-- Image -->
         <div class="relative">
           <div class="absolute inset-0 bg-accent/5 rounded-2xl blur-3xl"></div>
           <div class="relative bg-surface rounded-2xl border border-neutral-300 overflow-hidden shadow-soft">
-            <img 
-              src={url('/images/iwan.png')} 
-              alt="Iwan Stepanova" 
+            <img
+              src={url('/images/iwan.png')}
+              alt="Iwan Stepanova"
               class="w-full h-full object-cover"
             />
           </div>
@@ -43,23 +65,21 @@ import { url } from '../lib/urls';
   </section>
 
   <!-- Background Section -->
-  <section class="border-t border-neutral-300 bg-surface">
+  <section class="signal-section bg-surface">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
       <div class="max-w-2xl">
-        <span class="font-mono text-xs uppercase tracking-[0.15em] text-primary-light">
-          Mijn achtergrond
-        </span>
-        <h2 class="font-sans font-semibold text-2xl lg:text-3xl text-primary mt-4 mb-6 tracking-tight">
+        <span class="section-label">Mijn achtergrond</span>
+        <h2 class="font-sans font-semibold text-2xl lg:text-3xl text-primary mt-5 mb-6 tracking-tight">
           Ervaring die het verschil maakt
         </h2>
         <div class="font-sans text-neutral-500 space-y-4 leading-relaxed">
           <p>
-            Met jaren ervaring in SEO heb ik gezien hoe de industrie is veranderd. 
-            Van traditionele trefwoorden tot AI-gestuurde zoekervaringen — 
+            Met jaren ervaring in SEO heb ik gezien hoe de industrie is veranderd.
+            Van traditionele trefwoorden tot AI-gestuurde zoekervaringen —
             ik help merken om vooruit te blijven.
           </p>
           <p>
-            Mijn aanpak is strategisch: niet zomaar traffic, maar de juiste bezoekers 
+            Mijn aanpak is strategisch: niet zomaar traffic, maar de juiste bezoekers
             die converteren. Ik denk mee over de hele klantreis.
           </p>
         </div>
@@ -68,44 +88,42 @@ import { url } from '../lib/urls';
   </section>
 
   <!-- Values Section -->
-  <section class="border-t border-neutral-300 bg-surface-alt">
+  <section class="signal-section bg-surface-alt dot-grid">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
       <div class="text-center mb-16">
-        <span class="font-mono text-xs uppercase tracking-[0.15em] text-primary-light">
-          Waar ik voor sta
-        </span>
-        <h2 class="font-sans font-semibold text-3xl lg:text-4xl text-primary mt-4 tracking-tight">
+        <span class="section-label">Waar ik voor sta</span>
+        <h2 class="font-sans font-semibold text-3xl lg:text-4xl text-primary mt-5 tracking-tight">
           Mijn <span class="text-primary-light">waarden</span>
         </h2>
       </div>
-      
+
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="card">
+        <div class="card card-signal">
           <h3 class="font-sans font-semibold text-xl text-primary mb-3">
             Strategie eerst
           </h3>
           <p class="font-sans text-neutral-500 text-sm leading-relaxed">
-            Tactiek zonder strategie is als schieten in het donker. 
+            Tactiek zonder strategie is als schieten in het donker.
             Ik zorg voor een doordachte aanpak.
           </p>
         </div>
-        
-        <div class="card">
+
+        <div class="card card-signal">
           <h3 class="font-sans font-semibold text-xl text-primary mb-3">
             Meetbare resultaten
           </h3>
           <p class="font-sans text-neutral-500 text-sm leading-relaxed">
-            Wat niet gemeten wordt, kan niet verbeterd worden. 
+            Wat niet gemeten wordt, kan niet verbeterd worden.
             Ik rapporteer over concrete groei.
           </p>
         </div>
-        
-        <div class="card">
+
+        <div class="card card-signal">
           <h3 class="font-sans font-semibold text-xl text-primary mb-3">
             Toekomstbestendig
           </h3>
           <p class="font-sans text-neutral-500 text-sm leading-relaxed">
-            SEO verandert constant. 
+            SEO verandert constant.
             Ik zorg dat jouw merk klaar is voor wat komen gaat.
           </p>
         </div>
@@ -114,74 +132,81 @@ import { url } from '../lib/urls';
   </section>
 
   <!-- Expertise Section -->
-  <section class="border-t border-neutral-300 bg-surface">
+  <section class="signal-section bg-surface">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
       <div class="text-center mb-16">
-        <span class="font-mono text-xs uppercase tracking-[0.15em] text-primary-light">
-          Expertise
-        </span>
-        <h2 class="font-sans font-semibold text-3xl lg:text-4xl text-primary mt-4 tracking-tight">
+        <span class="section-label">Expertise</span>
+        <h2 class="font-sans font-semibold text-3xl lg:text-4xl text-primary mt-5 tracking-tight">
           Wat ik <span class="text-primary-light">beheers</span>
         </h2>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="card text-center">
-          <span class="font-sans font-bold text-4xl lg:text-5xl text-primary block mb-2">95%</span>
-          <span class="font-sans text-sm text-neutral-500">Technical SEO</span>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="expertise-grid">
+        <div class="card text-center expertise-card">
+          <span class="font-display italic text-5xl text-primary block mb-1" data-expertise="95">95</span>
+          <span class="font-mono text-xs text-accent uppercase tracking-widest">%</span>
+          <span class="font-sans text-sm text-neutral-500 block mt-3">Technical SEO</span>
+          <div class="expertise-bar mt-4"><div class="expertise-fill" data-width="95"></div></div>
         </div>
-        <div class="card text-center">
-          <span class="font-sans font-bold text-4xl lg:text-5xl text-primary block mb-2">90%</span>
-          <span class="font-sans text-sm text-neutral-500">Content Strategie</span>
+        <div class="card text-center expertise-card">
+          <span class="font-display italic text-5xl text-primary block mb-1" data-expertise="90">90</span>
+          <span class="font-mono text-xs text-accent uppercase tracking-widest">%</span>
+          <span class="font-sans text-sm text-neutral-500 block mt-3">Content Strategie</span>
+          <div class="expertise-bar mt-4"><div class="expertise-fill" data-width="90"></div></div>
         </div>
-        <div class="card text-center">
-          <span class="font-sans font-bold text-4xl lg:text-5xl text-primary block mb-2">85%</span>
-          <span class="font-sans text-sm text-neutral-500">Link Building</span>
+        <div class="card text-center expertise-card">
+          <span class="font-display italic text-5xl text-primary block mb-1" data-expertise="85">85</span>
+          <span class="font-mono text-xs text-accent uppercase tracking-widest">%</span>
+          <span class="font-sans text-sm text-neutral-500 block mt-3">Link Building</span>
+          <div class="expertise-bar mt-4"><div class="expertise-fill" data-width="85"></div></div>
         </div>
-        <div class="card text-center">
-          <span class="font-sans font-bold text-4xl lg:text-5xl text-primary block mb-2">92%</span>
-          <span class="font-sans text-sm text-neutral-500">GEO / AI Search</span>
+        <div class="card text-center expertise-card">
+          <span class="font-display italic text-5xl text-primary block mb-1" data-expertise="92">92</span>
+          <span class="font-mono text-xs text-accent uppercase tracking-widest">%</span>
+          <span class="font-sans text-sm text-neutral-500 block mt-3">GEO / AI Search</span>
+          <div class="expertise-bar mt-4"><div class="expertise-fill" data-width="92"></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Approach Section -->
-  <section class="border-t border-neutral-300 bg-surface-alt">
+  <!-- Approach / Werkwijze Section -->
+  <section class="signal-section bg-surface-alt dot-grid">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
       <div class="text-center mb-16">
-        <span class="font-mono text-xs uppercase tracking-[0.15em] text-primary-light">
-          Werkwijze
-        </span>
-        <h2 class="font-sans font-semibold text-3xl lg:text-4xl text-primary mt-4 tracking-tight">
+        <span class="section-label">Werkwijze</span>
+        <h2 class="font-sans font-semibold text-3xl lg:text-4xl text-primary mt-5 tracking-tight">
           Hoe ik <span class="text-primary-light">werk</span>
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div class="text-center md:text-left">
-          <span class="font-sans font-bold text-5xl text-primary/10 block mb-4">01</span>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-10">
+        <div class="relative">
+          <span class="font-display italic text-8xl text-accent/20 leading-none block mb-3 select-none">01</span>
           <h3 class="font-sans font-semibold text-lg text-primary mb-2">Intake</h3>
           <p class="font-sans text-sm text-neutral-500 leading-relaxed">
             We starten met een vrijblijvend gesprek om jouw doelen en uitdagingen te begrijpen.
           </p>
+          <div class="hidden md:block absolute top-10 right-0 w-px h-16 bg-gradient-to-b from-transparent via-neutral-300 to-transparent"></div>
         </div>
-        <div class="text-center md:text-left">
-          <span class="font-sans font-bold text-5xl text-primary/10 block mb-4">02</span>
+        <div class="relative">
+          <span class="font-display italic text-8xl text-accent/20 leading-none block mb-3 select-none">02</span>
           <h3 class="font-sans font-semibold text-lg text-primary mb-2">Analyse</h3>
           <p class="font-sans text-sm text-neutral-500 leading-relaxed">
             Ik onderzoek je huidige situatie, concurrentie en groeikansen in detail.
           </p>
+          <div class="hidden md:block absolute top-10 right-0 w-px h-16 bg-gradient-to-b from-transparent via-neutral-300 to-transparent"></div>
         </div>
-        <div class="text-center md:text-left">
-          <span class="font-sans font-bold text-5xl text-primary/10 block mb-4">03</span>
+        <div class="relative">
+          <span class="font-display italic text-8xl text-accent/20 leading-none block mb-3 select-none">03</span>
           <h3 class="font-sans font-semibold text-lg text-primary mb-2">Strategie</h3>
           <p class="font-sans text-sm text-neutral-500 leading-relaxed">
             Op basis van de analyse ontwikkel ik een op maat gemaakte strategie.
           </p>
+          <div class="hidden md:block absolute top-10 right-0 w-px h-16 bg-gradient-to-b from-transparent via-neutral-300 to-transparent"></div>
         </div>
-        <div class="text-center md:text-left">
-          <span class="font-sans font-bold text-5xl text-primary/10 block mb-4">04</span>
+        <div>
+          <span class="font-display italic text-8xl text-accent/20 leading-none block mb-3 select-none">04</span>
           <h3 class="font-sans font-semibold text-lg text-primary mb-2">Uitvoering</h3>
           <p class="font-sans text-sm text-neutral-500 leading-relaxed">
             We implementeren de strategie en monitoren continu de resultaten.
@@ -192,41 +217,52 @@ import { url } from '../lib/urls';
   </section>
 
   <!-- Tools Section -->
-  <section class="border-t border-neutral-300 bg-surface">
+  <section class="signal-section bg-surface">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
       <div class="text-center mb-16">
-        <span class="font-mono text-xs uppercase tracking-[0.15em] text-primary-light">
-          Tools & Technologie
-        </span>
-        <h2 class="font-sans font-semibold text-3xl lg:text-4xl text-primary mt-4 tracking-tight">
+        <span class="section-label">Tools & Technologie</span>
+        <h2 class="font-sans font-semibold text-3xl lg:text-4xl text-primary mt-5 tracking-tight">
           Mijn <span class="text-primary-light">toolkit</span>
         </h2>
       </div>
 
       <div class="flex flex-wrap justify-center gap-3">
-        <span class="bg-surface-alt border border-neutral-300 px-5 py-2.5 rounded-lg font-sans text-sm text-neutral-500 hover:text-primary hover:border-primary/30 transition-colors duration-300">Google Search Console</span>
-        <span class="bg-surface-alt border border-neutral-300 px-5 py-2.5 rounded-lg font-sans text-sm text-neutral-500 hover:text-primary hover:border-primary/30 transition-colors duration-300">Google Analytics</span>
-        <span class="bg-surface-alt border border-neutral-300 px-5 py-2.5 rounded-lg font-sans text-sm text-neutral-500 hover:text-primary hover:border-primary/30 transition-colors duration-300">Ahrefs</span>
-        <span class="bg-surface-alt border border-neutral-300 px-5 py-2.5 rounded-lg font-sans text-sm text-neutral-500 hover:text-primary hover:border-primary/30 transition-colors duration-300">Screaming Frog</span>
-        <span class="bg-surface-alt border border-neutral-300 px-5 py-2.5 rounded-lg font-sans text-sm text-neutral-500 hover:text-primary hover:border-primary/30 transition-colors duration-300">SEMrush</span>
-        <span class="bg-surface-alt border border-neutral-300 px-5 py-2.5 rounded-lg font-sans text-sm text-neutral-500 hover:text-primary hover:border-primary/30 transition-colors duration-300">Google Tag Manager</span>
-        <span class="bg-surface-alt border border-neutral-300 px-5 py-2.5 rounded-lg font-sans text-sm text-neutral-500 hover:text-primary hover:border-primary/30 transition-colors duration-300">Schema.org</span>
-        <span class="bg-surface-alt border border-neutral-300 px-5 py-2.5 rounded-lg font-sans text-sm text-neutral-500 hover:text-primary hover:border-primary/30 transition-colors duration-300">PageSpeed Insights</span>
+        {['Google Search Console','Google Analytics','Ahrefs','Screaming Frog','SEMrush','Google Tag Manager','Schema.org','PageSpeed Insights'].map(tool => (
+          <span class="group bg-surface-alt border border-neutral-300 px-5 py-2.5 rounded-lg font-sans text-sm text-neutral-500 hover:text-primary hover:border-accent/40 hover:bg-accent/5 transition-all duration-300 cursor-default">
+            {tool}
+          </span>
+        ))}
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="border-t border-neutral-300 bg-surface-alt">
+  <section class="signal-section bg-surface-alt dot-grid">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
       <div class="relative bg-surface rounded-2xl border border-neutral-300 p-10 lg:p-16 text-center overflow-hidden shadow-soft">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent/10 rounded-full blur-[100px]"></div>
+
+        <!-- Constellation motif -->
+        <svg class="absolute bottom-0 right-0 pointer-events-none select-none opacity-60" width="200" height="170" viewBox="0 0 200 170" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <line x1="160" y1="130" x2="80"  y2="80"  stroke="#C8A882" stroke-width="0.75" opacity="0.5" class="constellation-line" style="animation-delay: 0s"/>
+          <line x1="160" y1="130" x2="190" y2="65"  stroke="#C8A882" stroke-width="0.75" opacity="0.5" class="constellation-line" style="animation-delay: 0.1s"/>
+          <line x1="80"  y1="80"  x2="30"  y2="110" stroke="#C8A882" stroke-width="0.75" opacity="0.5" class="constellation-line" style="animation-delay: 0.2s"/>
+          <line x1="80"  y1="80"  x2="110" y2="25"  stroke="#C8A882" stroke-width="0.75" opacity="0.5" class="constellation-line" style="animation-delay: 0.3s"/>
+          <line x1="110" y1="25"  x2="190" y2="65"  stroke="#C8A882" stroke-width="0.5"  opacity="0.2" class="constellation-line" style="animation-delay: 0.4s"/>
+          <line x1="30"  y1="110" x2="160" y2="130" stroke="#C8A882" stroke-width="0.5"  opacity="0.15" class="constellation-line" style="animation-delay: 0.45s"/>
+          <circle cx="80"  cy="80"  r="3.5" fill="#C8A882" opacity="0.6"  class="constellation-node" style="--node-opacity: 0.6;  animation-delay: 0.1s"/>
+          <circle cx="160" cy="130" r="2.2" fill="#C8A882" opacity="0.45" class="constellation-node" style="--node-opacity: 0.45; animation-delay: 0.45s"/>
+          <circle cx="30"  cy="110" r="2.2" fill="#C8A882" opacity="0.45" class="constellation-node" style="--node-opacity: 0.45; animation-delay: 0.5s"/>
+          <circle cx="190" cy="65"  r="2.2" fill="#C8A882" opacity="0.45" class="constellation-node" style="--node-opacity: 0.45; animation-delay: 0.55s"/>
+          <circle cx="110" cy="25"  r="2.2" fill="#C8A882" opacity="0.45" class="constellation-node" style="--node-opacity: 0.45; animation-delay: 0.6s"/>
+        </svg>
+
         <div class="relative">
           <h2 class="font-sans font-semibold text-3xl lg:text-4xl text-primary tracking-tight">
             Klaar om te <span class="text-primary-light">groeien</span>?
           </h2>
           <p class="font-sans text-neutral-500 mt-4 max-w-xl mx-auto leading-relaxed">
-            Laten we samenwerken aan jouw online succes. 
+            Laten we samenwerken aan jouw online succes.
             Neem contact op voor een vrijblijvend gesprek.
           </p>
           <div class="mt-8">
@@ -239,3 +275,26 @@ import { url } from '../lib/urls';
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  // Animate expertise bars on scroll
+  const expertiseObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const fills = entry.target.querySelectorAll('.expertise-fill');
+        fills.forEach((fill) => {
+          const el = fill as HTMLElement;
+          const targetWidth = el.getAttribute('data-width') || '0';
+          // Slight delay so the transition is visible
+          requestAnimationFrame(() => {
+            el.style.width = targetWidth + '%';
+          });
+        });
+        expertiseObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  const expertiseGrid = document.getElementById('expertise-grid');
+  if (expertiseGrid) expertiseObserver.observe(expertiseGrid);
+</script>

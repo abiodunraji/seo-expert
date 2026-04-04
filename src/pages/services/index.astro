@@ -9,21 +9,41 @@ const services = await getCollection('services');
 const sortedServices = services.sort((a, b) => a.data.order - b.data.order);
 ---
 
-<BaseLayout 
+<BaseLayout
   title="Services"
   description="Alle SEO-diensten van Iwan Stepanova: Strategie, Analyse, Content, Technical SEO, Off-page SEO, Local SEO en GEO."
 >
   <!-- Hero Section -->
-  <section class="py-20 lg:py-28 bg-surface-alt">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="relative overflow-hidden py-20 lg:py-28 bg-surface-alt dot-grid">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[600px] bg-accent/5 rounded-full blur-[120px]"></div>
+
+    <!-- Constellation (desktop only) -->
+    <svg class="hidden lg:block absolute top-10 right-14 pointer-events-none select-none" width="260" height="200" viewBox="0 0 260 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <line x1="130" y1="100" x2="42"  y2="35"  stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0s"/>
+      <line x1="130" y1="100" x2="220" y2="48"  stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.1s"/>
+      <line x1="130" y1="100" x2="238" y2="148" stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.2s"/>
+      <line x1="130" y1="100" x2="88"  y2="175" stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.3s"/>
+      <line x1="130" y1="100" x2="28"  y2="130" stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.4s"/>
+      <line x1="42"  y1="35"  x2="220" y2="48"  stroke="#C8A882" stroke-width="0.5"  opacity="0.18" class="constellation-line" style="animation-delay: 0.5s"/>
+      <line x1="28"  y1="130" x2="88"  y2="175" stroke="#C8A882" stroke-width="0.5"  opacity="0.18" class="constellation-line" style="animation-delay: 0.55s"/>
+      <line x1="220" y1="48"  x2="252" y2="18"  stroke="#C8A882" stroke-width="0.5"  opacity="0.15" class="constellation-line" style="animation-delay: 0.65s"/>
+      <circle cx="130" cy="100" r="4.5" fill="#C8A882" opacity="0.65" class="constellation-node" style="--node-opacity: 0.65; animation-delay: 0.15s"/>
+      <circle cx="42"  cy="35"  r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.5s"/>
+      <circle cx="220" cy="48"  r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.55s"/>
+      <circle cx="238" cy="148" r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.6s"/>
+      <circle cx="88"  cy="175" r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.65s"/>
+      <circle cx="28"  cy="130" r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.7s"/>
+      <circle cx="252" cy="18"  r="1.6" fill="#C8A882" opacity="0.30" class="constellation-node" style="--node-opacity: 0.30; animation-delay: 0.8s"/>
+    </svg>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <span class="font-mono text-xs uppercase tracking-[0.15em] text-primary-light">
-          Diensten
-        </span>
-        <h1 class="font-sans font-semibold text-4xl lg:text-5xl xl:text-6xl text-primary mt-4 tracking-tight">
-          Complete <span class="text-primary-light">SEO-expertise</span>
+        <span class="section-label">Diensten</span>
+        <h1 class="font-semibold text-4xl lg:text-5xl xl:text-6xl mt-5 tracking-tight leading-[1.1]">
+          <span class="font-display italic text-primary">Complete</span>
+          <span class="font-sans text-primary-light"> SEO-expertise</span>
         </h1>
-        <p class="font-sans text-neutral-500 mt-4 max-w-2xl mx-auto leading-relaxed">
+        <p class="font-sans text-neutral-500 mt-5 max-w-2xl mx-auto leading-relaxed">
           Van technische optimalisatie tot AI-gestuurde zoekmachine strategie.
           Ik bied alle diensten om jouw merk online te laten domineren.
         </p>
@@ -31,7 +51,7 @@ const sortedServices = services.sort((a, b) => a.data.order - b.data.order);
 
       <BentoGrid columns={3} gap="md" centerLastRow>
         {sortedServices.map((service) => (
-          <ServiceCard 
+          <ServiceCard
             title={service.data.title}
             description={service.data.description}
             icon={service.data.icon}

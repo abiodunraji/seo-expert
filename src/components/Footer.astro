@@ -16,31 +16,29 @@ const footerLinks = [
 ];
 ---
 
-<footer class="bg-surface border-t border-neutral-300">
+<footer class="signal-section bg-surface">
   <!-- Footer Content -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-8">
       <!-- Brand -->
       <div class="lg:col-span-2">
-        <a href={url('/')} class="inline-block mb-6">
-          <span class="font-sans font-bold text-2xl text-primary">
-            IWAN
+        <a href={url('/')} class="inline-flex items-center gap-1.5 mb-6 group">
+          <span class="font-display italic text-2xl text-primary group-hover:text-primary-light transition-colors duration-300">
+            Iwan
           </span>
-          <span class="font-sans font-bold text-2xl text-primary-light">
-            STEPANOVA
+          <span class="font-sans font-bold text-2xl text-primary-light tracking-tight">
+            Stepanova
           </span>
         </a>
         <p class="font-sans text-neutral-500 max-w-md leading-relaxed">
-          De strategische architect voor zoekmachine dominantie. 
+          De strategische architect voor zoekmachine dominantie.
           Technical SEO, Content Architectuur & GEO voor de merken van morgen.
         </p>
       </div>
 
       <!-- Navigation -->
       <div>
-        <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-primary-light mb-6">
-          Navigatie
-        </h3>
+        <h3 class="section-label mb-6">Navigatie</h3>
         <ul class="space-y-3">
           {footerLinks.map((link) => (
             <li>
@@ -57,9 +55,7 @@ const footerLinks = [
 
       <!-- Social -->
       <div>
-        <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-primary-light mb-6">
-          Connect
-        </h3>
+        <h3 class="section-label mb-6">Connect</h3>
         <ul class="space-y-3">
           {socialLinks.map((link) => (
             <li>
@@ -78,7 +74,7 @@ const footerLinks = [
     </div>
 
     <!-- Bottom -->
-    <div class="border-t border-neutral-300 mt-12 pt-8 flex flex-col lg:flex-row justify-between items-center gap-4">
+    <div class="mt-12 pt-8 flex flex-col lg:flex-row justify-between items-center gap-4" style="border-top: 1px solid; border-image: linear-gradient(to right, transparent 0%, #D4CFC7 20%, #C8A882 50%, #D4CFC7 80%, transparent 100%) 1;">
       <p class="font-sans text-sm text-neutral-500/50">
         © {currentYear} Iwan Stepanova. All rights reserved.
       </p>
