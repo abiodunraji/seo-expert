@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#FAF8F5"/>
+  <rect x="0" y="0" width="800" height="600" fill="url(#grid)" opacity="0.03"/>
+  <defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3C210C" stroke-width="1"/></pattern></defs>
+  <path d="M 350 200 C 350 200 300 250 300 300 C 300 350 350 400 400 400 C 450 400 500 350 500 300 C 500 250 450 200 400 200 Z" stroke="#3C210C" stroke-width="2" fill="#FFFFFF"/>
+  <circle cx="400" cy="300" r="25" stroke="#3C210C" stroke-width="2" fill="none"/>
+  <circle cx="400" cy="300" r="8" fill="#3C210C" opacity="0.6"/>
+  <path d="M 400 275 L 400 250 M 400 325 L 400 350 M 375 300 L 350 300 M 425 300 L 450 300" stroke="#3C210C" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 100 100 L 100 140 M 100 100 L 140 100" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <path d="M 700 100 L 700 140 M 700 100 L 660 100" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <path d="M 100 500 L 100 460 M 100 500 L 140 500" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <path d="M 700 500 L 700 460 M 700 500 L 660 500" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <text x="400" y="520" text-anchor="middle" font-family="monospace" font-size="14" fill="#3C210C" opacity="0.4">OVERVIEW</text>
+</svg>

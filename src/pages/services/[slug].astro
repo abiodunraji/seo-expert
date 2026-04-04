@@ -17,82 +17,80 @@ const { Content } = await service.render();
 
 const heroImage = url(service.data.image || `/images/services/${service.slug}.svg`);
 
-// Distinct stock photos per service per section (Unsplash, royalty-free)
-const servicePhotos: Record<string, { overview: string; importance: string; approach: string; results: string }> = {
+// Distinct SVG illustrations per service per section
+const serviceIllustrations: Record<string, { overview: string; importance: string; approach: string; results: string }> = {
   strategie: {
-    overview: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80',
-    importance: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
-    approach: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&q=80',
-    results: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+    overview: url('/images/services/strategie-overview.svg'),
+    importance: url('/images/services/strategie-importance.svg'),
+    approach: url('/images/services/strategie-approach.svg'),
+    results: url('/images/services/strategie-results.svg'),
   },
   analyse: {
-    overview: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
-    importance: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
-    approach: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80',
-    results: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+    overview: url('/images/services/analyse-overview.svg'),
+    importance: url('/images/services/analyse-importance.svg'),
+    approach: url('/images/services/analyse-approach.svg'),
+    results: url('/images/services/analyse-results.svg'),
   },
   content: {
-    overview: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80',
-    importance: 'https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&q=80',
-    approach: 'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&q=80',
-    results: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80',
+    overview: url('/images/services/content-overview.svg'),
+    importance: url('/images/services/content-importance.svg'),
+    approach: url('/images/services/content-approach.svg'),
+    results: url('/images/services/content-results.svg'),
   },
   'technical-seo': {
-    overview: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80',
-    importance: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80',
-    approach: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80',
-    results: 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&q=80',
+    overview: url('/images/services/technical-seo-overview.svg'),
+    importance: url('/images/services/technical-seo-importance.svg'),
+    approach: url('/images/services/technical-seo-approach.svg'),
+    results: url('/images/services/technical-seo-results.svg'),
   },
   'offpage-seo': {
-    overview: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80',
-    importance: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80',
-    approach: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80',
-    results: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80',
+    overview: url('/images/services/offpage-seo-overview.svg'),
+    importance: url('/images/services/offpage-seo-importance.svg'),
+    approach: url('/images/services/offpage-seo-approach.svg'),
+    results: url('/images/services/offpage-seo-results.svg'),
   },
   'local-seo': {
-    overview: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80',
-    importance: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80',
-    approach: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800&q=80',
-    results: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&q=80',
+    overview: url('/images/services/local-seo-overview.svg'),
+    importance: url('/images/services/local-seo-importance.svg'),
+    approach: url('/images/services/local-seo-approach.svg'),
+    results: url('/images/services/local-seo-results.svg'),
   },
   geo: {
-    overview: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
-    importance: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80',
-    approach: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
-    results: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80',
+    overview: url('/images/services/geo-overview.svg'),
+    importance: url('/images/services/geo-importance.svg'),
+    approach: url('/images/services/geo-approach.svg'),
+    results: url('/images/services/geo-results.svg'),
   },
 };
 
-const photos = servicePhotos[service.slug] || servicePhotos.strategie;
-
-const sectionKeys = ['overview', 'importance', 'approach', 'results'] as const;
+const illustrations = serviceIllustrations[service.slug] || serviceIllustrations.strategie;
 
 const sections = [
   {
     title: 'Wat houdt het in?',
     description: service.data.description,
-    image: photos.overview,
+    image: illustrations.overview,
     imageAlt: `${service.data.title} overzicht`,
     reverse: false,
   },
   {
     title: 'Waarom dit belangrijk is',
     description: 'In een competitieve digitale markt is het essentieel om voorop te lopen. Deze dienst helpt je om onderscheidend vermogen te creëren en duurzame groei te realiseren.',
-    image: photos.importance,
+    image: illustrations.importance,
     imageAlt: `${service.data.title} belang`,
     reverse: true,
   },
   {
     title: 'Mijn aanpak',
     description: 'Ik werk met een bewezen methodiek die resultaten levert. Van intake tot implementatie — elke stap is doordacht en meetbaar.',
-    image: photos.approach,
+    image: illustrations.approach,
     imageAlt: `${service.data.title} aanpak`,
     reverse: false,
   },
   {
     title: 'Wat je kunt verwachten',
     description: 'Transparante communicatie, meetbare resultaten en een partnership dat jouw bedrijf naar het volgende niveau tilt.',
-    image: photos.results,
+    image: illustrations.results,
     imageAlt: `${service.data.title} resultaten`,
     reverse: true,
   },

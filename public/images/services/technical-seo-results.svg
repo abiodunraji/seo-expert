@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#FAF8F5"/>
+  <rect x="0" y="0" width="800" height="600" fill="url(#grid)" opacity="0.03"/>
+  <defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3C210C" stroke-width="1"/></pattern></defs>
+  <circle cx="400" cy="300" r="80" stroke="#3C210C" stroke-width="2" fill="none"/>
+  <circle cx="400" cy="300" r="50" stroke="#3C210C" stroke-width="2" fill="none"/>
+  <circle cx="400" cy="300" r="20" stroke="#3C210C" stroke-width="2" fill="none"/>
+  <path d="M 400 220 L 400 180" stroke="#3C210C" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 400 380 L 400 420" stroke="#3C210C" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 320 300 L 280 300" stroke="#3C210C" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 480 300 L 520 300" stroke="#3C210C" stroke-width="2" stroke-linecap="round"/>
+  <text x="400" y="200" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#3C210C">100</text>
+  <text x="400" y="216" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#3C210C" opacity="0.6">/100</text>
+  <path d="M 100 100 L 100 140 M 100 100 L 140 100" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <path d="M 700 100 L 700 140 M 700 100 L 660 100" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <path d="M 100 500 L 100 460 M 100 500 L 140 500" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <path d="M 700 500 L 700 460 M 700 500 L 660 500" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <text x="400" y="520" text-anchor="middle" font-family="monospace" font-size="14" fill="#3C210C" opacity="0.4">RESULTATEN</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#FAF8F5"/>
+  <rect x="0" y="0" width="800" height="600" fill="url(#grid)" opacity="0.03"/>
+  <defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3C210C" stroke-width="1"/></pattern></defs>
+  <circle cx="250" cy="300" r="40" stroke="#3C210C" stroke-width="2" fill="#FFFFFF"/>
+  <circle cx="400" cy="300" r="40" stroke="#3C210C" stroke-width="2" fill="#FFFFFF"/>
+  <circle cx="550" cy="300" r="40" stroke="#3C210C" stroke-width="2" fill="#FFFFFF"/>
+  <path d="M 290 300 L 360 300" stroke="#3C210C" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M 440 300 L 510 300" stroke="#3C210C" stroke-width="2" stroke-dasharray="4 4"/>
+  <circle cx="250" cy="300" r="10" fill="#3C210C" opacity="0.3"/>
+  <circle cx="400" cy="300" r="10" fill="#3C210C" opacity="0.5"/>
+  <circle cx="550" cy="300" r="10" fill="#3C210C" opacity="0.7"/>
+  <path d="M 250 260 L 250 240 M 400 260 L 400 240 M 550 260 L 550 240" stroke="#3C210C" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 250 340 L 250 360 M 400 340 L 400 360 M 550 340 L 550 360" stroke="#3C210C" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 100 100 L 100 140 M 100 100 L 140 100" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <path d="M 700 100 L 700 140 M 700 100 L 660 100" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <path d="M 100 500 L 100 460 M 100 500 L 140 500" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <path d="M 700 500 L 700 460 M 700 500 L 660 500" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <text x="400" y="520" text-anchor="middle" font-family="monospace" font-size="14" fill="#3C210C" opacity="0.4">AANPAK</text>
+</svg>

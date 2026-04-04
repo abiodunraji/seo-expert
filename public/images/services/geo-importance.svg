@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#FAF8F5"/>
+  <rect x="0" y="0" width="800" height="600" fill="url(#grid)" opacity="0.03"/>
+  <defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3C210C" stroke-width="1"/></pattern></defs>
+  <path d="M 350 200 L 450 200 L 450 400 L 350 400 Z" stroke="#3C210C" stroke-width="2" fill="#FFFFFF"/>
+  <path d="M 370 240 L 430 240 M 370 270 L 430 270 M 370 300 L 430 300 M 370 330 L 430 330 M 370 360 L 430 360" stroke="#3C210C" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="400" cy="240" r="4" fill="#3C210C" opacity="0.3"/>
+  <circle cx="400" cy="270" r="4" fill="#3C210C" opacity="0.4"/>
+  <circle cx="400" cy="300" r="4" fill="#3C210C" opacity="0.5"/>
+  <circle cx="400" cy="330" r="4" fill="#3C210C" opacity="0.6"/>
+  <circle cx="400" cy="360" r="4" fill="#3C210C" opacity="0.7"/>
+  <path d="M 300 300 L 350 300 M 450 300 L 500 300" stroke="#3C210C" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 300 300 L 280 280 M 300 300 L 280 320" stroke="#3C210C" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 500 300 L 520 280 M 500 300 L 520 320" stroke="#3C210C" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 100 100 L 100 140 M 100 100 L 140 100" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <path d="M 700 100 L 700 140 M 700 100 L 660 100" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <path d="M 100 500 L 100 460 M 100 500 L 140 500" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <path d="M 700 500 L 700 460 M 700 500 L 660 500" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <text x="400" y="520" text-anchor="middle" font-family="monospace" font-size="14" fill="#3C210C" opacity="0.4">BELANGRIJK</text>
+</svg>

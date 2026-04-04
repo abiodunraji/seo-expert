@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#FAF8F5"/>
+  <rect x="0" y="0" width="800" height="600" fill="url(#grid)" opacity="0.03"/>
+  <defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3C210C" stroke-width="1"/></pattern></defs>
+  <path d="M 300 200 L 500 200 L 500 380 L 300 380 Z" stroke="#3C210C" stroke-width="2" fill="#FFFFFF"/>
+  <path d="M 320 240 L 480 240" stroke="#3C210C" stroke-width="2"/>
+  <path d="M 320 280 L 480 280" stroke="#3C210C" stroke-width="2"/>
+  <path d="M 320 320 L 480 320" stroke="#3C210C" stroke-width="2"/>
+  <path d="M 320 360 L 480 360" stroke="#3C210C" stroke-width="2"/>
+  <path d="M 380 200 L 380 380" stroke="#3C210C" stroke-width="1.5"/>
+  <path d="M 440 200 L 440 380" stroke="#3C210C" stroke-width="1.5"/>
+  <circle cx="380" cy="240" r="6" fill="#3C210C" opacity="0.3"/>
+  <circle cx="440" cy="280" r="6" fill="#3C210C" opacity="0.5"/>
+  <circle cx="380" cy="320" r="6" fill="#3C210C" opacity="0.4"/>
+  <circle cx="440" cy="360" r="6" fill="#3C210C" opacity="0.6"/>
+  <path d="M 250 350 L 300 300 L 350 320 L 400 250 L 450 270 L 500 200 L 550 220" stroke="#3C210C" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+  <path d="M 100 100 L 100 140 M 100 100 L 140 100" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <path d="M 700 100 L 700 140 M 700 100 L 660 100" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <path d="M 100 500 L 100 460 M 100 500 L 140 500" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <path d="M 700 500 L 700 460 M 700 500 L 660 500" stroke="#3C210C" stroke-width="2" opacity="0.2"/>
+  <text x="400" y="520" text-anchor="middle" font-family="monospace" font-size="14" fill="#3C210C" opacity="0.4">RESULTATEN</text>
+</svg>
