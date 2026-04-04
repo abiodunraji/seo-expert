@@ -12,20 +12,20 @@ const { client, title, summary, results = [], href = '#' } = Astro.props;
 
 <a 
   href={href}
-  class="group block bg-surface rounded-2xl border border-white/5 p-6 lg:p-8 hover:bg-surface-light hover:border-cyan/20 transition-all duration-300"
+  class="group block bg-surface rounded-xl border border-neutral-300 p-6 lg:p-8 hover:border-accent/30 transition-all duration-300"
 >
   <!-- Client Name -->
-  <span class="font-mono text-xs text-cyan/70 uppercase tracking-[0.15em] mb-2 block">
+  <span class="font-mono text-xs text-primary-light uppercase tracking-[0.15em] mb-2 block">
     {client}
   </span>
   
   <!-- Title -->
-  <h3 class="font-space font-bold text-xl lg:text-2xl text-offwhite mb-4 group-hover:text-cyan transition-colors duration-300">
+  <h3 class="font-sans font-semibold text-xl lg:text-2xl text-primary mb-4 group-hover:text-primary-light transition-colors duration-300">
     {title}
   </h3>
   
   <!-- Summary -->
-  <p class="font-inter text-slategray text-sm lg:text-base mb-6 leading-relaxed">
+  <p class="font-sans text-neutral-500 text-sm lg:text-base mb-6 leading-relaxed">
     {summary}
   </p>
   
@@ -33,11 +33,11 @@ const { client, title, summary, results = [], href = '#' } = Astro.props;
   {results.length > 0 && (
     <div class="flex flex-wrap gap-3">
       {results.map((result) => (
-        <div class="bg-oxford px-4 py-2 rounded-lg border border-white/5">
-          <span class="font-mono text-xs text-cyan/70 uppercase tracking-wider">
+        <div class="bg-surface-alt px-4 py-2 rounded-lg border border-neutral-300">
+          <span class="font-mono text-xs text-primary-light uppercase tracking-wider">
             {result.metric}
           </span>
-          <span class="font-space font-bold text-lg text-offwhite ml-2">
+          <span class="font-sans font-bold text-lg text-primary ml-2">
             {result.value}
           </span>
         </div>
@@ -46,8 +46,8 @@ const { client, title, summary, results = [], href = '#' } = Astro.props;
   )}
   
   <!-- Arrow -->
-  <div class="mt-6 flex items-center text-cyan/70 group-hover:text-cyan transition-colors duration-300">
-    <span class="font-inter text-sm mr-2">
+  <div class="mt-6 flex items-center text-primary-light group-hover:text-primary transition-colors duration-300">
+    <span class="font-sans text-sm mr-2">
       Bekijk case
     </span>
     <svg 

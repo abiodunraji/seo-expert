@@ -65,10 +65,11 @@
   }
 
   .card-hover {
-    @apply hover:border-accent hover:-translate-y-1;
+    @apply hover:-translate-y-1;
   }
 
   .card-hover:hover {
+    border-color: var(--color-accent);
     box-shadow: 0 4px 16px rgba(60, 33, 12, 0.12);
   }
 
