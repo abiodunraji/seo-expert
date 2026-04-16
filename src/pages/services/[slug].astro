@@ -18,7 +18,10 @@ const { Content } = await service.render();
 const heroImage = url(service.data.image || `/images/services/${service.slug}.svg`);
 
 // Distinct SVG illustrations per service per section
-const serviceIllustrations: Record<string, { overview: string; importance: string; approach: string; results: string }> = {
+const serviceIllustrations: Record<
+  string,
+  { overview: string; importance: string; approach: string; results: string }
+> = {
   strategie: {
     overview: url('/images/services/strategie-overview.svg'),
     importance: url('/images/services/strategie-importance.svg'),
@@ -75,21 +78,24 @@ const sections = [
   },
   {
     title: 'Waarom dit belangrijk is',
-    description: 'In een competitieve digitale markt is het essentieel om voorop te lopen. Deze dienst helpt je om onderscheidend vermogen te creëren en duurzame groei te realiseren.',
+    description:
+      'In een competitieve digitale markt is het essentieel om voorop te lopen. Deze dienst helpt je om onderscheidend vermogen te creëren en duurzame groei te realiseren.',
     image: illustrations.importance,
     imageAlt: `${service.data.title} belang`,
     reverse: true,
   },
   {
     title: 'Mijn aanpak',
-    description: 'Ik werk met een bewezen methodiek die resultaten levert. Van intake tot implementatie — elke stap is doordacht en meetbaar.',
+    description:
+      'Ik werk met een bewezen methodiek die resultaten levert. Van intake tot implementatie — elke stap is doordacht en meetbaar.',
     image: illustrations.approach,
     imageAlt: `${service.data.title} aanpak`,
     reverse: false,
   },
   {
     title: 'Wat je kunt verwachten',
-    description: 'Transparante communicatie, meetbare resultaten en een partnership dat jouw bedrijf naar het volgende niveau tilt.',
+    description:
+      'Transparante communicatie, meetbare resultaten en een partnership dat jouw bedrijf naar het volgende niveau tilt.',
     image: illustrations.results,
     imageAlt: `${service.data.title} resultaten`,
     reverse: true,
@@ -97,58 +103,172 @@ const sections = [
 ];
 ---
 
-<BaseLayout 
-  title={service.data.title}
-  description={service.data.description}
->
+<BaseLayout title={service.data.title} description={service.data.description}>
   <!-- Hero Section -->
   <section class="relative overflow-hidden py-20 lg:py-28 bg-surface-alt dot-grid">
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[600px] bg-accent/5 rounded-full blur-[120px]"></div>
+    <div
+      class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[600px] bg-accent/5 rounded-full blur-[120px]"
+    >
+    </div>
 
     <!-- Constellation (desktop only) -->
-    <svg class="hidden lg:block absolute top-10 right-14 pointer-events-none select-none" width="240" height="190" viewBox="0 0 240 190" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <line x1="120" y1="95"  x2="38"  y2="32"  stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0s"/>
-      <line x1="120" y1="95"  x2="205" y2="45"  stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.1s"/>
-      <line x1="120" y1="95"  x2="220" y2="140" stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.2s"/>
-      <line x1="120" y1="95"  x2="80"  y2="168" stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.3s"/>
-      <line x1="38"  y1="32"  x2="205" y2="45"  stroke="#C8A882" stroke-width="0.5"  opacity="0.18" class="constellation-line" style="animation-delay: 0.45s"/>
-      <line x1="205" y1="45"  x2="235" y2="15"  stroke="#C8A882" stroke-width="0.5"  opacity="0.15" class="constellation-line" style="animation-delay: 0.55s"/>
-      <circle cx="120" cy="95"  r="4.5" fill="#C8A882" opacity="0.65" class="constellation-node" style="--node-opacity: 0.65; animation-delay: 0.15s"/>
-      <circle cx="38"  cy="32"  r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.5s"/>
-      <circle cx="205" cy="45"  r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.55s"/>
-      <circle cx="220" cy="140" r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.6s"/>
-      <circle cx="80"  cy="168" r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.65s"/>
-      <circle cx="235" cy="15"  r="1.6" fill="#C8A882" opacity="0.30" class="constellation-node" style="--node-opacity: 0.30; animation-delay: 0.75s"/>
+    <svg
+      class="hidden lg:block absolute top-10 right-14 pointer-events-none select-none"
+      width="240"
+      height="190"
+      viewBox="0 0 240 190"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <line
+        x1="120"
+        y1="95"
+        x2="38"
+        y2="32"
+        stroke="#C8A882"
+        stroke-width="0.75"
+        opacity="0.45"
+        class="constellation-line"
+        style="animation-delay: 0s"></line>
+      <line
+        x1="120"
+        y1="95"
+        x2="205"
+        y2="45"
+        stroke="#C8A882"
+        stroke-width="0.75"
+        opacity="0.45"
+        class="constellation-line"
+        style="animation-delay: 0.1s"></line>
+      <line
+        x1="120"
+        y1="95"
+        x2="220"
+        y2="140"
+        stroke="#C8A882"
+        stroke-width="0.75"
+        opacity="0.45"
+        class="constellation-line"
+        style="animation-delay: 0.2s"></line>
+      <line
+        x1="120"
+        y1="95"
+        x2="80"
+        y2="168"
+        stroke="#C8A882"
+        stroke-width="0.75"
+        opacity="0.45"
+        class="constellation-line"
+        style="animation-delay: 0.3s"></line>
+      <line
+        x1="38"
+        y1="32"
+        x2="205"
+        y2="45"
+        stroke="#C8A882"
+        stroke-width="0.5"
+        opacity="0.18"
+        class="constellation-line"
+        style="animation-delay: 0.45s"></line>
+      <line
+        x1="205"
+        y1="45"
+        x2="235"
+        y2="15"
+        stroke="#C8A882"
+        stroke-width="0.5"
+        opacity="0.15"
+        class="constellation-line"
+        style="animation-delay: 0.55s"></line>
+      <circle
+        cx="120"
+        cy="95"
+        r="4.5"
+        fill="#C8A882"
+        opacity="0.65"
+        class="constellation-node"
+        style="--node-opacity: 0.65; animation-delay: 0.15s"></circle>
+      <circle
+        cx="38"
+        cy="32"
+        r="2.8"
+        fill="#C8A882"
+        opacity="0.50"
+        class="constellation-node"
+        style="--node-opacity: 0.50; animation-delay: 0.5s"></circle>
+      <circle
+        cx="205"
+        cy="45"
+        r="2.8"
+        fill="#C8A882"
+        opacity="0.50"
+        class="constellation-node"
+        style="--node-opacity: 0.50; animation-delay: 0.55s"></circle>
+      <circle
+        cx="220"
+        cy="140"
+        r="2.8"
+        fill="#C8A882"
+        opacity="0.50"
+        class="constellation-node"
+        style="--node-opacity: 0.50; animation-delay: 0.6s"></circle>
+      <circle
+        cx="80"
+        cy="168"
+        r="2.8"
+        fill="#C8A882"
+        opacity="0.50"
+        class="constellation-node"
+        style="--node-opacity: 0.50; animation-delay: 0.65s"></circle>
+      <circle
+        cx="235"
+        cy="15"
+        r="1.6"
+        fill="#C8A882"
+        opacity="0.30"
+        class="constellation-node"
+        style="--node-opacity: 0.30; animation-delay: 0.75s"></circle>
     </svg>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <!-- Content -->
         <div>
-          <span class="section-label">Service</span>
-          <h1 class="font-display italic text-4xl lg:text-5xl xl:text-6xl text-primary mt-5 tracking-tight leading-[1.1]">
+          <div class="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent inline-block"></span>
+            <span class="font-mono text-xs text-primary-light uppercase tracking-widest">Diensten · SEO</span>
+          </div>
+          <h1
+            class="font-display italic text-4xl lg:text-5xl xl:text-6xl text-primary mt-5 tracking-tight leading-[1.1]"
+          >
             {service.data.title}
           </h1>
           <p class="font-sans text-lg text-neutral-500 mt-6 leading-relaxed">
             {service.data.description}
           </p>
 
-          {service.data.featured && (
-            <div class="inline-block bg-accent/10 text-primary px-4 py-1.5 mt-6 font-mono text-xs uppercase tracking-wider rounded-lg border border-accent/30">
-              Aanbevolen
-            </div>
-          )}
+          {
+            service.data.featured && (
+              <div class="inline-flex items-center gap-2 bg-accent/10 text-primary px-4 py-1.5 mt-6 font-mono text-xs uppercase tracking-widest rounded-full border border-accent/30">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent inline-block"></span>
+                Aanbevolen
+              </div>
+            )
+          }
         </div>
 
         <!-- Hero Image -->
         <div class="hidden lg:block">
           <div class="relative">
             <div class="absolute inset-0 bg-accent/5 rounded-2xl blur-3xl"></div>
-            <div class="relative bg-surface rounded-2xl border border-neutral-300 overflow-hidden shadow-soft">
+            <div
+              class="relative bg-surface rounded-2xl border border-neutral-300 overflow-hidden shadow-soft aspect-[4/3]"
+            >
               <img
                 src={heroImage}
                 alt={service.data.title}
-                class="w-full h-auto"
+                class="w-full h-full object-contain p-8"
               />
             </div>
           </div>
@@ -158,49 +278,46 @@ const sections = [
   </section>
 
   <!-- Alternating Content Sections -->
-  {sections.map((section, index) => (
-    <section class:list={[
-      'signal-section',
-      section.reverse ? 'bg-surface-alt dot-grid' : 'bg-surface'
-    ]}>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <!-- Text -->
-          <div class:list={[section.reverse && 'lg:order-2']}>
-            <span class="font-display italic text-7xl text-accent/20 leading-none block mb-2 select-none">
-              0{index + 1}
-            </span>
-            <h2 class="font-sans font-semibold text-2xl lg:text-3xl text-primary mb-6 tracking-tight">
-              {section.title}
-            </h2>
-            <p class="font-sans text-neutral-500 leading-relaxed">
-              {section.description}
-            </p>
-          </div>
+  {
+    sections.map((section, index) => (
+      <section
+        class:list={['signal-section', section.reverse ? 'bg-surface-alt dot-grid' : 'bg-surface']}
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div class:list={[section.reverse && 'lg:order-2']}>
+              <span class="font-display italic text-7xl text-accent/20 leading-none block mb-2 select-none">
+                0{index + 1}
+              </span>
+              <h2 class="font-display italic text-2xl lg:text-3xl text-primary mb-6 tracking-tight">
+                {section.title}
+              </h2>
+              <p class="font-sans text-neutral-500 leading-relaxed">{section.description}</p>
+            </div>
 
-          <!-- Image -->
-          <div class:list={[section.reverse && 'lg:order-1']}>
-            <div class="relative bg-surface rounded-xl border border-neutral-300 overflow-hidden aspect-[4/3] transition-shadow duration-300 hover:shadow-medium">
-              <img
-                src={section.image}
-                alt={section.imageAlt}
-                class="w-full h-full object-cover"
-                loading="lazy"
-                width="800"
-                height="600"
-              />
+            <div class:list={[section.reverse && 'lg:order-1']}>
+              <div class="relative bg-surface rounded-xl border border-neutral-300 overflow-hidden aspect-[4/3] transition-shadow duration-300 hover:shadow-medium">
+                <img
+                  src={section.image}
+                  alt={section.imageAlt}
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  width="800"
+                  height="600"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  ))}
+      </section>
+    ))
+  }
 
   <!-- MDX Content Section -->
   <section class="signal-section bg-surface">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
       <div class="max-w-3xl">
-        <h2 class="font-sans font-semibold text-2xl lg:text-3xl text-primary mb-8 tracking-tight">
+        <h2 class="font-display italic text-2xl lg:text-3xl text-primary mb-8 tracking-tight">
           Details
         </h2>
         <div class="prose prose-lg max-w-none">
@@ -215,36 +332,137 @@ const sections = [
   <!-- CTA Section -->
   <section class="signal-section bg-surface-alt dot-grid">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-      <div class="relative bg-surface rounded-2xl border border-neutral-300 p-10 lg:p-16 text-center overflow-hidden shadow-soft">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent/10 rounded-full blur-[100px]"></div>
+      <div
+        class="relative bg-surface rounded-2xl border border-neutral-300 p-10 lg:p-16 text-center overflow-hidden shadow-soft"
+      >
+        <div
+          class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent/10 rounded-full blur-[100px]"
+        >
+        </div>
 
         <!-- Constellation motif -->
-        <svg class="absolute bottom-0 left-0 pointer-events-none select-none opacity-60" width="200" height="165" viewBox="0 0 200 165" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <line x1="45"  y1="130" x2="120" y2="82"  stroke="#C8A882" stroke-width="0.75" opacity="0.5" class="constellation-line" style="animation-delay: 0s"/>
-          <line x1="45"  y1="130" x2="18"  y2="65"  stroke="#C8A882" stroke-width="0.75" opacity="0.5" class="constellation-line" style="animation-delay: 0.1s"/>
-          <line x1="120" y1="82"  x2="185" y2="100" stroke="#C8A882" stroke-width="0.75" opacity="0.5" class="constellation-line" style="animation-delay: 0.2s"/>
-          <line x1="120" y1="82"  x2="142" y2="25"  stroke="#C8A882" stroke-width="0.75" opacity="0.5" class="constellation-line" style="animation-delay: 0.3s"/>
-          <line x1="18"  y1="65"  x2="120" y2="82"  stroke="#C8A882" stroke-width="0.5"  opacity="0.2" class="constellation-line" style="animation-delay: 0.4s"/>
-          <line x1="142" y1="25"  x2="185" y2="100" stroke="#C8A882" stroke-width="0.5"  opacity="0.2" class="constellation-line" style="animation-delay: 0.45s"/>
-          <circle cx="120" cy="82"  r="3.5" fill="#C8A882" opacity="0.6"  class="constellation-node" style="--node-opacity: 0.6;  animation-delay: 0.1s"/>
-          <circle cx="45"  cy="130" r="2.2" fill="#C8A882" opacity="0.45" class="constellation-node" style="--node-opacity: 0.45; animation-delay: 0.45s"/>
-          <circle cx="18"  cy="65"  r="2.2" fill="#C8A882" opacity="0.45" class="constellation-node" style="--node-opacity: 0.45; animation-delay: 0.5s"/>
-          <circle cx="185" cy="100" r="2.2" fill="#C8A882" opacity="0.45" class="constellation-node" style="--node-opacity: 0.45; animation-delay: 0.55s"/>
-          <circle cx="142" cy="25"  r="2.2" fill="#C8A882" opacity="0.45" class="constellation-node" style="--node-opacity: 0.45; animation-delay: 0.6s"/>
+        <svg
+          class="absolute bottom-0 left-0 pointer-events-none select-none opacity-60"
+          width="200"
+          height="165"
+          viewBox="0 0 200 165"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <line
+            x1="45"
+            y1="130"
+            x2="120"
+            y2="82"
+            stroke="#C8A882"
+            stroke-width="0.75"
+            opacity="0.5"
+            class="constellation-line"
+            style="animation-delay: 0s"></line>
+          <line
+            x1="45"
+            y1="130"
+            x2="18"
+            y2="65"
+            stroke="#C8A882"
+            stroke-width="0.75"
+            opacity="0.5"
+            class="constellation-line"
+            style="animation-delay: 0.1s"></line>
+          <line
+            x1="120"
+            y1="82"
+            x2="185"
+            y2="100"
+            stroke="#C8A882"
+            stroke-width="0.75"
+            opacity="0.5"
+            class="constellation-line"
+            style="animation-delay: 0.2s"></line>
+          <line
+            x1="120"
+            y1="82"
+            x2="142"
+            y2="25"
+            stroke="#C8A882"
+            stroke-width="0.75"
+            opacity="0.5"
+            class="constellation-line"
+            style="animation-delay: 0.3s"></line>
+          <line
+            x1="18"
+            y1="65"
+            x2="120"
+            y2="82"
+            stroke="#C8A882"
+            stroke-width="0.5"
+            opacity="0.2"
+            class="constellation-line"
+            style="animation-delay: 0.4s"></line>
+          <line
+            x1="142"
+            y1="25"
+            x2="185"
+            y2="100"
+            stroke="#C8A882"
+            stroke-width="0.5"
+            opacity="0.2"
+            class="constellation-line"
+            style="animation-delay: 0.45s"></line>
+          <circle
+            cx="120"
+            cy="82"
+            r="3.5"
+            fill="#C8A882"
+            opacity="0.6"
+            class="constellation-node"
+            style="--node-opacity: 0.6;  animation-delay: 0.1s"></circle>
+          <circle
+            cx="45"
+            cy="130"
+            r="2.2"
+            fill="#C8A882"
+            opacity="0.45"
+            class="constellation-node"
+            style="--node-opacity: 0.45; animation-delay: 0.45s"></circle>
+          <circle
+            cx="18"
+            cy="65"
+            r="2.2"
+            fill="#C8A882"
+            opacity="0.45"
+            class="constellation-node"
+            style="--node-opacity: 0.45; animation-delay: 0.5s"></circle>
+          <circle
+            cx="185"
+            cy="100"
+            r="2.2"
+            fill="#C8A882"
+            opacity="0.45"
+            class="constellation-node"
+            style="--node-opacity: 0.45; animation-delay: 0.55s"></circle>
+          <circle
+            cx="142"
+            cy="25"
+            r="2.2"
+            fill="#C8A882"
+            opacity="0.45"
+            class="constellation-node"
+            style="--node-opacity: 0.45; animation-delay: 0.6s"></circle>
         </svg>
 
         <div class="relative">
-          <h2 class="font-sans font-semibold text-3xl lg:text-4xl text-primary tracking-tight">
-            Geïnteresseerd in <span class="text-primary-light">{service.data.title}</span>?
+          <h2 class="text-3xl lg:text-4xl tracking-tight">
+            <span class="font-display italic text-primary">Geïnteresseerd in</span>
+            <span class="font-sans font-semibold text-primary-light"> {service.data.title}</span>?
           </h2>
           <p class="font-sans text-neutral-500 mt-4 max-w-xl mx-auto leading-relaxed">
-            Laten we bespreken hoe ik jouw bedrijf kan helpen met deze dienst.
-            Samen werken we aan jouw online groei.
+            Laten we bespreken hoe ik jouw bedrijf kan helpen met deze dienst. Samen werken we aan
+            jouw online groei.
           </p>
           <div class="mt-8">
-            <Button href={url('/contact/')} variant="primary" size="lg">
-              Plan een gesprek
-            </Button>
+            <Button href={url('/contact/')} variant="primary" size="lg"> Plan een gesprek </Button>
           </div>
         </div>
       </div>

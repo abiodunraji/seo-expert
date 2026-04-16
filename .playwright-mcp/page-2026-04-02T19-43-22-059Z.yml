@@ -1,168 +1,168 @@
 - generic [active] [ref=e1]:
-  - banner [ref=e2]:
-    - navigation "Main navigation" [ref=e3]:
-      - generic [ref=e4]:
-        - link "IWAN STEPANOVA" [ref=e5] [cursor=pointer]:
-          - /url: /
-        - generic [ref=e6]:
-          - link "Home" [ref=e7] [cursor=pointer]:
-            - /url: /
-            - text: Home
-          - link "Services" [ref=e8] [cursor=pointer]:
-            - /url: /services
-          - link "Cases" [ref=e9] [cursor=pointer]:
-            - /url: /cases
-          - link "Over" [ref=e10] [cursor=pointer]:
-            - /url: /over
-          - link "Contact" [ref=e11] [cursor=pointer]:
-            - /url: /contact
-        - button "Toggle menu" [ref=e12]:
-          - img
-      - generic [ref=e15]:
-        - link "Home" [ref=e16] [cursor=pointer]:
-          - /url: /
-        - link "Services" [ref=e17] [cursor=pointer]:
-          - /url: /services
-        - link "Cases" [ref=e18] [cursor=pointer]:
-          - /url: /cases
-        - link "Over" [ref=e19] [cursor=pointer]:
-          - /url: /over
-        - link "Contact" [ref=e20] [cursor=pointer]:
-          - /url: /contact
-  - main [ref=e21]:
-    - generic [ref=e24]:
-      - generic [ref=e25]:
-        - heading "De Strategische Architect voor Zoekmachine Dominantie" [level=1] [ref=e26]
-        - paragraph [ref=e27]: Technical SEO, Content Architectuur & GEO voor de merken van morgen. Ik help ondernemingen groeien door strategische zoekmachine zichtbaarheid.
-        - link "Start je Project" [ref=e28] [cursor=pointer]:
-          - /url: /contact
-          - text: Start je Project
-          - img [ref=e29]
-      - generic [ref=e33]:
-        - generic [ref=e34]: IS
-        - paragraph [ref=e35]: Iwan Stepanova
-        - paragraph [ref=e36]: "[Foto komt nog]"
-    - generic [ref=e38]:
-      - generic [ref=e39]:
-        - text: Diensten
-        - heading "Jouw groei, mijn expertise" [level=2] [ref=e40]
-        - paragraph [ref=e41]: Complete SEO-oplossingen van strategie tot uitvoering. Kies de dienst die bij jouw uitdaging past.
-      - generic [ref=e42]:
-        - link "🎯 Strategie Ik ontwikkel een complete SEO-roadmap die aansluit bij jouw bedrijfsdoelen en groeikansen. Geen losse tactieken, maar een duidelijke strategische visie." [ref=e43] [cursor=pointer]:
-          - /url: /services/strategie
-          - generic [ref=e44]:
-            - text: 🎯
-            - img [ref=e45]
-          - heading "Strategie" [level=3] [ref=e47]
-          - paragraph [ref=e48]: Ik ontwikkel een complete SEO-roadmap die aansluit bij jouw bedrijfsdoelen en groeikansen. Geen losse tactieken, maar een duidelijke strategische visie.
-        - link "📊 Analyse Diepgaande inzichten in je huidige SEO-prestaties. Ik meet wat belangrijk is en vertaal data naar concrete acties." [ref=e49] [cursor=pointer]:
-          - /url: /services/analyse
-          - generic [ref=e50]:
-            - text: 📊
-            - img [ref=e51]
-          - heading "Analyse" [level=3] [ref=e53]
-          - paragraph [ref=e54]: Diepgaande inzichten in je huidige SEO-prestaties. Ik meet wat belangrijk is en vertaal data naar concrete acties.
-        - link "✍️ Content Content die rankt én converteert. Ik creëer strategische content die zoekmachines én je lezers begrijpen." [ref=e55] [cursor=pointer]:
-          - /url: /services/content
-          - generic [ref=e56]:
-            - text: ✍️
-            - img [ref=e57]
-          - heading "Content" [level=3] [ref=e59]
-          - paragraph [ref=e60]: Content die rankt én converteert. Ik creëer strategische content die zoekmachines én je lezers begrijpen.
-        - link "💻 Technical SEO De fundering van je website moet stevig staan. Ik optimaliseer de technische kant zodat zoekmachines je site vlekkeloos crawlen." [ref=e61] [cursor=pointer]:
-          - /url: /services/technical-seo
-          - generic [ref=e62]:
-            - text: 💻
-            - img [ref=e63]
-          - heading "Technical SEO" [level=3] [ref=e65]
-          - paragraph [ref=e66]: De fundering van je website moet stevig staan. Ik optimaliseer de technische kant zodat zoekmachines je site vlekkeloos crawlen.
-        - link "🔗 Off-Page SEO Autoriteit bouwen buiten je eigen website. Ik zorg voor kwalitatieve backlinks en merkbekendheid." [ref=e67] [cursor=pointer]:
-          - /url: /services/offpage-seo
-          - generic [ref=e68]:
-            - text: 🔗
-            - img [ref=e69]
-          - heading "Off-Page SEO" [level=3] [ref=e71]
-          - paragraph [ref=e72]: Autoriteit bouwen buiten je eigen website. Ik zorg voor kwalitatieve backlinks en merkbekendheid.
-        - link "📍 Local SEO Lokalale zichtbaarheid voor fysieke bedrijven. Ik zorg dat klanten je vindn als ze zoeken in jouw regio." [ref=e73] [cursor=pointer]:
-          - /url: /services/local-seo
-          - generic [ref=e74]:
-            - text: 📍
-            - img [ref=e75]
-          - heading "Local SEO" [level=3] [ref=e77]
-          - paragraph [ref=e78]: Lokalale zichtbaarheid voor fysieke bedrijven. Ik zorg dat klanten je vindn als ze zoeken in jouw regio.
-        - link "🧠 GEO De toekomst van SEO. Generative Engine Optimization — ik bereid je merk voor op AI-zoekmachines en conversational search." [ref=e79] [cursor=pointer]:
-          - /url: /services/geo
-          - generic [ref=e80]:
-            - text: 🧠
-            - img [ref=e81]
-          - heading "GEO" [level=3] [ref=e83]
-          - paragraph [ref=e84]: De toekomst van SEO. Generative Engine Optimization — ik bereid je merk voor op AI-zoekmachines en conversational search.
-    - generic [ref=e86]:
-      - generic [ref=e87]:
-        - text: Vertrouwd door
-        - heading "Ondernemingen die groeien" [level=2] [ref=e88]
-      - generic [ref=e89]:
-        - generic [ref=e91]:
-          - generic [ref=e92]: C1
-          - text: Client 1
-        - generic [ref=e94]:
-          - generic [ref=e95]: C2
-          - text: Client 2
-        - generic [ref=e97]:
-          - generic [ref=e98]: C3
-          - text: Client 3
-        - generic [ref=e100]:
-          - generic [ref=e101]: C4
-          - text: Client 4
-        - generic [ref=e103]:
-          - generic [ref=e104]: C5
-          - text: Client 5
-    - generic [ref=e107]:
-      - heading "Laten we praten over jouw groei" [level=2] [ref=e108]
-      - paragraph [ref=e109]: Klaar om je online zichtbaarheid te versterken? Ik help je graag met een strategie die past bij jouw ambitie.
-      - generic [ref=e110]:
-        - link "Contact opnemen" [ref=e111] [cursor=pointer]:
-          - /url: /contact
-        - link "Bekijk diensten" [ref=e112] [cursor=pointer]:
-          - /url: /services
-  - contentinfo [ref=e113]:
-    - generic [ref=e115]: IWAN STEPANOVA — SEO EXPERT — STRATEGISCHE ARCHITECT — IWAN STEPANOVA — SEO EXPERT — STRATEGISCHE ARCHITECT — IWAN STEPANOVA — SEO EXPERT — STRATEGISCHE ARCHITECT — IWAN STEPANOVA — SEO EXPERT — STRATEGISCHE ARCHITECT —
-    - generic [ref=e116]:
-      - generic [ref=e117]:
-        - generic [ref=e118]:
-          - link "IWAN STEPANOVA" [ref=e119] [cursor=pointer]:
-            - /url: /
-          - paragraph [ref=e120]: De strategische architect voor zoekmachine dominantie. Technical SEO, Content Architectuur & GEO voor de merken van morgen.
-        - generic [ref=e121]:
-          - heading "Navigatie" [level=3] [ref=e122]
-          - list [ref=e123]:
-            - listitem [ref=e124]:
-              - link "Home" [ref=e125] [cursor=pointer]:
-                - /url: /
-            - listitem [ref=e126]:
-              - link "Services" [ref=e127] [cursor=pointer]:
-                - /url: /services
-            - listitem [ref=e128]:
-              - link "Cases" [ref=e129] [cursor=pointer]:
-                - /url: /cases
-            - listitem [ref=e130]:
-              - link "Over Iwan" [ref=e131] [cursor=pointer]:
-                - /url: /over
-            - listitem [ref=e132]:
-              - link "Contact" [ref=e133] [cursor=pointer]:
-                - /url: /contact
-        - generic [ref=e134]:
-          - heading "Connect" [level=3] [ref=e135]
-          - list [ref=e136]:
-            - listitem [ref=e137]:
-              - link "LinkedIn" [ref=e138] [cursor=pointer]:
-                - /url: https://linkedin.com/in/iwanstepanova
-            - listitem [ref=e139]:
-              - link "Twitter" [ref=e140] [cursor=pointer]:
-                - /url: https://twitter.com
-            - listitem [ref=e141]:
-              - link "Instagram" [ref=e142] [cursor=pointer]:
-                - /url: https://instagram.com
-      - generic [ref=e143]:
-        - paragraph [ref=e144]: © 2026 Iwan Stepanova. All rights reserved.
-        - paragraph [ref=e145]: Built by Velora
+    - banner [ref=e2]:
+        - navigation "Main navigation" [ref=e3]:
+            - generic [ref=e4]:
+                - link "IWAN STEPANOVA" [ref=e5] [cursor=pointer]:
+                    - /url: /
+                - generic [ref=e6]:
+                    - link "Home" [ref=e7] [cursor=pointer]:
+                        - /url: /
+                        - text: Home
+                    - link "Services" [ref=e8] [cursor=pointer]:
+                        - /url: /services
+                    - link "Cases" [ref=e9] [cursor=pointer]:
+                        - /url: /cases
+                    - link "Over" [ref=e10] [cursor=pointer]:
+                        - /url: /over
+                    - link "Contact" [ref=e11] [cursor=pointer]:
+                        - /url: /contact
+                - button "Toggle menu" [ref=e12]:
+                    - img
+            - generic [ref=e15]:
+                - link "Home" [ref=e16] [cursor=pointer]:
+                    - /url: /
+                - link "Services" [ref=e17] [cursor=pointer]:
+                    - /url: /services
+                - link "Cases" [ref=e18] [cursor=pointer]:
+                    - /url: /cases
+                - link "Over" [ref=e19] [cursor=pointer]:
+                    - /url: /over
+                - link "Contact" [ref=e20] [cursor=pointer]:
+                    - /url: /contact
+    - main [ref=e21]:
+        - generic [ref=e24]:
+            - generic [ref=e25]:
+                - heading "De Strategische Architect voor Zoekmachine Dominantie" [level=1] [ref=e26]
+                - paragraph [ref=e27]: Technical SEO, Content Architectuur & GEO voor de merken van morgen. Ik help ondernemingen groeien door strategische zoekmachine zichtbaarheid.
+                - link "Start je Project" [ref=e28] [cursor=pointer]:
+                    - /url: /contact
+                    - text: Start je Project
+                    - img [ref=e29]
+            - generic [ref=e33]:
+                - generic [ref=e34]: IS
+                - paragraph [ref=e35]: Iwan Stepanova
+                - paragraph [ref=e36]: '[Foto komt nog]'
+        - generic [ref=e38]:
+            - generic [ref=e39]:
+                - text: Diensten
+                - heading "Jouw groei, mijn expertise" [level=2] [ref=e40]
+                - paragraph [ref=e41]: Complete SEO-oplossingen van strategie tot uitvoering. Kies de dienst die bij jouw uitdaging past.
+            - generic [ref=e42]:
+                - link "🎯 Strategie Ik ontwikkel een complete SEO-roadmap die aansluit bij jouw bedrijfsdoelen en groeikansen. Geen losse tactieken, maar een duidelijke strategische visie." [ref=e43] [cursor=pointer]:
+                    - /url: /services/strategie
+                    - generic [ref=e44]:
+                        - text: 🎯
+                        - img [ref=e45]
+                    - heading "Strategie" [level=3] [ref=e47]
+                    - paragraph [ref=e48]: Ik ontwikkel een complete SEO-roadmap die aansluit bij jouw bedrijfsdoelen en groeikansen. Geen losse tactieken, maar een duidelijke strategische visie.
+                - link "📊 Analyse Diepgaande inzichten in je huidige SEO-prestaties. Ik meet wat belangrijk is en vertaal data naar concrete acties." [ref=e49] [cursor=pointer]:
+                    - /url: /services/analyse
+                    - generic [ref=e50]:
+                        - text: 📊
+                        - img [ref=e51]
+                    - heading "Analyse" [level=3] [ref=e53]
+                    - paragraph [ref=e54]: Diepgaande inzichten in je huidige SEO-prestaties. Ik meet wat belangrijk is en vertaal data naar concrete acties.
+                - link "✍️ Content Content die rankt én converteert. Ik creëer strategische content die zoekmachines én je lezers begrijpen." [ref=e55] [cursor=pointer]:
+                    - /url: /services/content
+                    - generic [ref=e56]:
+                        - text: ✍️
+                        - img [ref=e57]
+                    - heading "Content" [level=3] [ref=e59]
+                    - paragraph [ref=e60]: Content die rankt én converteert. Ik creëer strategische content die zoekmachines én je lezers begrijpen.
+                - link "💻 Technical SEO De fundering van je website moet stevig staan. Ik optimaliseer de technische kant zodat zoekmachines je site vlekkeloos crawlen." [ref=e61] [cursor=pointer]:
+                    - /url: /services/technical-seo
+                    - generic [ref=e62]:
+                        - text: 💻
+                        - img [ref=e63]
+                    - heading "Technical SEO" [level=3] [ref=e65]
+                    - paragraph [ref=e66]: De fundering van je website moet stevig staan. Ik optimaliseer de technische kant zodat zoekmachines je site vlekkeloos crawlen.
+                - link "🔗 Off-Page SEO Autoriteit bouwen buiten je eigen website. Ik zorg voor kwalitatieve backlinks en merkbekendheid." [ref=e67] [cursor=pointer]:
+                    - /url: /services/offpage-seo
+                    - generic [ref=e68]:
+                        - text: 🔗
+                        - img [ref=e69]
+                    - heading "Off-Page SEO" [level=3] [ref=e71]
+                    - paragraph [ref=e72]: Autoriteit bouwen buiten je eigen website. Ik zorg voor kwalitatieve backlinks en merkbekendheid.
+                - link "📍 Local SEO Lokalale zichtbaarheid voor fysieke bedrijven. Ik zorg dat klanten je vindn als ze zoeken in jouw regio." [ref=e73] [cursor=pointer]:
+                    - /url: /services/local-seo
+                    - generic [ref=e74]:
+                        - text: 📍
+                        - img [ref=e75]
+                    - heading "Local SEO" [level=3] [ref=e77]
+                    - paragraph [ref=e78]: Lokalale zichtbaarheid voor fysieke bedrijven. Ik zorg dat klanten je vindn als ze zoeken in jouw regio.
+                - link "🧠 GEO De toekomst van SEO. Generative Engine Optimization — ik bereid je merk voor op AI-zoekmachines en conversational search." [ref=e79] [cursor=pointer]:
+                    - /url: /services/geo
+                    - generic [ref=e80]:
+                        - text: 🧠
+                        - img [ref=e81]
+                    - heading "GEO" [level=3] [ref=e83]
+                    - paragraph [ref=e84]: De toekomst van SEO. Generative Engine Optimization — ik bereid je merk voor op AI-zoekmachines en conversational search.
+        - generic [ref=e86]:
+            - generic [ref=e87]:
+                - text: Vertrouwd door
+                - heading "Ondernemingen die groeien" [level=2] [ref=e88]
+            - generic [ref=e89]:
+                - generic [ref=e91]:
+                    - generic [ref=e92]: C1
+                    - text: Client 1
+                - generic [ref=e94]:
+                    - generic [ref=e95]: C2
+                    - text: Client 2
+                - generic [ref=e97]:
+                    - generic [ref=e98]: C3
+                    - text: Client 3
+                - generic [ref=e100]:
+                    - generic [ref=e101]: C4
+                    - text: Client 4
+                - generic [ref=e103]:
+                    - generic [ref=e104]: C5
+                    - text: Client 5
+        - generic [ref=e107]:
+            - heading "Laten we praten over jouw groei" [level=2] [ref=e108]
+            - paragraph [ref=e109]: Klaar om je online zichtbaarheid te versterken? Ik help je graag met een strategie die past bij jouw ambitie.
+            - generic [ref=e110]:
+                - link "Contact opnemen" [ref=e111] [cursor=pointer]:
+                    - /url: /contact
+                - link "Bekijk diensten" [ref=e112] [cursor=pointer]:
+                    - /url: /services
+    - contentinfo [ref=e113]:
+        - generic [ref=e115]: IWAN STEPANOVA — SEO EXPERT — STRATEGISCHE ARCHITECT — IWAN STEPANOVA — SEO EXPERT — STRATEGISCHE ARCHITECT — IWAN STEPANOVA — SEO EXPERT — STRATEGISCHE ARCHITECT — IWAN STEPANOVA — SEO EXPERT — STRATEGISCHE ARCHITECT —
+        - generic [ref=e116]:
+            - generic [ref=e117]:
+                - generic [ref=e118]:
+                    - link "IWAN STEPANOVA" [ref=e119] [cursor=pointer]:
+                        - /url: /
+                    - paragraph [ref=e120]: De strategische architect voor zoekmachine dominantie. Technical SEO, Content Architectuur & GEO voor de merken van morgen.
+                - generic [ref=e121]:
+                    - heading "Navigatie" [level=3] [ref=e122]
+                    - list [ref=e123]:
+                        - listitem [ref=e124]:
+                            - link "Home" [ref=e125] [cursor=pointer]:
+                                - /url: /
+                        - listitem [ref=e126]:
+                            - link "Services" [ref=e127] [cursor=pointer]:
+                                - /url: /services
+                        - listitem [ref=e128]:
+                            - link "Cases" [ref=e129] [cursor=pointer]:
+                                - /url: /cases
+                        - listitem [ref=e130]:
+                            - link "Over Iwan" [ref=e131] [cursor=pointer]:
+                                - /url: /over
+                        - listitem [ref=e132]:
+                            - link "Contact" [ref=e133] [cursor=pointer]:
+                                - /url: /contact
+                - generic [ref=e134]:
+                    - heading "Connect" [level=3] [ref=e135]
+                    - list [ref=e136]:
+                        - listitem [ref=e137]:
+                            - link "LinkedIn" [ref=e138] [cursor=pointer]:
+                                - /url: https://linkedin.com/in/iwanstepanova
+                        - listitem [ref=e139]:
+                            - link "Twitter" [ref=e140] [cursor=pointer]:
+                                - /url: https://twitter.com
+                        - listitem [ref=e141]:
+                            - link "Instagram" [ref=e142] [cursor=pointer]:
+                                - /url: https://instagram.com
+            - generic [ref=e143]:
+                - paragraph [ref=e144]: © 2026 Iwan Stepanova. All rights reserved.
+                - paragraph [ref=e145]: Built by Velora

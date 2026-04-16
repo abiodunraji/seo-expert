@@ -1,8 +1,8 @@
 ---
-title: "Analyse"
-description: "Diepgaande inzichten in je huidige SEO-prestaties. Ik meet wat belangrijk is en vertaal data naar concrete acties."
-icon: "chart"
-image: "/images/services/analyse.svg"
+title: 'Analyse'
+description: 'Diepgaande inzichten in je huidige SEO-prestaties. Ik meet wat belangrijk is en vertaal data naar concrete acties.'
+icon: 'chart'
+image: '/images/services/analyse.svg'
 order: 2
 featured: false
 ---

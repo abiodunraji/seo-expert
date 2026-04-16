@@ -6,19 +6,16 @@ interface Props {
   label?: string;
 }
 
-const { 
-  href, 
-  variant = 'primary', 
-  size = 'md',
-  label
-} = Astro.props;
+const { href, variant = 'primary', size = 'md', label } = Astro.props;
 
-const baseClasses = 'inline-flex items-center justify-center font-sans font-medium text-sm transition-all duration-300 rounded-lg';
+const baseClasses =
+  'inline-flex items-center justify-center font-sans font-medium text-sm transition-all duration-300 rounded-full';
 
 const variantClasses = {
   primary: 'bg-primary text-white hover:bg-primary-light hover:shadow-medium btn-amber-glow',
   secondary: 'bg-surface text-primary border border-neutral-300 hover:border-primary/30',
-  outline: 'bg-transparent text-primary border border-primary/30 hover:bg-primary/5 hover:border-primary',
+  outline:
+    'bg-transparent text-primary border border-primary/30 hover:bg-primary/5 hover:border-primary',
 };
 
 const sizeClasses = {
@@ -28,10 +25,7 @@ const sizeClasses = {
 };
 ---
 
-<a 
-  href={href}
-  class:list={[baseClasses, variantClasses[variant], sizeClasses[size]]}
->
+<a href={href} class:list={[baseClasses, variantClasses[variant], sizeClasses[size]]}>
   <slot />
   {label && <span class="ml-2">{label}</span>}
 </a>

@@ -32,20 +32,13 @@ jobs:
 
       - name: Build
         run: npm run build
-        env:
-          GITHUB_PAGES: 'true'
 
-      - name: Verify base path
+      - name: Verify build output
         run: |
-          echo "Checking dist folder for correct base path..."
-          grep -r "seo-expert" dist/ | head -5 || echo "WARNING: base path not found in build output"
+          echo "Checking dist folder..."
           ls -la dist/
-
-      - name: Verify base path
-        run: |
-          echo "Checking dist folder for correct base path..."
-          grep -r "seo-expert" dist/ | head -5 || echo "WARNING: base path not found in build output"
-          ls -la dist/
+          echo "Checking CNAME..."
+          cat dist/CNAME
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -10,7 +10,7 @@ interface Props {
 const { client, title, summary, results = [], href = '#' } = Astro.props;
 ---
 
-<a 
+<a
   href={href}
   class="group block bg-surface rounded-xl border border-neutral-300 p-6 lg:p-8 hover:border-accent/30 transition-all duration-300"
 >
@@ -18,46 +18,52 @@ const { client, title, summary, results = [], href = '#' } = Astro.props;
   <span class="font-mono text-xs text-primary-light uppercase tracking-[0.15em] mb-2 block">
     {client}
   </span>
-  
+
   <!-- Title -->
-  <h3 class="font-sans font-semibold text-xl lg:text-2xl text-primary mb-4 group-hover:text-primary-light transition-colors duration-300">
+  <h3
+    class="font-sans font-semibold text-xl lg:text-2xl text-primary mb-4 group-hover:text-primary-light transition-colors duration-300"
+  >
     {title}
   </h3>
-  
+
   <!-- Summary -->
   <p class="font-sans text-neutral-500 text-sm lg:text-base mb-6 leading-relaxed">
     {summary}
   </p>
-  
+
   <!-- Results -->
-  {results.length > 0 && (
-    <div class="flex flex-wrap gap-3">
-      {results.map((result) => (
-        <div class="bg-surface-alt px-4 py-2 rounded-lg border border-neutral-300">
-          <span class="font-mono text-xs text-primary-light uppercase tracking-wider">
-            {result.metric}
-          </span>
-          <span class="font-sans font-bold text-lg text-primary ml-2">
-            {result.value}
-          </span>
-        </div>
-      ))}
-    </div>
-  )}
-  
+  {
+    results.length > 0 && (
+      <div class="flex flex-wrap gap-3">
+        {results.map((result) => (
+          <div class="bg-surface-alt px-4 py-2 rounded-lg border border-neutral-300">
+            <span class="font-mono text-xs text-primary-light uppercase tracking-wider">
+              {result.metric}
+            </span>
+            <span class="font-sans font-bold text-lg text-primary ml-2">{result.value}</span>
+          </div>
+        ))}
+      </div>
+    )
+  }
+
   <!-- Arrow -->
-  <div class="mt-6 flex items-center text-primary-light group-hover:text-primary transition-colors duration-300">
-    <span class="font-sans text-sm mr-2">
-      Bekijk case
-    </span>
-    <svg 
-      xmlns="http://www.w3.org/2000/svg" 
+  <div
+    class="mt-6 flex items-center text-primary-light group-hover:text-primary transition-colors duration-300"
+  >
+    <span class="font-sans text-sm mr-2"> Bekijk case </span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
       class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-      fill="none" 
-      viewBox="0 0 24 24" 
+      fill="none"
+      viewBox="0 0 24 24"
       stroke="currentColor"
     >
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
     </svg>
   </div>
 </a>

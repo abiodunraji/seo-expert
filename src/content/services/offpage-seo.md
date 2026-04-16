@@ -1,8 +1,8 @@
 ---
-title: "Off-Page SEO"
-description: "Autoriteit bouwen buiten je eigen website. Ik zorg voor kwalitatieve backlinks en merkbekendheid."
-icon: "link"
-image: "/images/services/offpage-seo.svg"
+title: 'Off-Page SEO'
+description: 'Autoriteit bouwen buiten je eigen website. Ik zorg voor kwalitatieve backlinks en merkbekendheid.'
+icon: 'link'
+image: '/images/services/offpage-seo.svg'
 order: 5
 featured: false
 ---

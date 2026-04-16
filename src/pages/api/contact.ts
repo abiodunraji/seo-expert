@@ -32,12 +32,12 @@ function isValidEmail(email: string): boolean {
 function checkRateLimit(ip: string): boolean {
   const now = Date.now();
   const times = submissionTimes.get(ip) || [];
-  const recent = times.filter(t => now - t < WINDOW_MS);
-  
+  const recent = times.filter((t) => now - t < WINDOW_MS);
+
   if (recent.length >= MAX_SUBMISSIONS) {
     return false;
   }
-  
+
   recent.push(now);
   submissionTimes.set(ip, recent);
   return true;
@@ -49,7 +49,10 @@ export const POST: APIRoute = async ({ request }) => {
     const ip = request.headers.get('x-forwarded-for') || 'unknown';
     if (!checkRateLimit(ip)) {
       return new Response(
-        JSON.stringify({ success: false, message: 'Te veel verzoeken. Probeer het later opnieuw.' }),
+        JSON.stringify({
+          success: false,
+          message: 'Te veel verzoeken. Probeer het later opnieuw.',
+        }),
         { status: 429, headers: { 'Content-Type': 'application/json' } }
       );
     }
@@ -75,10 +78,10 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     if (!isValidEmail(email) || email.length > 254) {
-      return new Response(
-        JSON.stringify({ success: false, message: 'Ongeldig e-mailadres.' }),
-        { status: 400, headers: { 'Content-Type': 'application/json' } }
-      );
+      return new Response(JSON.stringify({ success: false, message: 'Ongeldig e-mailadres.' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' },
+      });
     }
 
     if (message.length < 10 || message.length > 2000) {
@@ -89,26 +92,26 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     if (company && company.length > 100) {
-      return new Response(
-        JSON.stringify({ success: false, message: 'Bedrijfsnaam is te lang.' }),
-        { status: 400, headers: { 'Content-Type': 'application/json' } }
-      );
+      return new Response(JSON.stringify({ success: false, message: 'Bedrijfsnaam is te lang.' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' },
+      });
     }
 
     // Check for spam indicators (honeypot should be empty)
     if (body.website) {
-      return new Response(
-        JSON.stringify({ success: false, message: 'Verzoek geweigerd.' }),
-        { status: 400, headers: { 'Content-Type': 'application/json' } }
-      );
+      return new Response(JSON.stringify({ success: false, message: 'Verzoek geweigerd.' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' },
+      });
     }
 
     // Check timestamp (submissions too fast are likely bots)
     if (timestamp && Date.now() - timestamp < 1000) {
-      return new Response(
-        JSON.stringify({ success: false, message: 'Verzoek geweigerd.' }),
-        { status: 400, headers: { 'Content-Type': 'application/json' } }
-      );
+      return new Response(JSON.stringify({ success: false, message: 'Verzoek geweigerd.' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' },
+      });
     }
 
     // Sanitize inputs
@@ -180,7 +183,10 @@ Verzonden op: ${new Date().toLocaleString('nl-NL')}
   } catch (error) {
     console.error('Contact form error:', error);
     return new Response(
-      JSON.stringify({ success: false, message: 'Er is een fout opgetreden. Probeer het opnieuw.' }),
+      JSON.stringify({
+        success: false,
+        message: 'Er is een fout opgetreden. Probeer het opnieuw.',
+      }),
       { status: 500, headers: { 'Content-Type': 'application/json' } }
     );
   }

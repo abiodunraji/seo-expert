@@ -1,8 +1,8 @@
 ---
-title: "Content"
-description: "Content die rankt én converteert. Ik creëer strategische content die zoekmachines én je lezers begrijpen."
-icon: "content"
-image: "/images/services/content.svg"
+title: 'Content'
+description: 'Content die rankt én converteert. Ik creëer strategische content die zoekmachines én je lezers begrijpen.'
+icon: 'content'
+image: '/images/services/content.svg'
 order: 3
 featured: false
 ---

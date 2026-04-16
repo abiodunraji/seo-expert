@@ -13,31 +13,27 @@ interface Props {
 }
 
 const { title, description, canonicalURL, image } = Astro.props;
-const defaultDescription = 'Technical SEO, Content Architectuur & GEO voor de merken van morgen. Iwan Stepanova is de strategische architect voor zoekmachine dominantie.';
+const defaultDescription =
+  'Technical SEO, Content Architectuur & GEO voor de merken van morgen. Iwan Stepanova is de strategische architect voor zoekmachine dominantie.';
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    
-    <!-- Preconnect to Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
-    
-    <SEO 
-      title={title} 
-      description={description ?? defaultDescription} 
+
+    <!-- Fonts are self-hosted via @fontsource (imported in global.css) -->
+
+    <SEO
+      title={title}
+      description={description ?? defaultDescription}
       canonicalURL={canonicalURL}
       image={image}
     />
-    
+
     <!-- JSON-LD ProfessionalService Schema -->
     <script type="application/ld+json">
       {

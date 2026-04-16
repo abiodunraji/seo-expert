@@ -10,96 +10,298 @@ interface Props {
   ctaHref?: string;
 }
 
-const { 
-  title, 
-  subtitle, 
+const {
+  title,
+  subtitle,
   showImage = true,
   imageAlt = 'Iwan Stepanova',
   ctaText = 'Start je Project',
-  ctaHref = '/contact'
+  ctaHref = '/contact',
 } = Astro.props;
 ---
 
 <section class="relative overflow-hidden py-20 lg:py-32 bg-surface-alt dot-grid">
   <!-- Background Gradient -->
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[120px]"></div>
+  <div
+    class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[120px]"
+  >
+  </div>
 
   <!-- Constellation SVG motif (top-right, desktop only) -->
-  <svg class="hidden lg:block absolute top-12 right-16 pointer-events-none select-none" width="340" height="260" viewBox="0 0 340 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <svg
+    class="hidden lg:block absolute top-12 right-16 pointer-events-none select-none"
+    width="340"
+    height="260"
+    viewBox="0 0 340 260"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
     <!-- Primary edges from central node -->
-    <line x1="170" y1="130" x2="60"  y2="48"  stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0s"/>
-    <line x1="170" y1="130" x2="280" y2="62"  stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.1s"/>
-    <line x1="170" y1="130" x2="305" y2="185" stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.2s"/>
-    <line x1="170" y1="130" x2="120" y2="220" stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.3s"/>
-    <line x1="170" y1="130" x2="42"  y2="165" stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.4s"/>
+    <line
+      x1="170"
+      y1="130"
+      x2="60"
+      y2="48"
+      stroke="#C8A882"
+      stroke-width="0.75"
+      opacity="0.45"
+      class="constellation-line"
+      style="animation-delay: 0s"></line>
+    <line
+      x1="170"
+      y1="130"
+      x2="280"
+      y2="62"
+      stroke="#C8A882"
+      stroke-width="0.75"
+      opacity="0.45"
+      class="constellation-line"
+      style="animation-delay: 0.1s"></line>
+    <line
+      x1="170"
+      y1="130"
+      x2="305"
+      y2="185"
+      stroke="#C8A882"
+      stroke-width="0.75"
+      opacity="0.45"
+      class="constellation-line"
+      style="animation-delay: 0.2s"></line>
+    <line
+      x1="170"
+      y1="130"
+      x2="120"
+      y2="220"
+      stroke="#C8A882"
+      stroke-width="0.75"
+      opacity="0.45"
+      class="constellation-line"
+      style="animation-delay: 0.3s"></line>
+    <line
+      x1="170"
+      y1="130"
+      x2="42"
+      y2="165"
+      stroke="#C8A882"
+      stroke-width="0.75"
+      opacity="0.45"
+      class="constellation-line"
+      style="animation-delay: 0.4s"></line>
     <!-- Secondary cross-edges -->
-    <line x1="60"  y1="48"  x2="280" y2="62"  stroke="#C8A882" stroke-width="0.5"  opacity="0.18" class="constellation-line" style="animation-delay: 0.5s"/>
-    <line x1="60"  y1="48"  x2="42"  y2="165" stroke="#C8A882" stroke-width="0.5"  opacity="0.18" class="constellation-line" style="animation-delay: 0.52s"/>
-    <line x1="280" y1="62"  x2="305" y2="185" stroke="#C8A882" stroke-width="0.5"  opacity="0.18" class="constellation-line" style="animation-delay: 0.55s"/>
-    <line x1="42"  y1="165" x2="120" y2="220" stroke="#C8A882" stroke-width="0.5"  opacity="0.18" class="constellation-line" style="animation-delay: 0.58s"/>
+    <line
+      x1="60"
+      y1="48"
+      x2="280"
+      y2="62"
+      stroke="#C8A882"
+      stroke-width="0.5"
+      opacity="0.18"
+      class="constellation-line"
+      style="animation-delay: 0.5s"></line>
+    <line
+      x1="60"
+      y1="48"
+      x2="42"
+      y2="165"
+      stroke="#C8A882"
+      stroke-width="0.5"
+      opacity="0.18"
+      class="constellation-line"
+      style="animation-delay: 0.52s"></line>
+    <line
+      x1="280"
+      y1="62"
+      x2="305"
+      y2="185"
+      stroke="#C8A882"
+      stroke-width="0.5"
+      opacity="0.18"
+      class="constellation-line"
+      style="animation-delay: 0.55s"></line>
+    <line
+      x1="42"
+      y1="165"
+      x2="120"
+      y2="220"
+      stroke="#C8A882"
+      stroke-width="0.5"
+      opacity="0.18"
+      class="constellation-line"
+      style="animation-delay: 0.58s"></line>
     <!-- Satellite spurs -->
-    <line x1="60"  y1="48"  x2="22"  y2="18"  stroke="#C8A882" stroke-width="0.5"  opacity="0.15" class="constellation-line" style="animation-delay: 0.65s"/>
-    <line x1="280" y1="62"  x2="328" y2="30"  stroke="#C8A882" stroke-width="0.5"  opacity="0.15" class="constellation-line" style="animation-delay: 0.7s"/>
-    <line x1="305" y1="185" x2="335" y2="238" stroke="#C8A882" stroke-width="0.5"  opacity="0.15" class="constellation-line" style="animation-delay: 0.75s"/>
+    <line
+      x1="60"
+      y1="48"
+      x2="22"
+      y2="18"
+      stroke="#C8A882"
+      stroke-width="0.5"
+      opacity="0.15"
+      class="constellation-line"
+      style="animation-delay: 0.65s"></line>
+    <line
+      x1="280"
+      y1="62"
+      x2="328"
+      y2="30"
+      stroke="#C8A882"
+      stroke-width="0.5"
+      opacity="0.15"
+      class="constellation-line"
+      style="animation-delay: 0.7s"></line>
+    <line
+      x1="305"
+      y1="185"
+      x2="335"
+      y2="238"
+      stroke="#C8A882"
+      stroke-width="0.5"
+      opacity="0.15"
+      class="constellation-line"
+      style="animation-delay: 0.75s"></line>
     <!-- Nodes -->
-    <circle cx="170" cy="130" r="4.5" fill="#C8A882" opacity="0.65" class="constellation-node" style="--node-opacity: 0.65; animation-delay: 0.15s"/>
-    <circle cx="60"  cy="48"  r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.5s"/>
-    <circle cx="280" cy="62"  r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.55s"/>
-    <circle cx="305" cy="185" r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.6s"/>
-    <circle cx="120" cy="220" r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.65s"/>
-    <circle cx="42"  cy="165" r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.7s"/>
-    <circle cx="22"  cy="18"  r="1.6" fill="#C8A882" opacity="0.30" class="constellation-node" style="--node-opacity: 0.30; animation-delay: 0.85s"/>
-    <circle cx="328" cy="30"  r="1.6" fill="#C8A882" opacity="0.30" class="constellation-node" style="--node-opacity: 0.30; animation-delay: 0.9s"/>
-    <circle cx="335" cy="238" r="1.6" fill="#C8A882" opacity="0.30" class="constellation-node" style="--node-opacity: 0.30; animation-delay: 0.95s"/>
+    <circle
+      cx="170"
+      cy="130"
+      r="4.5"
+      fill="#C8A882"
+      opacity="0.65"
+      class="constellation-node"
+      style="--node-opacity: 0.65; animation-delay: 0.15s"></circle>
+    <circle
+      cx="60"
+      cy="48"
+      r="2.8"
+      fill="#C8A882"
+      opacity="0.50"
+      class="constellation-node"
+      style="--node-opacity: 0.50; animation-delay: 0.5s"></circle>
+    <circle
+      cx="280"
+      cy="62"
+      r="2.8"
+      fill="#C8A882"
+      opacity="0.50"
+      class="constellation-node"
+      style="--node-opacity: 0.50; animation-delay: 0.55s"></circle>
+    <circle
+      cx="305"
+      cy="185"
+      r="2.8"
+      fill="#C8A882"
+      opacity="0.50"
+      class="constellation-node"
+      style="--node-opacity: 0.50; animation-delay: 0.6s"></circle>
+    <circle
+      cx="120"
+      cy="220"
+      r="2.8"
+      fill="#C8A882"
+      opacity="0.50"
+      class="constellation-node"
+      style="--node-opacity: 0.50; animation-delay: 0.65s"></circle>
+    <circle
+      cx="42"
+      cy="165"
+      r="2.8"
+      fill="#C8A882"
+      opacity="0.50"
+      class="constellation-node"
+      style="--node-opacity: 0.50; animation-delay: 0.7s"></circle>
+    <circle
+      cx="22"
+      cy="18"
+      r="1.6"
+      fill="#C8A882"
+      opacity="0.30"
+      class="constellation-node"
+      style="--node-opacity: 0.30; animation-delay: 0.85s"></circle>
+    <circle
+      cx="328"
+      cy="30"
+      r="1.6"
+      fill="#C8A882"
+      opacity="0.30"
+      class="constellation-node"
+      style="--node-opacity: 0.30; animation-delay: 0.9s"></circle>
+    <circle
+      cx="335"
+      cy="238"
+      r="1.6"
+      fill="#C8A882"
+      opacity="0.30"
+      class="constellation-node"
+      style="--node-opacity: 0.30; animation-delay: 0.95s"></circle>
   </svg>
 
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
       <!-- Text Content -->
       <div class="space-y-6 lg:space-y-8">
-        <h1 class="font-semibold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.1] tracking-tight">
-          <span class="block font-display italic text-primary">{title.split(' ').slice(0, 3).join(' ')}</span>
-          <span class="block font-sans text-primary-light">{title.split(' ').slice(3).join(' ')}</span>
+        <!-- Eyebrow badge -->
+        <div
+          class="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5"
+        >
+          <span class="w-1.5 h-1.5 rounded-full bg-accent inline-block"></span>
+          <span class="font-mono text-xs text-primary-light uppercase tracking-widest"
+            >SEO Consultant · Amsterdam</span
+          >
+        </div>
+
+        <h1
+          class="font-semibold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.1] tracking-tight"
+        >
+          <span class="block font-display italic text-primary"
+            >{title.split(' ').slice(0, 3).join(' ')}</span
+          >
+          <span class="block font-sans text-primary-light"
+            >{title.split(' ').slice(3).join(' ')}</span
+          >
         </h1>
-        
-        {subtitle && (
-          <p class="font-sans text-lg lg:text-xl text-neutral-500 max-w-xl leading-relaxed">
-            {subtitle}
-          </p>
-        )}
+
+        {
+          subtitle && (
+            <p class="font-sans text-lg lg:text-xl text-neutral-500 max-w-xl leading-relaxed">
+              {subtitle}
+            </p>
+          )
+        }
 
         <div class="flex flex-wrap gap-4">
           <a
             href={ctaHref}
-            class="inline-flex items-center justify-center font-sans font-medium text-sm bg-primary text-white px-8 py-4 rounded-lg transition-all duration-300 hover:bg-primary-light hover:shadow-medium btn-amber-glow"
+            class="inline-flex items-center justify-center font-sans font-medium text-sm bg-primary text-white px-8 py-4 rounded-full transition-all duration-300 hover:bg-primary-light hover:shadow-medium btn-amber-glow"
           >
             {ctaText}
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
               class="w-4 h-4 ml-2"
-              fill="none" 
-              viewBox="0 0 24 24" 
+              fill="none"
+              viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
             </svg>
           </a>
         </div>
       </div>
 
       <!-- Image / Visual -->
-      {showImage && (
-        <div class="relative">
-          <div class="absolute inset-0 bg-accent/5 rounded-2xl blur-3xl"></div>
-          <div class="relative bg-surface rounded-2xl border border-neutral-300 overflow-hidden shadow-soft">
-            <img 
-              src={url('/images/iwan.png')} 
-              alt={imageAlt} 
-              class="w-full h-auto"
-            />
+      {
+        showImage && (
+          <div class="relative">
+            <div class="absolute inset-0 bg-accent/5 rounded-2xl blur-3xl" />
+            <div class="relative bg-surface rounded-2xl border border-neutral-300 overflow-hidden shadow-soft">
+              <img src={url('/images/iwan.png')} alt={imageAlt} class="w-full h-auto" />
+            </div>
           </div>
-        </div>
-      )}
+        )
+      }
     </div>
   </div>
 </section>

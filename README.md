@@ -37,7 +37,7 @@ seo-expert/
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm 9+
 
 ### Installation
@@ -77,9 +77,9 @@ Create a new Markdown file in `/src/content/services/`:
 
 ```markdown
 ---
-title: "Servicenaam"
-description: "Korte beschrijving"
-icon: "iconnaam"
+title: 'Servicenaam'
+description: 'Korte beschrijving'
+icon: 'iconnaam'
 order: 8
 featured: false
 ---
@@ -103,12 +103,12 @@ Create a new Markdown file in `/src/content/cases/`:
 
 ```markdown
 ---
-client: "Client Naam"
-title: "Case Titel"
-summary: "Korte samenvatting"
+client: 'Client Naam'
+title: 'Case Titel'
+summary: 'Korte samenvatting'
 results:
-  - { metric: "Traffic", value: "+150%" }
-  - { metric: "Conversies", value: "+80%" }
+  - { metric: 'Traffic', value: '+150%' }
+  - { metric: 'Conversies', value: '+80%' }
 date: 2024-01-01
 featured: true
 ---

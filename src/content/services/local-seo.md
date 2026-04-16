@@ -1,8 +1,8 @@
 ---
-title: "Local SEO"
-description: "Lokalale zichtbaarheid voor fysieke bedrijven. Ik zorg dat klanten je vindn als ze zoeken in jouw regio."
-icon: "map"
-image: "/images/services/local-seo.svg"
+title: 'Local SEO'
+description: 'Lokalale zichtbaarheid voor fysieke bedrijven. Ik zorg dat klanten je vindn als ze zoeken in jouw regio.'
+icon: 'map'
+image: '/images/services/local-seo.svg'
 order: 6
 featured: false
 ---

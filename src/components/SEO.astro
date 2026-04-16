@@ -7,19 +7,23 @@ interface Props {
   type?: 'website' | 'article';
 }
 
-const { 
-  title, 
-  description = 'Technical SEO, Content Architectuur & GEO voor de merken van morgen.', 
+const {
+  title,
+  description = 'Technical SEO, Content Architectuur & GEO voor de merken van morgen.',
   canonicalURL,
   image,
-  type = 'website'
+  type = 'website',
 } = Astro.props;
 
 const siteTitle = 'Iwan Stepanova — SEO Expert';
 const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
 const defaultImage = '/images/og-default.jpg';
-const absoluteImage = image ? new URL(image, Astro.url.origin).toString() : new URL(defaultImage, Astro.url.origin).toString();
-const absoluteCanonical = canonicalURL ? new URL(canonicalURL, Astro.url.origin).toString() : Astro.url.href;
+const absoluteImage = image
+  ? new URL(image, Astro.url.origin).toString()
+  : new URL(defaultImage, Astro.url.origin).toString();
+const absoluteCanonical = canonicalURL
+  ? new URL(canonicalURL, Astro.url.origin).toString()
+  : Astro.url.href;
 ---
 
 <title>{fullTitle}</title>
