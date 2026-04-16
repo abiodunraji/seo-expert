@@ -4,5 +4,5 @@ const BASE_PATH = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 export function url(path: string): string {
   const cleanPath = path.replace(/\/$/, '');
-  return BASE_PATH + cleanPath;
+  return BASE_PATH + cleanPath || '/';
 }
