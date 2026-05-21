@@ -1,0 +1,314 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Button from '../../components/Button.astro';
+import { url } from '../../lib/urls';
+
+const pillars = [
+  {
+    title: 'Google Bedrijfsprofiel',
+    description:
+      "De belangrijkste plek waar lokale vindbaarheid wordt bepaald. Volledigheid, juiste categorieën, beschrijving, foto's, openingstijden, productlijst, antwoordtijd op vragen. Ik zorg dat alle onderdelen op orde zijn en dat het profiel actief onderhouden wordt. Een goed bedrijfsprofiel werkt zowel in Google als in AI-zoekmachines, want zij gebruiken dezelfde bron.",
+  },
+  {
+    title: 'Reviews en reputatie',
+    description:
+      'Reviews wegen zwaar in zowel de keuze van de klant als de positie in de zoekresultaten. Ik help met een structurele aanpak om reviews binnen te krijgen, met de juiste reacties op nieuwe en bestaande reviews, en met het herstellen van eventuele oneerlijke beoordelingen.',
+  },
+  {
+    title: 'Lokale signalen en vermeldingen',
+    description:
+      'Naam, adres en telefoonnummer moeten overal consistent staan. In branchegidsen, op kaartdiensten, op portals die relevant zijn voor jouw sector. Inconsistentie kost zichtbaarheid. Ik zorg dat alle vermeldingen kloppen en dat de juiste lokale signalen op de juiste plekken staan.',
+  },
+  {
+    title: 'Website en techniek',
+    description:
+      "De website ondersteunt het bedrijfsprofiel, niet andersom. Ik kijk naar de pagina's die het meest bijdragen aan lokale vindbaarheid (vaak de homepage, contactpagina en locatiepagina's), de technische basis, schema markup, en de lokale signalen die je site uitzendt. Geen tweehonderd \"actiepunten\", wel de optimalisaties die in jouw context echt verschil maken.",
+  },
+];
+
+const phases = [
+  {
+    label: 'Maand 1',
+    title: 'Analyse en fundering',
+    description:
+      'Ik begin met een volledige analyse van de huidige situatie: bedrijfsprofiel, reviews, vermeldingen, website, concurrentie in jouw regio. Op basis daarvan stel ik een strategie vast en zet ik de eerste belangrijke optimalisaties direct in gang. De fundering moet staan voordat we gaan groeien.',
+  },
+  {
+    label: 'Maand 2 tot 3',
+    title: 'Opbouw',
+    description:
+      'In deze fase wordt het werk uitgevoerd dat de positie structureel verbetert. Profielen worden compleet gemaakt, reviews komen op gang, vermeldingen worden rechtgetrokken, technische verbeteringen op de website worden doorgevoerd. Eerste resultaten zijn doorgaans in deze periode al zichtbaar.',
+  },
+  {
+    label: 'Vanaf maand 4',
+    title: 'Optimalisatie en onderhoud',
+    description:
+      'Local SEO is geen project dat af is. Posities verschuiven, concurrenten bewegen, Google verandert. Vanaf deze fase ligt de nadruk op doorlopende optimalisatie: nieuwe content waar nuttig, structureel onderhoud van het bedrijfsprofiel, monitoren van reviews en posities, en strategisch bijsturen waar dat nodig is.',
+  },
+  {
+    label: 'Doorlopend',
+    title: 'Rapportage en contact',
+    description:
+      'Elke maand ontvang je een rapportage die laat zien wat er is gedaan en wat het oplevert. Geen grafiek-festival, wel de cijfers die ertoe doen: posities, weergaven van je bedrijfsprofiel, klikken naar je website, telefoongesprekken en routebeschrijvingen die direct uit Google komen. Daarnaast korte lijnen voor vragen tussendoor.',
+  },
+];
+---
+
+<BaseLayout
+  title="Local SEO"
+  description="Local SEO voor bedrijven die hun klanten uit de eigen regio halen. Vaste prijs per maand, maandelijks opzegbaar. Inclusief AI search en GEO."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-20 lg:py-28 bg-surface-alt dot-grid">
+    <div
+      class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[600px] bg-accent/5 rounded-full blur-[120px]"
+    >
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <span class="section-label">Dienst</span>
+        <h1
+          class="font-semibold text-4xl lg:text-5xl xl:text-6xl mt-5 tracking-tight leading-[1.1]"
+        >
+          <span class="font-display italic text-primary">Local SEO</span>
+        </h1>
+        <p class="font-sans text-lg lg:text-xl text-neutral-500 mt-6 leading-relaxed">
+          Langdurige samenwerking voor bedrijven die hun klanten uit de eigen regio halen. Vaste
+          prijs per maand, maandelijks opzegbaar.
+        </p>
+        <div class="mt-8">
+          <Button href={url('/contact/')} variant="primary" size="lg">
+            Plan een kennismaking
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wat is local SEO -->
+  <section class="signal-section bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl">
+        <span class="section-label">Wat is local SEO</span>
+        <h2 class="text-3xl lg:text-4xl mt-5 mb-8 tracking-tight">
+          <span class="font-display italic text-primary">Vindbaar worden</span>
+          <span class="font-sans font-semibold text-primary-light"> waar je klanten zoeken.</span>
+        </h2>
+        <div class="font-sans text-neutral-500 space-y-5 leading-relaxed text-lg">
+          <p>
+            Local SEO is het vakgebied dat zich richt op de zichtbaarheid van bedrijven in lokale
+            zoekresultaten. In de praktijk gaat het om drie plekken waar potentiële klanten
+            beslissen: de lokale resultaten in Google (de kaart met drie bedrijven die bovenin
+            verschijnt), Google Maps zelf, en steeds vaker ook de antwoorden van AI-zoekmachines
+            zoals ChatGPT en Google AI Overviews.
+          </p>
+          <p>
+            Wie op die plekken zichtbaar is, wordt gevonden op het moment dat het ertoe doet. Een
+            patiënt die een fysiotherapeut zoekt in zijn woonplaats. Een ondernemer die een
+            advocaat zoekt voor een specifieke kwestie. Iemand die wil reserveren bij een
+            restaurant in zijn buurt. Voor dit soort zoekopdrachten is local SEO doorslaggevend.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- De vier pijlers -->
+  <section class="signal-section bg-surface-alt dot-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl mb-16">
+        <span class="section-label">Waar mijn werk uit bestaat</span>
+        <h2 class="text-3xl lg:text-4xl mt-5 tracking-tight">
+          <span class="font-display italic text-primary">De vier pijlers</span>
+          <span class="font-sans font-semibold text-primary-light"> van local SEO.</span>
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          pillars.map((pillar) => (
+            <div class="card card-signal">
+              <h3 class="font-sans font-semibold text-xl text-primary mb-4">{pillar.title}</h3>
+              <p class="font-sans text-neutral-500 leading-relaxed">{pillar.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- AI search -->
+  <section class="signal-section bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl">
+        <span class="section-label">AI search en local SEO</span>
+        <h2 class="text-3xl lg:text-4xl mt-5 mb-8 tracking-tight">
+          <span class="font-display italic text-primary">AI-zoekmachines kijken vooral</span>
+          <span class="font-sans font-semibold text-primary-light">
+            naar je Google Bedrijfsprofiel.
+          </span>
+        </h2>
+        <div class="font-sans text-neutral-500 space-y-5 leading-relaxed text-lg">
+          <p>
+            Wanneer iemand aan ChatGPT, Google AI Overviews of Perplexity vraagt om een lokale
+            aanbeveling, putten die systemen voor een groot deel uit een bron: je Google
+            Bedrijfsprofiel. Wat daar staat over je dienst, je openingstijden, je reviews en je
+            categorieën, dat is wat een AI-assistent oppikt en doorgeeft.
+          </p>
+          <p>
+            Dat maakt local SEO en de optimalisatie voor AI-zoekmachines (ook wel GEO genoemd,
+            Generative Engine Optimization) in de praktijk geen aparte disciplines. Een goed
+            onderhouden bedrijfsprofiel werkt zowel in de klassieke zoekresultaten als in de
+            AI-antwoorden die daar steeds vaker bovenop verschijnen. Wie zijn local SEO op orde
+            heeft, profiteert dubbel.
+          </p>
+          <p>
+            In elk traject is voorbereiding op AI-zoekmachines daarom standaard onderdeel van wat
+            ik doe. Geen losse dienst, geen meerprijs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Werkwijze -->
+  <section class="signal-section bg-surface-alt dot-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl mb-16">
+        <span class="section-label">Werkwijze</span>
+        <h2 class="text-3xl lg:text-4xl mt-5 tracking-tight">
+          <span class="font-display italic text-primary">Hoe een samenwerking</span>
+          <span class="font-sans font-semibold text-primary-light"> eruit ziet.</span>
+        </h2>
+      </div>
+      <div class="space-y-8">
+        {
+          phases.map((phase, index) => (
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-start card card-signal bg-surface">
+              <div>
+                <span class="font-mono text-xs text-accent uppercase tracking-widest">
+                  Fase 0{index + 1}
+                </span>
+                <p class="font-display italic text-2xl text-primary mt-2">{phase.label}</p>
+              </div>
+              <div class="md:col-span-3">
+                <h3 class="font-sans font-semibold text-xl text-primary mb-3">{phase.title}</h3>
+                <p class="font-sans text-neutral-500 leading-relaxed">{phase.description}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Voor wie -->
+  <section class="signal-section bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl">
+        <span class="section-label">Geschikt voor</span>
+        <h2 class="text-3xl lg:text-4xl mt-5 mb-8 tracking-tight">
+          <span class="font-display italic text-primary">Lokale dienstverleners</span>
+          <span class="font-sans font-semibold text-primary-light">
+            en MKB-bedrijven met fysieke klanten.
+          </span>
+        </h2>
+        <div class="font-sans text-neutral-500 space-y-5 leading-relaxed text-lg">
+          <p>
+            Local SEO werkt het best voor bedrijven waar klanten naar toe komen of waar klanten
+            lokaal naar zoeken. Dat zijn bijvoorbeeld praktijken in de zorg (fysiotherapie,
+            tandarts, huisarts, psychologen), juridisch en financieel dienstverleners (advocaten,
+            accountants, notarissen), bouw en installatie (loodgieters, elektriciens, aannemers),
+            horeca en gastvrijheid (restaurants, cafés, hotels), en kleinschalige retail met een
+            fysieke locatie.
+          </p>
+          <p>
+            Voor bedrijven met meerdere vestigingen werk ik ook met een gestructureerde aanpak per
+            locatie. Dat geldt voor franchises, ketens en bedrijven met meerdere praktijken in
+            verschillende plaatsen.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tarief -->
+  <section class="signal-section bg-surface-alt dot-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl">
+        <span class="section-label">Tarief</span>
+        <h2 class="text-3xl lg:text-4xl mt-5 mb-8 tracking-tight">
+          <span class="font-display italic text-primary">Eén vaste prijs per maand.</span>
+          <span class="font-sans font-semibold text-primary-light"> Maandelijks opzegbaar.</span>
+        </h2>
+        <div class="font-sans text-neutral-500 space-y-5 leading-relaxed text-lg">
+          <p>
+            Mijn tarief hangt af van de situatie: de omvang van het bedrijf, het aantal locaties,
+            de staat waarin het bedrijfsprofiel nu verkeert, en de concurrentie in jouw regio. In
+            een eerste gesprek krijg je daar direct een helder antwoord op.
+          </p>
+          <p>
+            De samenwerking is altijd maandelijks opzegbaar. Geen jaarcontract, geen opstartkosten.
+            Wel met de gedachte van een langdurig traject, omdat local SEO maanden nodig heeft om
+            vol tot zijn recht te komen.
+          </p>
+          <p>
+            Voor wie eerst een eenmalige analyse wil voordat een langdurig traject gestart wordt:
+            een local SEO audit is ook beschikbaar als losse opdracht.
+          </p>
+        </div>
+        <div class="mt-8">
+          <a
+            href={url('/diensten/local-seo-audit/')}
+            class="inline-flex items-center gap-2 font-sans text-primary-light hover:text-primary transition-colors duration-300"
+          >
+            Bekijk de local SEO audit
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slot CTA -->
+  <section class="signal-section bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div
+        class="relative bg-surface-alt rounded-2xl border border-neutral-300 p-10 lg:p-16 text-center overflow-hidden shadow-soft"
+      >
+        <div
+          class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent/10 rounded-full blur-[100px]"
+        >
+        </div>
+        <div class="relative">
+          <h2 class="text-3xl lg:text-4xl tracking-tight">
+            <span class="font-display italic text-primary">Klaar om te kijken</span>
+            <span class="font-sans font-semibold text-primary-light">
+              wat er voor jouw bedrijf mogelijk is?
+            </span>
+          </h2>
+          <p class="font-sans text-neutral-500 mt-6 max-w-2xl mx-auto leading-relaxed text-lg">
+            Een eerste gesprek kost een half uur en levert je in elk geval een eerlijke inschatting
+            op van waar je staat en wat er te halen is.
+          </p>
+          <div class="mt-8">
+            <Button href={url('/contact/')} variant="primary" size="lg">
+              Plan een kennismaking
+            </Button>
+          </div>
+          <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest mt-6">
+            Vrijblijvend. Geen verkooppraatje.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

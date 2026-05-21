@@ -1,0 +1,187 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Button from '../../components/Button.astro';
+import { url } from '../../lib/urls';
+
+const components = [
+  {
+    title: 'Google Bedrijfsprofiel',
+    description:
+      "Volledigheid, juistheid, categorieën, beschrijving, foto's, productlijst, openingstijden, antwoordtijd op vragen en reviews. De fundering van je lokale zichtbaarheid.",
+  },
+  {
+    title: 'Reviews en reputatie',
+    description:
+      'Aantal en kwaliteit van reviews, frequentie waarmee ze binnenkomen, hoe ze beantwoord worden, en hoe je ten opzichte van directe concurrenten scoort.',
+  },
+  {
+    title: 'Lokale vermeldingen',
+    description:
+      'Consistentie en aanwezigheid van je naam, adres en telefoonnummer in branchegidsen, kaartdiensten en sectorportals. Inconsistente vermeldingen kosten zichtbaarheid.',
+  },
+  {
+    title: 'Website en techniek',
+    description:
+      "De technische staat van je website, de pagina's die het meest bijdragen aan lokale vindbaarheid, schema markup, en de lokale signalen die je site uitzendt.",
+  },
+  {
+    title: 'Concurrentie in jouw regio',
+    description:
+      'Hoe je positie zich verhoudt tot directe concurrenten in jouw plaats of regio. Waar zij scoren en waar voor jou de openingen liggen.',
+  },
+];
+---
+
+<BaseLayout
+  title="Local SEO audit"
+  description="Een eenmalige doorlichting van je lokale vindbaarheid, met concrete prioriteiten en een gesprek om de uitkomsten door te nemen. Vaste prijs."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-20 lg:py-28 bg-surface-alt dot-grid">
+    <div
+      class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[600px] bg-accent/5 rounded-full blur-[120px]"
+    >
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <span class="section-label">Dienst</span>
+        <h1
+          class="font-semibold text-4xl lg:text-5xl xl:text-6xl mt-5 tracking-tight leading-[1.1]"
+        >
+          <span class="font-display italic text-primary">Local SEO audit</span>
+        </h1>
+        <p class="font-sans text-lg lg:text-xl text-neutral-500 mt-6 leading-relaxed">
+          Een doorlichting van je lokale vindbaarheid, met een concrete prioriteitenlijst.
+          Eenmalig, vaste prijs.
+        </p>
+        <div class="mt-8">
+          <Button href={url('/contact/')} variant="primary" size="lg">Vraag een audit aan</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wat je krijgt -->
+  <section class="signal-section bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl">
+        <span class="section-label">Wat je krijgt</span>
+        <h2 class="text-3xl lg:text-4xl mt-5 mb-8 tracking-tight">
+          <span class="font-display italic text-primary">Helder beeld van waar je staat</span>
+          <span class="font-sans font-semibold text-primary-light"> en wat er te halen valt.</span>
+        </h2>
+        <div class="font-sans text-neutral-500 space-y-5 leading-relaxed text-lg">
+          <p>
+            Een local SEO audit beantwoordt drie vragen. Hoe sta je er nu voor in lokale
+            zoekresultaten en op Google Maps? Wat gaat goed en wat zit je in de weg? Welke
+            optimalisaties leveren de meeste impact op, en in welke volgorde pak je ze aan?
+          </p>
+          <p>
+            Het resultaat is een rapport met concrete bevindingen, een prioriteitenlijst, en een
+            gesprek waarin we de uitkomsten samen doornemen. Geen tweehonderd actiepunten waar
+            niemand mee aan de slag gaat, wel een lijst met de tien tot vijftien acties die echt
+            verschil maken.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wat de audit omvat -->
+  <section class="signal-section bg-surface-alt dot-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl mb-16">
+        <span class="section-label">Wat de audit omvat</span>
+        <h2 class="text-3xl lg:text-4xl mt-5 tracking-tight">
+          <span class="font-display italic text-primary">Vijf onderdelen,</span>
+          <span class="font-sans font-semibold text-primary-light"> op elkaar afgestemd.</span>
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          components.map((item) => (
+            <div class="card card-signal">
+              <h3 class="font-sans font-semibold text-xl text-primary mb-3">{item.title}</h3>
+              <p class="font-sans text-neutral-500 leading-relaxed">{item.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Werkwijze -->
+  <section class="signal-section bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl">
+        <span class="section-label">Werkwijze</span>
+        <h2 class="text-3xl lg:text-4xl mt-5 mb-8 tracking-tight">
+          <span class="font-display italic text-primary">Van aanvraag tot rapport</span>
+          <span class="font-sans font-semibold text-primary-light"> in twee weken.</span>
+        </h2>
+        <div class="font-sans text-neutral-500 space-y-5 leading-relaxed text-lg">
+          <p>
+            Na aanvraag krijg je een korte intake van een kwartier, waarin we doornemen welke
+            informatie ik nodig heb (toegang tot je Google Bedrijfsprofiel, Google Search Console,
+            en eventueel Analytics). Daarna ga ik aan de slag.
+          </p>
+          <p>
+            Binnen twee weken ontvang je het rapport, gevolgd door een gesprek van een half uur
+            waarin we de uitkomsten doornemen. Je krijgt het rapport mee als document dat je
+            intern of met je webbouwer kunt delen.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tarief -->
+  <section class="signal-section bg-surface-alt dot-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl">
+        <span class="section-label">Tarief</span>
+        <h2 class="text-3xl lg:text-4xl mt-5 mb-8 tracking-tight">
+          <span class="font-display italic text-primary">€595,</span>
+          <span class="font-sans font-semibold text-primary-light"> vaste prijs.</span>
+        </h2>
+        <div class="font-sans text-neutral-500 space-y-5 leading-relaxed text-lg">
+          <p>
+            Vaste prijs van €595 (excl. btw), ongeacht de omvang van het werk. Voor bedrijven met
+            meerdere vestigingen geldt een aangepast tarief, dat in de intake besproken wordt.
+          </p>
+          <p>
+            Mocht je na de audit kiezen voor een langdurig local SEO traject, dan wordt het bedrag
+            van de audit verrekend met de eerste maand.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slot CTA -->
+  <section class="signal-section bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div
+        class="relative bg-surface-alt rounded-2xl border border-neutral-300 p-10 lg:p-16 text-center overflow-hidden shadow-soft"
+      >
+        <div
+          class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent/10 rounded-full blur-[100px]"
+        >
+        </div>
+        <div class="relative">
+          <h2 class="text-3xl lg:text-4xl tracking-tight">
+            <span class="font-display italic text-primary">Klaar om te weten</span>
+            <span class="font-sans font-semibold text-primary-light"> waar je staat?</span>
+          </h2>
+          <p class="font-sans text-neutral-500 mt-6 max-w-2xl mx-auto leading-relaxed text-lg">
+            Vul het contactformulier in of plan direct een korte intake. Ik laat je binnen één
+            werkdag weten wat de volgende stap is.
+          </p>
+          <div class="mt-8">
+            <Button href={url('/contact/')} variant="primary" size="lg">Vraag een audit aan</Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

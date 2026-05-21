@@ -9,13 +9,13 @@ interface Props {
 
 const {
   title,
-  description = 'Technical SEO, Content Architectuur & GEO voor de merken van morgen.',
+  description = 'Lokaal vindbaar worden, zonder fluff. Local SEO voor dienstverleners en MKB-bedrijven.',
   canonicalURL,
   image,
   type = 'website',
 } = Astro.props;
 
-const siteTitle = 'Iwan Stepanova — SEO Expert';
+const siteTitle = 'Iwan Stepanova';
 const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
 const defaultImage = '/images/og-default.jpg';
 const absoluteImage = image

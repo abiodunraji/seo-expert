@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Button from '../../components/Button.astro';
+import { url } from '../../lib/urls';
+
+const services = [
+  {
+    title: 'Local SEO',
+    description:
+      'Langdurige samenwerking voor bedrijven die hun klanten uit de eigen regio halen. Een aanpak die zich richt op wat lokaal het meest oplevert: een sterk Google Bedrijfsprofiel, structurele reviews, juiste lokale signalen, en een website die deze fundering ondersteunt. Vaste prijs per maand, maandelijks opzegbaar.',
+    audience:
+      'Lokale dienstverleners en MKB-bedrijven die structureel willen groeien in zichtbaarheid.',
+    href: url('/diensten/local-seo/'),
+    linkLabel: 'Bekijk local SEO',
+  },
+  {
+    title: 'Local SEO audit',
+    description:
+      'Eenmalige doorlichting van je huidige lokale vindbaarheid. Ik bekijk je Google Bedrijfsprofiel, je reviews, je lokale vermeldingen, je website en je positie ten opzichte van de concurrentie in jouw regio. Je krijgt een rapport met concrete bevindingen en een lijst met prioriteiten, plus een gesprek om de uitkomsten door te nemen.',
+    audience:
+      'Ondernemers die eerst willen weten waar ze staan voordat ze een langdurig traject overwegen.',
+    href: url('/diensten/local-seo-audit/'),
+    linkLabel: 'Bekijk de audit',
+  },
+  {
+    title: 'Voor bureaus',
+    description:
+      'Samenwerking met agencies en collega-freelancers die zelf geen local SEO specialist in huis hebben. Audits, GBP-optimalisaties, GEO-strategie, of het volledig uitvoeren van local SEO trajecten onder jullie eigen merk. Korte lijnen, vaste tarieven, en discretie waar nodig.',
+    audience:
+      'Bureaus en freelancers die local SEO willen aanbieden zonder zelf de specialistische kennis op te bouwen.',
+    href: url('/diensten/voor-bureaus/'),
+    linkLabel: 'Meer over samenwerken',
+  },
+];
+---
+
+<BaseLayout
+  title="Diensten"
+  description="Local SEO als langdurig traject, eenmalige audit, of samenwerking met bureaus. Drie manieren om met Iwan Stepanova te werken."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-20 lg:py-28 bg-surface-alt dot-grid">
+    <div
+      class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[600px] bg-accent/5 rounded-full blur-[120px]"
+    >
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <span class="section-label">Diensten</span>
+        <h1
+          class="font-semibold text-4xl lg:text-5xl xl:text-6xl mt-5 tracking-tight leading-[1.1]"
+        >
+          <span class="font-display italic text-primary block">Drie manieren</span>
+          <span class="font-sans text-primary-light block">om samen te werken</span>
+        </h1>
+        <p class="font-sans text-lg lg:text-xl text-neutral-500 mt-6 leading-relaxed">
+          Een langdurig traject, een eenmalige analyse, of samenwerking als onderaannemer voor
+          bureaus.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diensten cards -->
+  <section class="signal-section bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="space-y-8">
+        {
+          services.map((service) => (
+            <a
+              href={service.href}
+              class="group block card card-signal card-hover bg-surface-alt"
+            >
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12">
+                <div>
+                  <h2 class="font-sans font-semibold text-2xl lg:text-3xl text-primary tracking-tight">
+                    {service.title}
+                  </h2>
+                </div>
+                <div class="lg:col-span-2 space-y-5">
+                  <p class="font-sans text-neutral-500 leading-relaxed text-lg">
+                    {service.description}
+                  </p>
+                  <p class="font-sans text-sm text-primary-light italic">
+                    Voor wie: {service.audience}
+                  </p>
+                  <span class="inline-flex items-center gap-2 font-sans font-medium text-primary-light group-hover:text-primary transition-colors duration-300">
+                    {service.linkLabel}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Twijfel je -->
+  <section class="signal-section bg-surface-alt dot-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl">
+        <span class="section-label">Twijfel je</span>
+        <h2 class="text-3xl lg:text-4xl mt-5 mb-6 tracking-tight">
+          <span class="font-display italic text-primary">Niet zeker welke</span>
+          <span class="font-sans font-semibold text-primary-light"> vorm past?</span>
+        </h2>
+        <p class="font-sans text-neutral-500 leading-relaxed text-lg">
+          In een eerste gesprek bespreken we je situatie en kijken we welke samenwerkingsvorm het
+          beste past. Soms is een audit een logische instap, soms kun je beter direct met een
+          langdurig traject beginnen, en voor bureaus geldt vaak een eigen ritme. Geen vooraf
+          bepaald pad, wel een eerlijke inschatting.
+        </p>
+        <div class="mt-8">
+          <Button href={url('/contact/')} variant="primary" size="lg">
+            Plan een kennismaking
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

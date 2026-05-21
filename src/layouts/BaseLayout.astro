@@ -14,7 +14,7 @@ interface Props {
 
 const { title, description, canonicalURL, image } = Astro.props;
 const defaultDescription =
-  'Technical SEO, Content Architectuur & GEO voor de merken van morgen. Iwan Stepanova is de strategische architect voor zoekmachine dominantie.';
+  'Lokaal vindbaar worden, zonder fluff. Local SEO voor dienstverleners en MKB-bedrijven die hun klanten uit de eigen regio halen.';
 ---
 
 <!doctype html>
@@ -35,22 +35,24 @@ const defaultDescription =
     />
 
     <!-- JSON-LD ProfessionalService Schema -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Iwan Stepanova",
-        "description": "Technical SEO, Content Architecture & GEO consultant",
-        "url": "https://iwansrepub.nl/",
-        "areaServed": "Nederland",
-        "priceRange": "€€€€",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "NL"
-        },
-        "sameAs": []
-      }
-    </script>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Iwan Stepanova",
+      "description": "Local SEO specialist voor MKB en dienstverleners in Nederland.",
+      "url": "https://iwanstepanova.com/",
+      "email": "hallo@iwanstepanova.com",
+      "telephone": "+31623872013",
+      "areaServed": "Nederland",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Alkmaar",
+        "addressCountry": "NL"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/iwan-stepanova-seo/"
+      ]
+    })} />
   </head>
   <body class="bg-neutral-100 text-primary min-h-screen flex flex-col antialiased">
     <Header />
