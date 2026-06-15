@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import { copyFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -34,22 +33,9 @@ function flatSitemap() {
 export default defineConfig({
   site: 'https://iwanstepanova.com',
   base: '/',
-  integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
-    sitemap(),
-    flatSitemap(),
-  ],
+  integrations: [sitemap(), flatSitemap()],
   prefetch: true,
   build: {
     inlineStylesheets: 'auto',
-  },
-  vite: {
-    css: {
-      postcss: {
-        plugins: [],
-      },
-    },
   },
 });
