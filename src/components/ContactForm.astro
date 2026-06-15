@@ -1,8 +1,8 @@
 ---
-// Formspree form ID. Set PUBLIC_FORMSPREE_FORM_ID in .env (or in the GitHub Pages
-// build environment) to the form ID from https://formspree.io. Falls back to a
-// placeholder that surfaces a clear error if the variable is missing.
-const FORMSPREE_FORM_ID = import.meta.env.PUBLIC_FORMSPREE_FORM_ID ?? 'YOUR_FORMSPREE_FORM_ID';
+// Formspree form ID for iwanstepanova.com (notifications -> hallo@iwanstepanova.com).
+// Public by design — it ships in the page HTML — so it's safe to hardcode as the
+// default. PUBLIC_FORMSPREE_FORM_ID still overrides it if set in the build env.
+const FORMSPREE_FORM_ID = import.meta.env.PUBLIC_FORMSPREE_FORM_ID ?? 'mnjywjew';
 const formAction = `https://formspree.io/f/${FORMSPREE_FORM_ID}`;
 
 interface Props {
