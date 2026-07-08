@@ -5,36 +5,36 @@ import { url } from '../../lib/urls';
 
 const components = [
   {
-    title: 'Google Bedrijfsprofiel',
+    title: 'Techniek en indexatie',
     description:
-      "Volledigheid, juistheid, categorieën, beschrijving, foto's, productlijst, openingstijden, antwoordtijd op vragen en reviews. De fundering van je lokale zichtbaarheid.",
+      "De technische staat van je site: crawlbaarheid, indexatie, structuur, snelheid, schema markup en de signalen die je pagina's uitzenden. De fundering waar de rest op rust.",
   },
   {
-    title: 'Reviews en reputatie',
+    title: 'Content en on-page',
     description:
-      'Aantal en kwaliteit van reviews, frequentie waarmee ze binnenkomen, hoe ze beantwoord worden, en hoe je ten opzichte van directe concurrenten scoort.',
+      'Sluit je content aan op de zoekintentie van je publiek? Waar laat je posities liggen, waar is kannibalisatie, en welke pagina\'s verdienen de meeste aandacht. Mijn sterkste discipline.',
   },
   {
-    title: 'Lokale vermeldingen',
+    title: 'GEO en AI-zichtbaarheid',
     description:
-      'Consistentie en aanwezigheid van je naam, adres en telefoonnummer in branchegidsen, kaartdiensten en sectorportals. Inconsistente vermeldingen kosten zichtbaarheid.',
+      'In hoeverre word je opgepikt door AI-zoekmachines als ChatGPT, Perplexity en Google AI Overviews. Niet alleen gestructureerde data, maar ook de corroboratie buiten je eigen site die bepaalt of je geciteerd wordt.',
   },
   {
-    title: 'Website en techniek',
+    title: 'Autoriteit en verwijzingen',
     description:
-      "De technische staat van je website, de pagina's die het meest bijdragen aan lokale vindbaarheid, schema markup, en de lokale signalen die je site uitzendt.",
+      'Je linkprofiel, merkvermeldingen op het bredere web en earned media. De signalen buiten je eigen domein die zwaar wegen in zowel klassieke ranking als AI-aanbevelingen.',
   },
   {
-    title: 'Concurrentie in jouw regio',
+    title: 'Local, waar relevant',
     description:
-      'Hoe je positie zich verhoudt tot directe concurrenten in jouw plaats of regio. Waar zij scoren en waar voor jou de openingen liggen.',
+      'Voor opdrachtgevers met een lokale component: het Google Bedrijfsprofiel, reviews en de consistentie van lokale vermeldingen. Meegenomen waar het zichtbaarheid oplevert.',
   },
 ];
 ---
 
 <BaseLayout
-  title="Local SEO audit"
-  description="Een eenmalige doorlichting van je lokale vindbaarheid, met concrete prioriteiten en een gesprek om de uitkomsten door te nemen. Vaste prijs."
+  title="SEO-audit"
+  description="Een doorlichting van je SEO en GEO, met concrete bevindingen en een prioriteitenlijst. Techniek, content, autoriteit en zichtbaarheid in klassieke en AI-zoekresultaten."
 >
   <!-- Hero -->
   <section class="relative overflow-hidden py-20 lg:py-28 bg-surface-alt dot-grid">
@@ -48,11 +48,11 @@ const components = [
         <h1
           class="font-semibold text-4xl lg:text-5xl xl:text-6xl mt-5 tracking-tight leading-[1.1]"
         >
-          <span class="font-display italic text-primary">Local SEO audit</span>
+          <span class="font-display italic text-primary">SEO-audit</span>
         </h1>
         <p class="font-sans text-lg lg:text-xl text-neutral-500 mt-6 leading-relaxed">
-          Een doorlichting van je lokale vindbaarheid, met een concrete prioriteitenlijst.
-          Eenmalig, vaste prijs.
+          Een doorlichting van je SEO en GEO, met een concrete prioriteitenlijst. Techniek, content,
+          autoriteit en je zichtbaarheid in klassieke en AI-zoekresultaten.
         </p>
         <div class="mt-8">
           <Button href={url('/contact/')} variant="primary" size="lg">Vraag een audit aan</Button>
@@ -72,15 +72,15 @@ const components = [
         </h2>
         <div class="font-sans text-neutral-500 space-y-5 leading-relaxed text-lg">
           <p>
-            Een local SEO audit beantwoordt drie vragen. Hoe sta je er nu voor in lokale
-            zoekresultaten en op Google Maps? Wat gaat goed en wat zit je in de weg? Welke
-            optimalisaties leveren de meeste impact op, en in welke volgorde pak je ze aan?
+            Een SEO-audit beantwoordt drie vragen. Hoe sta je er nu voor in de klassieke
+            zoekresultaten en in AI-zoekmachines? Wat gaat goed en wat zit je in de weg? Welke
+            ingrepen leveren de meeste impact op, en in welke volgorde pak je ze aan?
           </p>
           <p>
             Het resultaat is een rapport met concrete bevindingen, een prioriteitenlijst, en een
             gesprek waarin we de uitkomsten samen doornemen. Geen tweehonderd actiepunten waar
-            niemand mee aan de slag gaat, wel een lijst met de tien tot vijftien acties die echt
-            verschil maken.
+            niemand mee aan de slag gaat, wel de acties die echt verschil maken, in de juiste
+            volgorde. Een document dat je intern of met je team kunt delen en direct kunt uitvoeren.
           </p>
         </div>
       </div>
@@ -121,14 +121,14 @@ const components = [
         </h2>
         <div class="font-sans text-neutral-500 space-y-5 leading-relaxed text-lg">
           <p>
-            Na aanvraag krijg je een korte intake van een kwartier, waarin we doornemen welke
-            informatie ik nodig heb (toegang tot je Google Bedrijfsprofiel, Google Search Console,
-            en eventueel Analytics). Daarna ga ik aan de slag.
+            Na aanvraag volgt een korte intake, waarin we doornemen welke informatie ik nodig heb
+            (toegang tot Google Search Console, Analytics en, waar relevant, het Google
+            Bedrijfsprofiel) en waar de audit de nadruk op moet leggen. Daarna ga ik aan de slag.
           </p>
           <p>
             Binnen twee weken ontvang je het rapport, gevolgd door een gesprek van een half uur
-            waarin we de uitkomsten doornemen. Je krijgt het rapport mee als document dat je
-            intern of met je webbouwer kunt delen.
+            waarin we de uitkomsten en de prioriteiten doornemen. Je krijgt het rapport mee als
+            document dat je intern of met je bureau kunt delen.
           </p>
         </div>
       </div>
@@ -141,17 +141,18 @@ const components = [
       <div class="max-w-3xl">
         <span class="section-label">Tarief</span>
         <h2 class="text-3xl lg:text-4xl mt-5 mb-8 tracking-tight">
-          <span class="font-display italic text-primary">€595,</span>
-          <span class="font-sans font-semibold text-primary-light"> vaste prijs.</span>
+          <span class="font-display italic text-primary">Vaste prijs,</span>
+          <span class="font-sans font-semibold text-primary-light"> afgestemd op de scope.</span>
         </h2>
         <div class="font-sans text-neutral-500 space-y-5 leading-relaxed text-lg">
           <p>
-            Vaste prijs van €595 (excl. btw), ongeacht de omvang van het werk. Voor bedrijven met
-            meerdere vestigingen geldt een aangepast tarief, dat in de intake besproken wordt.
+            De audit heeft een vaste prijs, afgestemd op de omvang en de nadruk die je nodig hebt.
+            Voor grotere sites of een bredere scope geldt een aangepast tarief, dat we in de intake
+            vaststellen zodat je vooraf weet waar je aan toe bent.
           </p>
           <p>
-            Mocht je na de audit kiezen voor een langdurig local SEO traject, dan wordt het bedrag
-            van de audit verrekend met de eerste maand.
+            Kies je na de audit voor uitvoering, als interim of op projectbasis, dan wordt de audit
+            verrekend met de vervolgopdracht.
           </p>
         </div>
       </div>

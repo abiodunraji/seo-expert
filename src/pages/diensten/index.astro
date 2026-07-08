@@ -3,40 +3,63 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Button from '../../components/Button.astro';
 import { url } from '../../lib/urls';
 
-const services = [
+const disciplines = [
+  {
+    title: 'Technische SEO-audits',
+    description:
+      'Een grondige doorlichting van indexatie, techniek, structuur en de signalen die je site uitzendt, met een prioriteitenlijst die een team kan uitvoeren.',
+  },
+  {
+    title: 'Contentstrategie en on-page',
+    description:
+      'Mijn sterkste discipline. Van zoekintentie naar een contentplan en on-page keuzes die aansluiten op wat mensen en zoekmachines daadwerkelijk zoeken.',
+  },
+  {
+    title: 'GEO',
+    description:
+      'Zichtbaarheid in AI-zoekresultaten zoals ChatGPT, Perplexity en Google AI Overviews. Mijn scherpste onderscheidende punt, onderbouwd en niet hyperig.',
+  },
   {
     title: 'Local SEO',
     description:
-      'Langdurige samenwerking voor bedrijven die hun klanten uit de eigen regio halen. Een aanpak die zich richt op wat lokaal het meest oplevert: een sterk Google Bedrijfsprofiel, structurele reviews, juiste lokale signalen, en een website die deze fundering ondersteunt. Vaste prijs per maand, maandelijks opzegbaar.',
-    audience:
-      'Lokale dienstverleners en MKB-bedrijven die structureel willen groeien in zichtbaarheid.',
-    href: url('/diensten/local-seo/'),
-    linkLabel: 'Bekijk local SEO',
+      'Een van de dingen die ik goed kan, met ruime operationele schaal. Onderdeel van het geheel, niet de kop.',
   },
+];
+
+const services = [
   {
-    title: 'Local SEO audit',
+    title: 'SEO-audit',
     description:
-      'Eenmalige doorlichting van je huidige lokale vindbaarheid. Ik bekijk je Google Bedrijfsprofiel, je reviews, je lokale vermeldingen, je website en je positie ten opzichte van de concurrentie in jouw regio. Je krijgt een rapport met concrete bevindingen en een lijst met prioriteiten, plus een gesprek om de uitkomsten door te nemen.',
+      'Een doorlichting van je SEO en GEO: techniek, content, autoriteit en je zichtbaarheid in klassieke en AI-zoekresultaten. Je krijgt een rapport met concrete bevindingen en een prioriteitenlijst, plus een gesprek om de uitkomsten door te nemen.',
     audience:
-      'Ondernemers die eerst willen weten waar ze staan voordat ze een langdurig traject overwegen.',
+      'Bureaus, in-house teams en merken die eerst scherp willen weten waar ze staan en wat er te halen valt.',
     href: url('/diensten/local-seo-audit/'),
-    linkLabel: 'Bekijk de audit',
+    linkLabel: 'Bekijk de SEO-audit',
   },
   {
     title: 'Voor bureaus',
     description:
-      'Samenwerking met agencies en collega-freelancers die zelf geen local SEO specialist in huis hebben. Audits, GBP-optimalisaties, GEO-strategie, of het volledig uitvoeren van local SEO trajecten onder jullie eigen merk. Korte lijnen, vaste tarieven, en discretie waar nodig.',
+      'Tijdelijke SEO- en GEO-capaciteit onder jullie eigen merk. Technische audits, contentstrategie, GEO-trajecten, of meedraaien in een lopend klantteam. Als interim, als onderaannemer, of op projectbasis.',
     audience:
-      'Bureaus en freelancers die local SEO willen aanbieden zonder zelf de specialistische kennis op te bouwen.',
+      'Bureaus die tijdelijk een brede SEO-specialist of GEO-expertise nodig hebben zonder zelf iemand aan te nemen.',
     href: url('/diensten/voor-bureaus/'),
     linkLabel: 'Meer over samenwerken',
+  },
+  {
+    title: 'Local SEO',
+    description:
+      'Local SEO als competentie, niet als hoofdverhaal. Google Bedrijfsprofiel, reviews, lokale signalen en de techniek eromheen, ingezet waar het relevant is binnen een breder SEO-traject. Onderbouwd met ruim honderd beheerde bedrijfsprofielen.',
+    audience:
+      'Opdrachtgevers en teams met een lokale component die daar specialistische uitvoering voor zoeken.',
+    href: url('/diensten/local-seo/'),
+    linkLabel: 'Bekijk local SEO',
   },
 ];
 ---
 
 <BaseLayout
   title="Diensten"
-  description="Local SEO als langdurig traject, eenmalige audit, of samenwerking met bureaus. Drie manieren om met Iwan Stepanova te werken."
+  description="Brede SEO met GEO als scherpste punt. Technische audits, contentstrategie, on-page en GEO, als interim of freelance voor bureaus, in-house teams en grotere merken."
 >
   <!-- Hero -->
   <section class="relative overflow-hidden py-20 lg:py-28 bg-surface-alt dot-grid">
@@ -51,26 +74,56 @@ const services = [
         <h1
           class="font-semibold text-4xl lg:text-5xl xl:text-6xl mt-5 tracking-tight leading-[1.1]"
         >
-          <span class="font-display italic text-primary block">Drie manieren</span>
-          <span class="font-sans text-primary-light block">om samen te werken</span>
+          <span class="font-display italic text-primary block">Brede SEO,</span>
+          <span class="font-sans text-primary-light block">met GEO als scherpste punt</span>
         </h1>
         <p class="font-sans text-lg lg:text-xl text-neutral-500 mt-6 leading-relaxed">
-          Een langdurig traject, een eenmalige analyse, of samenwerking als onderaannemer voor
-          bureaus.
+          Technische audits, contentstrategie, on-page en GEO. Als interim of freelance, voor
+          bureaus, in-house teams en grotere merken.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Diensten cards -->
+  <!-- Disciplines -->
   <section class="signal-section bg-surface">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl mb-16">
+        <span class="section-label">Waar ik mee werk</span>
+        <h2 class="text-3xl lg:text-4xl mt-5 tracking-tight">
+          <span class="font-display italic text-primary">Vier disciplines,</span>
+          <span class="font-sans font-semibold text-primary-light"> één samenhangende aanpak.</span>
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          disciplines.map((d) => (
+            <div class="card card-signal">
+              <h3 class="font-sans font-semibold text-xl text-primary mb-3">{d.title}</h3>
+              <p class="font-sans text-neutral-500 leading-relaxed">{d.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Manieren van samenwerken -->
+  <section class="signal-section bg-surface-alt dot-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl mb-16">
+        <span class="section-label">Manieren van samenwerken</span>
+        <h2 class="text-3xl lg:text-4xl mt-5 tracking-tight">
+          <span class="font-display italic text-primary">Interim, freelance</span>
+          <span class="font-sans font-semibold text-primary-light"> of op projectbasis.</span>
+        </h2>
+      </div>
       <div class="space-y-8">
         {
           services.map((service) => (
             <a
               href={service.href}
-              class="group block card card-signal card-hover bg-surface-alt"
+              class="group block card card-signal card-hover bg-surface"
             >
               <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12">
                 <div>
@@ -111,24 +164,24 @@ const services = [
     </div>
   </section>
 
-  <!-- Twijfel je -->
-  <section class="signal-section bg-surface-alt dot-grid">
+  <!-- Beschikbaarheid -->
+  <section class="signal-section bg-surface">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
       <div class="max-w-3xl">
-        <span class="section-label">Twijfel je</span>
+        <span class="section-label">Beschikbaarheid</span>
         <h2 class="text-3xl lg:text-4xl mt-5 mb-6 tracking-tight">
           <span class="font-display italic text-primary">Niet zeker welke</span>
           <span class="font-sans font-semibold text-primary-light"> vorm past?</span>
         </h2>
         <p class="font-sans text-neutral-500 leading-relaxed text-lg">
-          In een eerste gesprek bespreken we je situatie en kijken we welke samenwerkingsvorm het
-          beste past. Soms is een audit een logische instap, soms kun je beter direct met een
-          langdurig traject beginnen, en voor bureaus geldt vaak een eigen ritme. Geen vooraf
-          bepaald pad, wel een eerlijke inschatting.
+          Ik ben beschikbaar voor interim- en freelanceopdrachten in SEO en GEO, remote of op
+          locatie, voor zowel langere interim-trajecten als projectwerk. In een eerste gesprek
+          bespreken we wat je nodig hebt en welke vorm het beste past. Geen vooraf bepaald pad, wel
+          een scherpe inschatting.
         </p>
         <div class="mt-8">
           <Button href={url('/contact/')} variant="primary" size="lg">
-            Plan een kennismaking
+            Plan een gesprek
           </Button>
         </div>
       </div>
