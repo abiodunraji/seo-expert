@@ -7,25 +7,25 @@ const collabModes = [
   {
     title: 'White label trajecten',
     description:
-      'Volledige uitvoering van local SEO onder jullie merk. Jullie houden de klantrelatie, ik doe het werk. Rapportages, communicatie en oplevering worden afgestemd op jullie huisstijl en proces. Vast tarief per klant per maand, met marge voor jullie kant.',
+      'Volledige uitvoering van SEO of GEO onder jullie merk. Jullie houden de klantrelatie, ik doe het werk. Rapportages, communicatie en oplevering worden afgestemd op jullie huisstijl en proces.',
   },
   {
     title: 'Losse opdrachten',
     description:
-      'Audits, GBP-optimalisaties, set-up van nieuwe locaties, of het oplossen van specifieke problemen. Vast tarief per opdracht, korte doorlooptijden.',
+      'Technische audits, contentstrategie, GEO-trajecten, of het oplossen van een specifiek vraagstuk. Vaste afspraken, duidelijke deliverables, korte doorlooptijden.',
   },
   {
-    title: 'Strategische sparring',
+    title: 'Interim capaciteit',
     description:
-      'Voor bureaus die zelf local SEO doen maar willen meedenken op specifieke vraagstukken, zoals een complexe multi-vestigingsklant, GEO-strategie voor lokale dienstverleners, of een ingewikkelde Google Business Profile situatie. Per uur, op afroep.',
+      'Meedraaien in een lopend klantteam of jullie eigen team wanneer de capaciteit of de specialistische kennis tijdelijk ontbreekt. Remote of op locatie, voor een afgebakende periode.',
   },
 ];
 
 const benefits = [
   {
-    title: 'Diepte in local en GEO',
+    title: 'Diepte in SEO en GEO',
     description:
-      'Local SEO is mijn specialisatie, niet een van mijn zeven diensten. Ik heb webinars en trainingen over local SEO en GEO verzorgd voor andere bureaus, en zit voor op de combinatie van klassieke local en optimalisatie voor AI-zoekmachines.',
+      'Een brede SEO-specialist met GEO als scherpste punt. Ik heb honderden professionals getraind en webinars over GEO verzorgd voor externe bureaus, met een nuchtere, op bewijs gebaseerde aanpak in plaats van hype.',
   },
   {
     title: 'Discretie en respect voor jullie relatie',
@@ -35,18 +35,19 @@ const benefits = [
   {
     title: 'Voorspelbare uitvoering',
     description:
-      'Vaste tarieven, afgesproken doorlooptijden, en duidelijke deliverables. Geen verrassingen op de factuur, geen scope-discussies achteraf.',
+      'Duidelijke afspraken, afgesproken doorlooptijden en heldere deliverables. Geen verrassingen op de factuur, geen scope-discussies achteraf.',
   },
   {
     title: 'Korte lijnen',
-    description: 'Direct contact met mij. Geen accountmanagers, geen tussenlagen.',
+    description:
+      'Direct contact met de specialist die het werk doet. Geen accountmanagers, geen tussenlagen.',
   },
 ];
 ---
 
 <BaseLayout
   title="Voor bureaus"
-  description="Local SEO als white label of onderaannemer. Voor agencies en freelancers die local SEO willen aanbieden zonder zelf een specialist in huis te nemen."
+  description="Tijdelijke SEO- en GEO-capaciteit onder jullie eigen merk. Als interim, onderaannemer of op projectbasis, voor bureaus die een brede specialist nodig hebben."
 >
   <!-- Hero -->
   <section class="relative overflow-hidden py-20 lg:py-28 bg-surface-alt dot-grid">
@@ -56,16 +57,16 @@ const benefits = [
     </div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl">
-        <span class="section-label">Voor bureaus en freelancers</span>
+        <span class="section-label">Voor bureaus</span>
         <h1
           class="font-semibold text-4xl lg:text-5xl xl:text-6xl mt-5 tracking-tight leading-[1.1]"
         >
-          <span class="font-display italic text-primary block">Local SEO als</span>
-          <span class="font-sans text-primary-light block">white label of onderaannemer</span>
+          <span class="font-display italic text-primary block">SEO- en GEO-capaciteit</span>
+          <span class="font-sans text-primary-light block">onder jullie eigen merk</span>
         </h1>
         <p class="font-sans text-lg lg:text-xl text-neutral-500 mt-6 leading-relaxed">
-          Voor agencies en freelancers die local SEO willen aanbieden zonder zelf de
-          specialistische kennis op te bouwen.
+          Voor bureaus die tijdelijk een brede SEO-specialist of GEO-expertise nodig hebben. Als
+          interim, als onderaannemer, of op projectbasis.
         </p>
         <div class="mt-8">
           <Button href={url('/contact/')} variant="primary" size="lg">Neem contact op</Button>
@@ -80,21 +81,20 @@ const benefits = [
       <div class="max-w-3xl">
         <span class="section-label">De situatie</span>
         <h2 class="text-3xl lg:text-4xl mt-5 mb-8 tracking-tight">
-          <span class="font-display italic text-primary">Local SEO past niet in elk bureau,</span>
-          <span class="font-sans font-semibold text-primary-light"> maar de vraag is er wel.</span>
+          <span class="font-display italic text-primary">Soms is de vraag er wel,</span>
+          <span class="font-sans font-semibold text-primary-light"> maar de capaciteit even niet.</span>
         </h2>
         <div class="font-sans text-neutral-500 space-y-5 leading-relaxed text-lg">
           <p>
-            Veel bureaus krijgen vragen van klanten over lokale zichtbaarheid, het Google
-            Bedrijfsprofiel, of reviews. Maar local SEO heeft een andere logica dan traditionele
-            SEO voor webshops of contentsites, en vraagt om kennis die niet in elk team aanwezig
-            is. Tegelijk is het commercieel zonde om die vraag door te verwijzen, zeker bij
-            bestaande klanten met wie je al een goede relatie hebt.
+            Een klant vraagt om SEO of om zichtbaarheid in AI-zoekmachines, een specialist valt weg,
+            of een project vraagt tijdelijk om meer handen dan het team heeft. Dat zijn de momenten
+            waarop het commercieel zonde is om nee te verkopen, en waarop je liever niet meteen
+            iemand aanneemt voor iets wat tijdelijk is.
           </p>
           <p>
-            Voor die situatie ben ik er. Ik werk als onderaannemer voor bureaus en freelancers die
-            local SEO als dienst willen aanbieden, maar zelf liever niet investeren in het
-            opbouwen van die specialisatie.
+            Voor die situatie ben ik er. Ik stap in als interim of onderaannemer, lever strategie en
+            uitvoering over de volle breedte van SEO en GEO, en draag het werk zo over dat jullie
+            team er zelf mee verder kan.
           </p>
         </div>
       </div>
@@ -132,7 +132,7 @@ const benefits = [
         <h2 class="text-3xl lg:text-4xl mt-5 tracking-tight">
           <span class="font-display italic text-primary">Specialistische kennis</span>
           <span class="font-sans font-semibold text-primary-light">
-            zonder dat je een specialist hoeft aan te nemen.
+            zonder dat je iemand hoeft aan te nemen.
           </span>
         </h2>
       </div>
@@ -153,16 +153,15 @@ const benefits = [
   <section class="signal-section bg-surface-alt dot-grid">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
       <div class="max-w-3xl">
-        <span class="section-label">Tarieven</span>
+        <span class="section-label">Afspraken</span>
         <h2 class="text-3xl lg:text-4xl mt-5 mb-8 tracking-tight">
-          <span class="font-display italic text-primary">Vaste tarieven,</span>
-          <span class="font-sans font-semibold text-primary-light"> transparant per type werk.</span>
+          <span class="font-display italic text-primary">Heldere afspraken,</span>
+          <span class="font-sans font-semibold text-primary-light"> per type samenwerking.</span>
         </h2>
         <p class="font-sans text-neutral-500 leading-relaxed text-lg">
-          Voor white label trajecten en losse opdrachten werk ik met vaste tarieven per klant of
-          per project, afhankelijk van de omvang. Voor strategische sparring per uur. In een eerste
-          gesprek bespreken we welke vorm past, wat het volume is, en wat de tarieven concreet
-          betekenen voor jullie marge.
+          Voor interim-trajecten werk ik met een dag- of uurtarief, voor losse opdrachten en white
+          label trajecten met vaste afspraken per project. In een eerste gesprek bespreken we welke
+          vorm past, wat het volume is, en wat de afspraken concreet betekenen voor jullie kant.
         </p>
       </div>
     </div>
