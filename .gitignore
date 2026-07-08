@@ -4,3 +4,6 @@ dist/
 *.local
 .env*
 node_modules
+
+# Claude Code local settings
+.claude/
