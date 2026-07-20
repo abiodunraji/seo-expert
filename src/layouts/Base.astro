@@ -13,7 +13,6 @@ const {
 
 const site = 'https://iwanstepanova.com';
 const canonical = new URL(path, site).href;
-const ogImage = `${site}/images/og-default.jpg`;
 const GTM = 'GTM-PZXB5GSC';
 
 const knowsAbout = [
@@ -58,7 +57,7 @@ const graph = {
       name: 'Iwan Stepanova',
       description: orgDescription,
       url: site,
-      image: `${site}/images/og-default.jpg`,
+      image: `${site}/images/iwan.jpg`,
       email: 'hallo@iwanstepanova.com',
       telephone: '+31623872013',
       knowsAbout,
@@ -106,11 +105,9 @@ const breadcrumbSchema = breadcrumb
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonical} />
-  <meta property="og:image" content={ogImage} />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={ogImage} />
 
   <link rel="preload" href="/fonts/Excon-Medium.woff2" as="font" type="font/woff2" crossorigin />
 
