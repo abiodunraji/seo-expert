@@ -1,0 +1,55 @@
+---
+import Base from '../layouts/Base.astro';
+import PageTop from '../components/PageTop.astro';
+const title = 'SEO-content die rankt en leest | Iwan Stepanova';
+const description = 'SEO-content vanuit zoekintentie, geschreven om te ranken en om gelezen te worden. Copywriting als onderscheid, en autoriteit die standhoudt in AI-resultaten.';
+const faq = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Schrijf je de content zelf?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Ik kom uit de copywriting en die achtergrond is mijn sterkste SEO-discipline. Ik bepaal de strategie en schrijf ook, of stuur een team aan met een duidelijke lijn, zodat de content klopt en ook leest.' } },
+    { '@type': 'Question', name: 'Werkt SEO-content ook voor AI-zoekmachines?', acceptedAnswer: { '@type': 'Answer', text: 'Grotendeels wel. Zichtbaarheid in AI-resultaten loopt sterk achter op klassieke SEO: sterke, gezaghebbende content die goed rankt, is ook wat AI-tools eerder aanhalen. Ik bouw daarom aan onderwerpsautoriteit in plaats van aan losse trucs.' } },
+    { '@type': 'Question', name: 'Hoe lang duurt het voor content rankt?', acceptedAnswer: { '@type': 'Answer', text: 'Dat hangt af van de concurrentie en de autoriteit van je domein. Reken op weken tot maanden. Ik stuur daarom op wat ik zelf in de hand heb, zoals gepubliceerde en geindexeerde content, en niet alleen op verkeer, dat van veel externe factoren afhangt.' } }
+  ]
+};
+---
+<Base title={title} description={description} path="/seo-content" breadcrumb="SEO-content">
+  <PageTop label="SEO-content" />
+  <script type="application/ld+json" set:html={JSON.stringify(faq)} />
+  <main class="pg">
+    <div class="u">https://iwanstepanova.com &rsaquo; seo-content</div>
+    <h1>SEO-content die <span class="grad-txt">rankt en leest</span>.</h1>
+    <p class="lead">Content voor zoekmachines is geen keuze tussen vindbaar en leesbaar. Het goede werk is allebei tegelijk, en dat begint bij de zoekvraag, niet bij het zoekwoord.</p>
+    <div class="hr"></div>
+    <p>Veel SEO-content is geschreven voor een algoritme en leest ook zo. En veel mooie tekst is geschreven zonder ooit naar de zoekvraag te kijken en wordt dus nooit gevonden. Ik begin bij wat iemand echt wil weten, bouw daar de inhoud omheen die daarbij past, en schrijf het zo dat het antwoord ook wint. In die volgorde.</p>
+
+    <h2 class="sr-only">Van zoekvraag naar antwoord</h2>
+    <div class="flow">
+      <div class="f"><div class="n">Stap 1</div><h3>Zoekvraag</h3><p>Wat wil iemand echt weten, en met welke intentie zoekt die.</p></div>
+      <div class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="f"><div class="n">Stap 2</div><h3>Inhoud die past</h3><p>De vorm en diepgang die bij die intentie horen, niet een vast sjabloon.</p></div>
+      <div class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="f"><div class="n">Stap 3</div><h3>Antwoord dat wint</h3><p>Beter geschreven en completer dan wat er nu bovenaan staat.</p></div>
+    </div>
+
+    <h2>Zoekintentie boven zoekwoorden</h2>
+    <p>Zoekwoorden zijn een symptoom, geen doel. Achter elke zoekopdracht zit een intentie: iets willen begrijpen, vergelijken, of meteen iets doen. Wie alleen op het zoekwoord mikt, schrijft de verkeerde pagina voor de goede term. Ik bepaal eerst de intentie en laat die de vorm en de diepgang bepalen. Een vergelijkende zoekvraag verdient een ander stuk dan een simpele definitievraag, en die keuze maakt vaak het verschil tussen meedoen en winnen.</p>
+
+    <h2>Copywriting als onderscheid</h2>
+    <p>Content is mijn sterkste SEO-discipline, en dat is geen toeval: ik kom uit de copywriting. Het verschil tussen content die het net niet haalt en content die bovenaan komt, zit vaak niet in meer zoekwoorden maar in scherper schrijven. Duidelijker, overtuigender, en makkelijker te lezen dan de rest. Dat is precies waar de meeste SEO-teksten het laten liggen, en waar ik het verschil maak.</p>
+
+    <blockquote class="pull">Het verschil zit niet in meer zoekwoorden, maar in scherper schrijven.</blockquote>
+
+    <h2>Autoriteit die standhoudt in AI-resultaten</h2>
+    <p>Zichtbaarheid in AI-tools als ChatGPT is grotendeels een uitvloeisel van gewone SEO. Wat goed rankt en gezaghebbend is, wordt ook eerder door AI aangehaald, en losse trucs om AI te sturen zijn onbetrouwbaar. Ik bouw daarom aan onderwerpsautoriteit: een samenhangend geheel aan content dat een thema echt afdekt, plus corroboratie van buiten je site. Dat houdt stand in de klassieke resultaten en in de nieuwe. Nuchter, en op basis van wat aantoonbaar werkt in plaats van wat goed klinkt.</p>
+
+    <h3 class="sub">Veelgestelde vragen</h3>
+    <div class="paa" style="margin-top:14px">
+      <details><summary>Schrijf je de content zelf?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></summary><div class="in">Ja. Ik kom uit de copywriting en die achtergrond is mijn sterkste SEO-discipline. Ik bepaal de strategie en schrijf ook, of stuur een team aan met een duidelijke lijn, zodat de content klopt en ook leest.</div></details>
+      <details><summary>Werkt SEO-content ook voor AI-zoekmachines?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></summary><div class="in">Grotendeels wel. Zichtbaarheid in AI-resultaten loopt sterk achter op klassieke SEO: sterke, gezaghebbende content die goed rankt, is ook wat AI-tools eerder aanhalen. Ik bouw daarom aan onderwerpsautoriteit in plaats van aan losse trucs.</div></details>
+      <details><summary>Hoe lang duurt het voor content rankt?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></summary><div class="in">Dat hangt af van de concurrentie en de autoriteit van je domein. Reken op weken tot maanden. Ik stuur daarom op wat ik zelf in de hand heb, zoals gepubliceerde en geindexeerde content, en niet alleen op verkeer, dat van veel externe factoren afhangt.</div></details>
+    </div>
+
+    <div class="close"><div class="a"></div><h2>Content die rankt en ook echt gelezen wordt?</h2><p>Vertel me waar je nu op vastloopt, dan laat ik zien waar de winst zit.</p><a class="cta-btn" href="/contact">Plan een gesprek</a></div>
+  </main>
+</Base>

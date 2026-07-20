@@ -1,170 +1,60 @@
-# Iwan Stepanova — SEO Expert
+# iwanstepanova.com
 
-Personal brand website for Iwan Stepanova, SEO Expert specializing in Technical SEO, Content Architecture, and GEO (Generative Engine Optimization).
+Persoonlijke-merk portfolio in Astro, opgezet als een zoekresultatenpagina in je eigen huisstijl. Statische site, elke pagina een eigen route en eigen HTML-bestand.
 
-## Tech Stack
-
-- **Framework**: Astro.js 5.x (Static Site Generation)
-- **Styling**: Tailwind CSS 4.x
-- **Typography**: Space Grotesk, Inter, JetBrains Mono
-- **Colors**: Oxford Blue (#1B263B), Electric Cyan (#00F5FF), Off-White (#F8FAFC)
-
-## Design System — Brutalist
-
-- Heavy 1–2px solid borders in Electric Cyan
-- Hard shadows (no blur): `4px 4px 0 #00F5FF`
-- Grid-first brutalist layouts
-- Responsive: Mobile-first approach
-
-## Project Structure
-
-```
-seo-expert/
-├── src/
-│   ├── components/     # UI components
-│   ├── content/       # Markdown content collections
-│   │   ├── services/  # Service pages (editable via Markdown)
-│   │   └── cases/     # Case studies (editable via Markdown)
-│   ├── layouts/       # Base and service layouts
-│   ├── pages/         # Routes (index, services, cases, etc.)
-│   └── styles/        # Global CSS with Tailwind
-├── public/            # Static assets
-├── astro.config.mjs   # Astro configuration
-└── tailwind.config.mjs # Tailwind configuration
-```
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+
-- npm 9+
-
-### Installation
+## Draaien
 
 ```bash
 npm install
+npm run dev        # lokaal op http://localhost:4321
+npm run build      # productie-output in /dist
+npm run preview    # /dist lokaal bekijken
 ```
 
-### Development
+Node 18+ aanbevolen.
 
-```bash
-npm run dev
+## Structuur
+
+```
+public/            robots.txt, sitemap.xml, _redirects, favicon, /fonts, /images
+src/layouts/       Base.astro   (head, meta, OG, JSON-LD graaf + breadcrumbs, GTM + consent, footer, cookiebanner)
+src/components/    SerpHeader, PageTop, Footer, CookieBanner
+src/pages/         index, maps, overview, ervaring, diensten, local-seo, seo-content, contact, privacy, 404
+src/styles/        global.css
 ```
 
-### Build
+Routes: `/`, `/maps`, `/overview`, `/ervaring`, `/diensten`, `/local-seo`, `/seo-content`, `/contact`, `/privacy`, plus `/404`.
 
-```bash
-npm run build
-```
+## Wat je zelf nog invult
 
-### Preview
+1. **Profielfoto.** Vervang `public/images/iwan.png` door je eigen foto (ongeveer vierkant tot staand, minimaal 240x300). Er staat nu een tijdelijke placeholder in.
+2. **OG-afbeelding.** Zet je bestaande `og-default.jpg` in `public/images/` voor de social-preview.
+3. **Contactformulier.** In `src/pages/contact.astro` staat een Web3Forms-formulier met placeholder `JOUW-WEB3FORMS-KEY`. Vervang die door je eigen access key (web3forms.com), of hang er je eigen backend aan. De boekingslink werkt al.
 
-```bash
-npm run preview
-```
+## GTM, GA4 en Consent Mode v2
 
-## Content Management
+Je container `GTM-PZXB5GSC` zit al in `Base.astro`. Consent Mode v2 staat standaard op denied voor analytics en advertising, en op granted voor functionaliteit en beveiliging. De cookiebanner zet consent op granted zodra iemand accepteert, en onthoudt de keuze in localStorage. Je GA4-tag in GTM respecteert die consent automatisch.
 
-All content is editable via Markdown files in `/src/content/`:
+## Schema
 
-- **Services**: `/src/content/services/*.md`
-- **Cases**: `/src/content/cases/*.md`
+De JSON-LD zit in `Base.astro` als een gekoppelde graaf: een Person (jij, met expertise en profielen), een ProfessionalService (je bedrijf, met telefoon, adres en werkgebied) en een WebSite, aan elkaar geknoopt via @id. Die graaf staat site-breed. Daarbovenop krijgt elke subpagina een BreadcrumbList, en local-seo en seo-content krijgen elk een FAQPage. De homepage heeft geen breadcrumb.
 
-### Adding a New Service
+## Sitemap
 
-Create a new Markdown file in `/src/content/services/`:
+Een schone `public/sitemap.xml` met alle URL's, geen sitemap-index. Voeg je later pagina's toe, werk dit bestand dan bij. `robots.txt` verwijst ernaar en zet de AI-crawlers expliciet open.
 
-```markdown
----
-title: 'Servicenaam'
-description: 'Korte beschrijving'
-icon: 'iconnaam'
-order: 8
-featured: false
----
+## Migratie van je huidige site (exacte stappen)
 
-## Wat houdt het in?
+Je huidige site is al Astro op Cloudflare Pages, en dit is hetzelfde domein. Het is dus een vervanging van de deploy, geen domeinverhuizing. Laag risico, mits de redirects kloppen.
 
-Je content hier...
+1. Assets overzetten. Zet je eigen `iwan.png` en `og-default.jpg` in `public/images/`. Neem eventuele andere bestaande assets die je wilt houden ook mee.
+2. Redirects. `public/_redirects` bevat al de 301's voor de gewijzigde paden: `/over` naar `/ervaring` en `/diensten/voor-bureaus` naar `/diensten`. Blijven ongewijzigd: `/`, `/diensten`, `/contact`, `/privacy`. Nieuw: `/overview`, `/local-seo`, `/seo-content`, `/maps`. Rankt er nog een oude URL die verdwijnt, voeg dan een regel toe: `/oude-url  /nieuwe-url  301`.
+3. Deployen naar Cloudflare Pages. Push dit project naar je repo en koppel het aan Cloudflare Pages, framework-preset Astro, build command `npm run build`, output directory `dist`. Of upload de `dist`-map direct. Zet het custom domain `iwanstepanova.com` op deze deploy; DNS en SSL laat je staan.
+4. AI-crawlers vrijgeven. Dit is waarom Claude je huidige site niet kon bekijken en Gemini wel: in Cloudflare staat vrijwel zeker "Block AI bots" aan. Zet die blokkade uit of op do-not-block voor dit domein. `robots.txt` zet de AI-crawlers al expliciet open. Controleer daarna dat een AI-tool de live site kan lezen.
+5. Search Console. Na livegang `https://iwanstepanova.com/sitemap.xml` (opnieuw) indienen en voor de belangrijkste pagina's een herindexering aanvragen.
+6. Schema vergelijken. De graaf in `Base.astro` is rijker dan de losse ProfessionalService op je huidige site. Neem deze over, of voeg samen wat je zeker wilt houden.
+7. Nalopen na deploy. Controleer per steekproef: bron-HTML bevat de JSON-LD, elke pagina heeft eigen title, description en canonical, de sitemap laadt, de 404 werkt, en de cookiebanner verschijnt en zet consent correct om.
 
-## Aanpak
+## Kaart
 
-1. Stap 1
-2. Stap 2
-3. Stap 3
-```
-
-Icons available: `target`, `chart`, `content`, `code`, `link`, `map`, `brain`
-
-### Adding a New Case Study
-
-Create a new Markdown file in `/src/content/cases/`:
-
-```markdown
----
-client: 'Client Naam'
-title: 'Case Titel'
-summary: 'Korte samenvatting'
-results:
-  - { metric: 'Traffic', value: '+150%' }
-  - { metric: 'Conversies', value: '+80%' }
-date: 2024-01-01
-featured: true
----
-
-## Uitdaging
-
-Beschrijf de uitdaging...
-
-## Oplossing
-
-Beschrijf de oplossing...
-
-## Resultaten
-
-Beschrijf de resultaten...
-```
-
-## Deployment
-
-Deploy to Vercel:
-
-```bash
-npm install -g vercel
-vercel deploy
-```
-
-Or connect your GitHub repository to Vercel for automatic deployments.
-
-## SEO
-
-The site includes:
-
-- Reusable `SEO.astro` component for meta tags
-- JSON-LD ProfessionalService schema in base layout
-- Semantic HTML throughout
-- Optimized for Lighthouse 100/100
-
-## Customization
-
-### Colors
-
-Edit `tailwind.config.mjs` to change the color palette:
-
-```javascript
-colors: {
-  oxford: '#1B263B',
-  cyan: '#00F5FF',
-  offwhite: '#F8FAFC',
-  // ...
-}
-```
-
-### Typography
-
-Fonts are loaded via Google Fonts in `BaseLayout.astro`.
-
-## License
-
-Private — All rights reserved for Iwan Stepanova.
+De Maps-pagina gebruikt Leaflet met OpenStreetMap, geladen vanaf cdnjs. Dat werkt live meteen. Wil je geen externe bron, dan kun je de kaart vervangen of de Maps-tab weghalen (link in `SerpHeader.astro`).

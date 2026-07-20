@@ -1,407 +1,109 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Button from '../components/Button.astro';
-import { url } from '../lib/urls';
-
-const clientLogos = [
-  { name: 'ANWB', src: url('/images/clients/anwb.png') },
-  { name: 'Interpolis', src: url('/images/clients/interpolis.png') },
-  { name: 'Action', src: url('/images/clients/action.png') },
-  { name: 'Etos', src: url('/images/clients/etos.png') },
-];
+import Base from '../layouts/Base.astro';
+import SerpHeader from '../components/SerpHeader.astro';
+const title = 'Iwan Stepanova, brede SEO-specialist | Iwan Stepanova';
+const description = 'Brede SEO-specialist. Beschikbaar voor interim- en freelanceopdrachten, remote of op locatie, voor bureaus, in-house teams en grotere merken.';
 ---
-
-<BaseLayout
-  title="Iwan Stepanova, brede SEO-specialist"
-  description="Brede SEO-specialist. Beschikbaar voor interim- en freelanceopdrachten, remote of op locatie, voor bureaus, in-house teams en grotere merken."
->
-  <!-- Hero Section -->
-  <section class="relative overflow-hidden py-20 lg:py-32 bg-surface-alt dot-grid">
-    <div
-      class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[120px]"
-    >
-    </div>
-
-    <!-- Constellation SVG motif (top-right, desktop only) -->
-    <svg
-      class="hidden lg:block absolute top-12 right-16 pointer-events-none select-none"
-      width="340"
-      height="260"
-      viewBox="0 0 340 260"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <line x1="170" y1="130" x2="60" y2="48" stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0s"></line>
-      <line x1="170" y1="130" x2="280" y2="62" stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.1s"></line>
-      <line x1="170" y1="130" x2="305" y2="185" stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.2s"></line>
-      <line x1="170" y1="130" x2="120" y2="220" stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.3s"></line>
-      <line x1="170" y1="130" x2="42" y2="165" stroke="#C8A882" stroke-width="0.75" opacity="0.45" class="constellation-line" style="animation-delay: 0.4s"></line>
-      <circle cx="170" cy="130" r="4.5" fill="#C8A882" opacity="0.65" class="constellation-node" style="--node-opacity: 0.65; animation-delay: 0.15s"></circle>
-      <circle cx="60" cy="48" r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.5s"></circle>
-      <circle cx="280" cy="62" r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.55s"></circle>
-      <circle cx="305" cy="185" r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.6s"></circle>
-      <circle cx="120" cy="220" r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.65s"></circle>
-      <circle cx="42" cy="165" r="2.8" fill="#C8A882" opacity="0.50" class="constellation-node" style="--node-opacity: 0.50; animation-delay: 0.7s"></circle>
-    </svg>
-
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <!-- Text Content -->
-        <div class="space-y-6 lg:space-y-8">
-          <span class="section-label">SEO-specialist</span>
-
-          <h1
-            class="font-semibold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.1] tracking-tight"
-          >
-            <span class="block font-display italic text-primary">Brede SEO,</span>
-            <span class="block font-sans text-primary-light">van strategie tot uitvoering</span>
-          </h1>
-
-          <p class="font-sans text-lg lg:text-xl text-neutral-500 max-w-xl leading-relaxed">
-            Ik help bureaus, in-house teams en grotere merken beter vindbaar te worden in
-            zoekmachines. Strategie en uitvoering, geen losse trucjes. Beschikbaar voor interim- en
-            freelanceopdrachten.
-          </p>
-
-          <div class="flex flex-wrap gap-4 items-center">
-            <Button href={url('/contact/')} variant="primary" size="lg">
-              Plan een gesprek
-            </Button>
-            <Button href={url('/diensten/')} variant="outline" size="lg">
-              Bekijk mijn diensten
-            </Button>
+<Base title={title} description={description} path="/">
+  <SerpHeader active="all" />
+  <main class="body-wrap">
+    <div class="wrapc">
+      <h1 class="sr-only">Iwan Stepanova, brede SEO-specialist, beschikbaar voor interim en freelance</h1>
+      <div class="rescount">5 resultaten (0,28 seconden)</div>
+      <div class="cols">
+        <div class="main"><h2 class="sr-only">Zoekresultaten</h2>
+          <div class="aio">
+            <div class="aio-h">
+              <svg viewBox="0 0 24 24"><defs><linearGradient id="sp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF6A2C"/><stop offset="1" stop-color="#7B2CF0"/></linearGradient></defs><path d="M12 2l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="url(#sp)"/></svg>
+              <span class="grad-txt">AI-overzicht</span>
+            </div>
+            <p>Iwan Stepanova is een brede SEO-specialist, beschikbaar voor interim- en freelanceopdrachten. Hij combineert strategie en uitvoering over de volle breedte van SEO, met ervaring op enterprise-niveau in bureaucontext. Bekend om een nuchtere, op bewijs gebaseerde aanpak en om SEO uit te leggen in gewone taal, zonder hype.</p>
+            <div class="src">
+              <a class="chip" href="/overview"><span class="f"></span>iwanstepanova.com</a>
+              <a class="chip" href="https://www.linkedin.com/in/iwan-stepanova-seo/" target="_blank" rel="noopener"><span class="f"></span>LinkedIn</a>
+            </div>
+            <div class="dis">Samengevat uit bronnen op het web.</div>
           </div>
 
-          <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest">
-            Beschikbaar voor interim en freelance. Remote of op locatie.
-          </p>
-        </div>
-
-        <!-- Image -->
-        <div class="relative">
-          <div class="absolute inset-0 bg-accent/5 rounded-2xl blur-3xl"></div>
-          <div
-            class="relative bg-surface rounded-2xl border border-neutral-300 overflow-hidden shadow-soft"
-          >
-            <img src={url('/images/iwan.png')} alt="Iwan Stepanova" class="w-full h-auto" />
+          <div class="res">
+            <a class="rlink" href="/overview">
+              <div class="top"><div class="fav"><img src="/images/logo.png" alt="" /></div><div><div class="site">Iwan Stepanova</div><div class="u">https://iwanstepanova.com</div></div></div>
+              <h3>Brede SEO-capaciteit voor je team, zo lang als je die nodig hebt</h3>
+              <div class="snip">Interim en freelance SEO-specialist. Strategie en uitvoering over de volle breedte, van technische audits tot contentstrategie en local SEO. Ik stap zelfstandig in en laat je team er sterker uit komen.</div>
+            </a>
+            <div class="sitelinks">
+              <div><a href="/ervaring">Ervaring &amp; bewijs</a><div class="s">Enterprise-SEO in bureaucontext</div></div>
+              <div><a href="/diensten">Diensten</a><div class="s">Wat ik voor je oppak</div></div>
+              <div><a href="/local-seo">Local SEO</a><div class="s">Zichtbaar op de kaart</div></div>
+              <div><a href="/contact">Contact</a><div class="s">Plan een gesprek</div></div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Client Logos -->
-  <section class="signal-section bg-surface">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-      <div class="text-center mb-10">
-        <span class="section-label">Gewerkt aan SEO voor merken als</span>
-      </div>
+          <a class="res rlink" href="/ervaring">
+            <div class="top"><div class="fav"><img src="/images/logo.png" alt="" /></div><div><div class="site">Iwan Stepanova</div><div class="u">https://iwanstepanova.com &rsaquo; ervaring</div></div></div>
+            <h3>Ervaring &amp; bewijs, bewezen op enterprise-niveau</h3>
+            <div class="snip">Enterprise SEO aan merken als ANWB, Etos, Action en Interpolis, in bureaucontext. Honderden professionals getraind en meerdere webinars. 100+ Google Bedrijfsprofielen beheerd.</div>
+          </a>
 
-      <div class="relative overflow-hidden">
-        <div
-          class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-surface to-transparent z-10"
-        >
+          <a class="vres" href="https://login.demarketingcommunity.nl/c/kennissessie-hoe-word-je-zichtbaar-in-ai-zoekmachines-geo/sections/1092646/lessons/4162060" target="_blank" rel="noopener">
+            <div class="thumb"><img src="/images/webinar.jpg" alt="Webinar: hoe word je zichtbaar in AI-zoekmachines" width="760" height="428" loading="lazy" decoding="async" /><div class="play"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,.35)"/><path d="M10 8l6 4-6 4z" fill="currentColor"/></svg></div></div>
+            <div class="meta">
+              <div class="top"><div class="fav"><svg viewBox="0 0 24 24"><path d="M10 8l6 4-6 4z" fill="currentColor"/></svg></div><div><div class="site">De Marketing Community</div><div class="u">login.demarketingcommunity.nl</div></div></div>
+              <h3>Kennissessie: hoe word je zichtbaar in AI-zoekmachines (GEO)</h3>
+              <div class="snip">Iwan legt uit hoe AI-tools als ChatGPT bepalen welke bedrijven ze aanbevelen, en wat je vandaag al kunt doen om beter zichtbaar te worden. Nuchter en op bewijs.</div>
+            </div>
+          </a>
+
+          <div class="paa">
+            <div class="paa-h">Mensen vragen ook</div>
+            <details><summary>Is Iwan beschikbaar voor interim of freelance?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></summary><div class="in">Ja. Iwan neemt interim- en freelanceopdrachten aan, remote of op locatie, en werkt in heel Nederland. Een eerste gesprek van een half uur geeft je snel een scherpe inschatting.</div></details>
+            <details><summary>Doet Iwan zowel strategie als uitvoering?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></summary><div class="in">Ja. Hij bepaalt de richting en de prioriteiten, en voert het werk ook uit. Zo hoef je niet apart iemand te zoeken voor het denkwerk en voor de handen.</div></details>
+            <details><summary>Werkt Iwan samen met bureaus?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></summary><div class="in">Ja, ook white-label onder jullie eigen merk. Losse opdrachten of doorlopend, van audits en contentstrategie tot meedraaien in een lopend klantteam.</div></details>
+            <details><summary>Hoe verloopt een eerste gesprek?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></summary><div class="in">Een half uur, waarin je vertelt wat er ligt en Iwan een scherpe eerste inschatting geeft van de kansen en hoe hij zou instappen. Vrijblijvend.</div></details>
+          </div>
+
+          <div class="local">
+            <div class="mini"><div class="blob"></div></div>
+            <div>
+              <div class="nm">Iwan Stepanova &mdash; Freelance SEO-specialist</div>
+              <div class="rate"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5,0 &middot; SEO-consultant</div>
+              <div class="meta"><span class="op">Beschikbaar</span> &middot; werkt in heel Nederland, remote of op locatie</div>
+              <a class="lk" href="/maps">Bekijk werkgebied &rsaquo;</a>
+            </div>
+          </div>
+
+          <a class="res rlink" href="https://www.linkedin.com/in/iwan-stepanova-seo/" target="_blank" rel="noopener">
+            <div class="top"><div class="fav li">in</div><div><div class="site">LinkedIn &middot; Iwan Stepanova</div><div class="u">https://www.linkedin.com &rsaquo; in &rsaquo; iwan-stepanova</div></div></div>
+            <h3>Iwan Stepanova &ndash; SEO- &amp; GEO-specialist</h3>
+            <div class="snip">Brede SEO-specialist, beschikbaar voor interim en freelance. Deelt inzichten over local SEO en vindbaarheid in AI-resultaten, en waarom evidence het wint van hype.</div>
+          </a>
         </div>
-        <div
-          class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-surface to-transparent z-10"
-        >
-        </div>
-        <div class="animate-marquee flex items-center gap-12">
-          {
-            [...clientLogos, ...clientLogos].map((client) => (
-              <div class="flex-shrink-0 flex items-center justify-center px-6 py-4">
-                <img
-                  src={client.src}
-                  alt={client.name}
-                  class="max-h-12 w-auto object-contain"
-                  loading="lazy"
-                />
+
+        <aside class="side">
+          <div class="kp">
+            <div class="kp-hero">
+              <div class="t">
+                <h2 class="n">Iwan Stepanova</h2>
+                <div class="sub">SEO- &amp; GEO-specialist</div>
+                <div class="avail"><span class="d"></span>Beschikbaar</div>
               </div>
-            ))
-          }
-        </div>
-      </div>
-
-      <p class="text-center font-sans text-sm text-neutral-500 mt-8 max-w-2xl mx-auto leading-relaxed">
-        Werk aan merken als L'Oréal, ANWB, Etos, Action, Interpolis en Papa John's, uitgevoerd
-        binnen bureauwerk, waaronder bij het grootste marketingbureau van de Benelux.
-      </p>
-    </div>
-  </section>
-
-  <!-- Wat ik doe -->
-  <section class="signal-section bg-surface-alt dot-grid">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-      <div class="max-w-3xl">
-        <span class="section-label">Wat ik doe</span>
-        <h2 class="text-3xl lg:text-4xl mt-5 mb-8 tracking-tight">
-          <span class="font-display italic text-primary">Brede SEO-specialist.</span>
-          <span class="font-sans font-semibold text-primary-light">
-            Strategie, geen losse trucjes.
-          </span>
-        </h2>
-        <div class="font-sans text-neutral-500 space-y-5 leading-relaxed text-lg">
-          <p>
-            Ik werk over de volle breedte van SEO. Technische audits, contentstrategie, on-page
-            optimalisatie en de voorbereiding op AI-zoekmachines. Content is een van mijn sterkste
-            kanten, technische SEO en linkbuilding beheers ik degelijk. Mijn achtergrond ligt in
-            copywriting, en dat is de reden dat de inhoud altijd op orde is.
-          </p>
-          <p>
-            Ik werk met een volledige toolset, onder andere Screaming Frog, Ahrefs, Semrush, Search
-            Console, GA4 en GTM. Maar de kern is niet de tooling. De kern is de vertaling van
-            analyse naar keuzes die een opdrachtgever begrijpt en kan uitvoeren. Ik leg SEO uit in
-            gewone taal, zonder jargon om het jargon.
-          </p>
-          <p>
-            De rode draad in mijn werk is dat ik geen losse trucjes lever maar strategie, en dat ik
-            zelfstandig binnen een groter team of bureau kan opereren.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SEO en AI-zoekmachines -->
-  <section class="signal-section bg-surface">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-      <div class="max-w-3xl">
-        <span class="section-label">SEO en AI-zoekmachines</span>
-        <h2 class="text-3xl lg:text-4xl mt-5 mb-8 tracking-tight">
-          <span class="font-display italic text-primary">Zoeken verandert.</span>
-          <span class="font-sans font-semibold text-primary-light"> De basis blijft.</span>
-        </h2>
-        <div class="font-sans text-neutral-500 space-y-5 leading-relaxed text-lg">
-          <p>
-            Steeds vaker beantwoorden AI-zoekmachines als ChatGPT, Perplexity en Google AI Overviews
-            de vraag van je publiek. Dat verandert waar mensen zoeken, niet wat je zichtbaar maakt.
-            De term die daarvoor rondgaat, GEO, dekt in de markt vaak vooral hype. Ik ga er nuchter
-            en op bewijs gebaseerd mee om.
-          </p>
-          <p>
-            Gestructureerde data maakt je vindbaar als entiteit, maar zorgt niet vanzelf voor een
-            aanbeveling. Wat een AI-systeem je laat citeren is corroboratie buiten je eigen site:
-            merkvermeldingen op het bredere web, earned media en organische ranking. Kortom, goede
-            SEO. Ik heb er honderden professionals in getraind en webinars over verzorgd voor externe
-            bureaus.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Achtergrond en bewijs -->
-  <section class="signal-section bg-surface-alt dot-grid">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-      <div class="max-w-3xl mb-16">
-        <span class="section-label">Achtergrond en bewijs</span>
-        <h2 class="text-3xl lg:text-4xl mt-5 tracking-tight">
-          <span class="font-display italic text-primary">Ruim drie jaar SEO,</span>
-          <span class="font-sans font-semibold text-primary-light">
-            deels op enterprise-niveau.
-          </span>
-        </h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="card card-signal">
-          <h3 class="font-sans font-semibold text-xl text-primary mb-4">Enterprise-ervaring</h3>
-          <p class="font-sans text-neutral-500 leading-relaxed">
-            Gewerkt bij meerdere bureaus, waaronder Youvia, onderdeel van FCR Media, het grootste
-            marketingbureau van de Benelux. Daar deed ik enterprise SEO en werkte ik aan merken als
-            L'Oréal, ANWB, Etos, Action, Interpolis en Papa John's.
-          </p>
-        </div>
-        <div class="card card-signal">
-          <h3 class="font-sans font-semibold text-xl text-primary mb-4">Kennis gedeeld</h3>
-          <p class="font-sans text-neutral-500 leading-relaxed">
-            Honderden professionals getraind en webinars verzorgd voor externe bureaus, over moderne
-            SEO. Ik breng het vak niet alleen in de praktijk, ik leg het ook uit aan vakgenoten.
-          </p>
-        </div>
-        <div class="card card-signal">
-          <h3 class="font-sans font-semibold text-xl text-primary mb-4">Operationele schaal</h3>
-          <p class="font-sans text-neutral-500 leading-relaxed">
-            Meer dan honderd Google Bedrijfsprofielen beheerd. Sinds begin 2026 werk ik fulltime als
-            zelfstandige, na ruim drie jaar ervaring waarvan een deel op enterprise-niveau.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Voor wie -->
-  <section class="signal-section bg-surface">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-      <div class="max-w-3xl">
-        <span class="section-label">Voor wie</span>
-        <h2 class="text-3xl lg:text-4xl mt-5 mb-8 tracking-tight">
-          <span class="font-display italic text-primary">Bureaus, in-house teams</span>
-          <span class="font-sans font-semibold text-primary-light">
-            en grotere merken.
-          </span>
-        </h2>
-        <div class="font-sans text-neutral-500 space-y-5 leading-relaxed text-lg">
-          <p>
-            Ik werk voor bureaus, in-house marketingteams en grotere merken die tijdelijk of op
-            projectbasis SEO-expertise nodig hebben. Dat is een publiek dat zoekt naar bewezen
-            ervaring op schaal, een scherpe visie, en het vertrouwen dat ik zelfstandig binnen een
-            groter team kan opereren.
-          </p>
-          <p>
-            Dat vertrouwen is verdiend in de praktijk. Ik stap in waar de capaciteit of de
-            specialistische kennis tijdelijk ontbreekt, lever strategie en uitvoering, en draag het
-            werk zo over dat het team er zelf mee verder kan.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Beschikbaarheid -->
-  <section class="signal-section bg-surface-alt dot-grid">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-      <div class="max-w-3xl">
-        <span class="section-label">Beschikbaarheid</span>
-        <h2 class="text-3xl lg:text-4xl mt-5 mb-8 tracking-tight">
-          <span class="font-display italic text-primary">Beschikbaar voor interim</span>
-          <span class="font-sans font-semibold text-primary-light">
-            en freelance.
-          </span>
-        </h2>
-        <div class="font-sans text-neutral-500 space-y-5 leading-relaxed text-lg">
-          <p>
-            Ik ben beschikbaar voor interim- en freelanceopdrachten in SEO, niet gebonden aan een
-            specifieke niche. Ik werk zowel remote als op locatie, en ik sta open voor langere
-            interim-trajecten en voor projectwerk.
-          </p>
-          <p>
-            Zoek je tijdelijke SEO-capaciteit voor een team, een merk of een klanttraject, dan is
-            een kort gesprek de snelste manier om te zien of het past.
-          </p>
-        </div>
-        <div class="mt-10">
-          <Button href={url('/contact/')} variant="primary" size="lg">
-            Plan een gesprek
-          </Button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Over -->
-  <section class="signal-section bg-surface">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-      <div class="max-w-3xl">
-        <span class="section-label">Over Iwan</span>
-        <h2 class="text-3xl lg:text-4xl mt-5 mb-8 tracking-tight">
-          <span class="font-display italic text-primary">Van copywriter naar</span>
-          <span class="font-sans font-semibold text-primary-light">
-            brede SEO-specialist.
-          </span>
-        </h2>
-        <div class="font-sans text-neutral-500 space-y-5 leading-relaxed text-lg">
-          <p>
-            Ik begon op mijn zeventiende als freelance copywriter en ben van daaruit doorgegroeid
-            naar SEO. Die achtergrond in taal en inhoud is de reden dat content een van mijn
-            sterkste kanten is gebleven, ook toen het werk technischer en breder werd.
-          </p>
-          <p>
-            Bij meerdere bureaus, waaronder het grootste marketingbureau van de Benelux, deed ik
-            enterprise SEO. Sinds begin 2026 werk ik fulltime als zelfstandige.
-          </p>
-        </div>
-        <div class="mt-8">
-          <a
-            href={url('/over/')}
-            class="inline-flex items-center gap-2 font-sans text-primary-light hover:text-primary transition-colors duration-300"
-          >
-            Lees meer over mij
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Voor bureaus -->
-  <section class="signal-section bg-surface-alt dot-grid">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-      <div class="max-w-3xl">
-        <span class="section-label">Voor bureaus</span>
-        <h2 class="text-3xl lg:text-4xl mt-5 mb-8 tracking-tight">
-          <span class="font-display italic text-primary">SEO-capaciteit</span>
-          <span class="font-sans font-semibold text-primary-light"> onder jullie eigen merk.</span>
-        </h2>
-        <p class="font-sans text-neutral-500 leading-relaxed text-lg">
-          Voor bureaus die tijdelijk een brede SEO-specialist nodig hebben, neem ik losse opdrachten
-          of doorlopende samenwerkingen aan. Technische audits, contentstrategie, of het meedraaien
-          in een lopend klantteam. Korte lijnen, en discretie waar nodig.
-        </p>
-        <div class="mt-8">
-          <a
-            href={url('/diensten/voor-bureaus/')}
-            class="inline-flex items-center gap-2 font-sans text-primary-light hover:text-primary transition-colors duration-300"
-          >
-            Meer over samenwerken met bureaus
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Slot CTA -->
-  <section class="signal-section bg-surface">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-      <div
-        class="relative bg-surface-alt rounded-2xl border border-neutral-300 p-10 lg:p-16 text-center overflow-hidden shadow-soft"
-      >
-        <div
-          class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent/10 rounded-full blur-[100px]"
-        >
-        </div>
-
-        <div class="relative">
-          <h2 class="text-3xl lg:text-4xl xl:text-5xl tracking-tight">
-            <span class="font-display italic text-primary">Op zoek naar tijdelijke</span>
-            <span class="font-sans font-semibold text-primary-light">
-              SEO-capaciteit?
-            </span>
-          </h2>
-          <p class="font-sans text-neutral-500 mt-6 max-w-2xl mx-auto leading-relaxed text-lg">
-            Een eerste gesprek kost een half uur en levert je een scherpe inschatting op van waar de
-            kansen liggen en hoe ik zou instappen. Geen verkooppraatje.
-          </p>
-          <div class="mt-8 flex justify-center">
-            <Button href={url('/contact/')} variant="primary" size="lg">
-              Plan een gesprek
-            </Button>
+              <div class="ph"><img src="/images/iwan.jpg" alt="Iwan Stepanova" width="320" height="320" decoding="async" /></div>
+            </div>
+            <div class="desc">Nederlandse SEO-specialist met een brede aanpak en een nuchtere, op bewijs gebaseerde kijk op zoekmachines. Vertaalt SEO naar gewone taal.</div>
+            <div class="facts">
+              <div class="f"><b>Werkgebied</b> &nbsp; heel Nederland, remote of op locatie</div>
+              <div class="f"><b>Specialismen</b> &nbsp; content, technisch, local, AI-vindbaarheid</div>
+              <div class="f"><b>Ervaring</b> &nbsp; enterprise SEO in bureaucontext</div>
+              <div class="f"><b>Profiel</b> &nbsp; <a href="https://www.linkedin.com/in/iwan-stepanova-seo/" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="/overview">iwanstepanova.com</a></div>
+            </div>
+            <a class="cta" href="/contact">Plan een gesprek</a>
+            <div class="pas">
+              <div class="t2">Mensen zoeken ook naar</div>
+              <div class="row"><a href="/local-seo">Local SEO</a><a href="/seo-content">SEO-content</a></div>
+            </div>
           </div>
-          <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest mt-6">
-            Beschikbaar voor interim en freelance. Remote of op locatie.
-          </p>
-        </div>
+        </aside>
       </div>
     </div>
-  </section>
-</BaseLayout>
+  </main>
+</Base>

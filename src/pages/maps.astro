@@ -1,0 +1,60 @@
+---
+import Base from '../layouts/Base.astro';
+import SerpHeader from '../components/SerpHeader.astro';
+const title = 'Werkgebied, heel Nederland | Iwan Stepanova';
+const description = 'Freelance SEO-specialist, werkzaam in heel Nederland vanuit de omgeving Alkmaar. Remote of op locatie, beschikbaar voor interim en freelance.';
+---
+<Base title={title} description={description} path="/maps" breadcrumb="Werkgebied">
+  <SerpHeader active="maps" />
+  <main class="body-wrap">
+    <div class="wrapc">
+      <div class="rescount">Maps &middot; werkgebied Nederland</div>
+      <div class="mapsview">
+        <div class="panel">
+          <h1>Iwan Stepanova</h1>
+          <div class="sub">Freelance SEO-specialist</div>
+          <div class="rate"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5,0</div>
+          <div class="f"><b>Werkgebied:</b> heel Nederland</div>
+          <div class="f"><b>Basis:</b> Alkmaar, remote of op locatie</div>
+          <div class="f"><b>Beschikbaar:</b> interim &amp; freelance</div>
+          <a class="cta" href="/contact">Plan een gesprek</a>
+        </div>
+        <div id="map" role="img" aria-label="Kaart van Nederland met werkgebied"></div>
+      </div>
+    </div>
+  </main>
+  <script is:inline>
+    (function () {
+      var el = document.getElementById('map');
+      if (!el) return;
+      var started = false;
+      function initMap() {
+        var map = L.map('map', { scrollWheelZoom: false }).setView([52.15, 5.3], 7);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '&copy; OpenStreetMap' }).addTo(map);
+        var base = [52.632, 4.749];
+        L.marker(base).addTo(map).bindPopup('Basis: Alkmaar &middot; werkt in heel Nederland');
+        map.fitBounds([[50.75, 3.36], [53.55, 7.22]]);
+        setTimeout(function () { map.invalidateSize(); }, 200);
+      }
+      function loadLeaflet() {
+        if (started) return; started = true;
+        var css = document.createElement('link');
+        css.rel = 'stylesheet';
+        css.href = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';
+        document.head.appendChild(css);
+        var js = document.createElement('script');
+        js.src = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
+        js.onload = initMap;
+        document.body.appendChild(js);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          if (entries[0].isIntersecting) { io.disconnect(); loadLeaflet(); }
+        }, { rootMargin: '250px' });
+        io.observe(el);
+      } else {
+        window.addEventListener('load', loadLeaflet);
+      }
+    })();
+  </script>
+</Base>

@@ -1,0 +1,18 @@
+---
+const { active = 'all' } = Astro.props;
+---
+<div class="head">
+  <div class="wrapc">
+    <div class="head-row">
+      <a class="mark" href="/" aria-label="Home"><img src="/images/logo.png" alt="Iwan Stepanova" /></a>
+      <div class="sbox">
+        <svg class="mag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+        <div class="q">Iwan Stepanova</div>
+      </div>
+    </div>
+    <nav class="tabs" aria-label="Weergaven">
+      <a class={active === 'all' ? 'on' : ''} aria-current={active === 'all' ? 'page' : undefined} href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>Alles</a>
+      <a class={active === 'maps' ? 'on' : ''} aria-current={active === 'maps' ? 'page' : undefined} href="/maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.5 7-11a7 7 0 1 0-14 0c0 4.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>Maps</a>
+    </nav>
+  </div>
+</div>

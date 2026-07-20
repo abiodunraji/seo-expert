@@ -1,35 +1,24 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import Base from '../layouts/Base.astro';
+import PageTop from '../components/PageTop.astro';
+const title = 'Privacyverklaring | Iwan Stepanova';
+const description = 'Hoe iwanstepanova.com omgaat met je gegevens en met analytische cookies.';
 ---
-
-<BaseLayout
-  title="Privacy"
-  description="Privacyverklaring van iwanstepanova.com."
->
-  <section class="signal-section bg-surface">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-      <span class="section-label">Juridisch</span>
-      <h1 class="text-3xl lg:text-4xl xl:text-5xl mt-5 mb-8 tracking-tight">
-        <span class="font-display italic text-primary">Privacy</span>
-        <span class="font-sans font-semibold text-primary-light">verklaring</span>
-      </h1>
-      <div class="font-sans text-neutral-500 space-y-5 leading-relaxed">
-        <p>
-          De definitieve privacyverklaring wordt op dit moment opgesteld. Heb je tot die tijd een
-          vraag over hoe ik met je gegevens omga? Stuur een bericht naar
-          <a
-            href="mailto:hallo@iwanstepanova.com"
-            class="text-primary underline decoration-accent/40 hover:decoration-accent transition-colors"
-          >
-            hallo@iwanstepanova.com
-          </a>.
-        </p>
-        <p>
-          In het kort: ik gebruik de gegevens die je via het contactformulier deelt uitsluitend
-          om je vraag te beantwoorden. Ik verkoop geen gegevens, deel ze niet met derden voor
-          marketingdoeleinden, en bewaar ze niet langer dan nodig.
-        </p>
-      </div>
-    </div>
-  </section>
-</BaseLayout>
+<Base title={title} description={description} path="/privacy" breadcrumb="Privacy">
+  <PageTop label="Privacy" />
+  <main class="pg">
+    <div class="u">https://iwanstepanova.com &rsaquo; privacy</div>
+    <h1>Privacyverklaring</h1>
+    <p class="lead">Korte, eerlijke uitleg over welke gegevens deze site verwerkt en waarom.</p>
+    <h2>Wie verwerkt je gegevens</h2>
+    <p>Verwerkingsverantwoordelijke is Iwan Stepanova, eenmanszaak, ingeschreven bij de Kamer van Koophandel onder nummer 90576063. Voor vragen over je gegevens kun je mailen naar <a href="mailto:hallo@iwanstepanova.com">hallo@iwanstepanova.com</a>.</p>
+    <h2>Analytische cookies</h2>
+    <p>Deze site gebruikt Google Analytics via Google Tag Manager om te begrijpen hoe de site wordt gebruikt. Die cookies worden pas geplaatst nadat je daar via de cookiemelding toestemming voor geeft, dat is de grondslag. Weiger je, dan wordt er geen analytische cookie geplaatst. Bij dit gebruik is Google een verwerker en kunnen gegevens door Google worden verwerkt. Je toestemming kun je altijd intrekken door je cookiekeuze te wissen.</p>
+    <h2>Contactformulier en e-mail</h2>
+    <p>Als je het contactformulier gebruikt of mailt, verwerk ik de gegevens die je zelf invult, uitsluitend om je bericht te beantwoorden. De grondslag is je toestemming en ons gerechtvaardigd belang bij communicatie. Ik deel die gegevens niet met derden voor andere doeleinden.</p>
+    <h2>Bewaartermijn</h2>
+    <p>Analytische gegevens worden bewaard conform de instellingen in Google Analytics. Berichten via het formulier of per mail bewaar ik zolang dat nodig is om je vraag af te handelen en, waar van toepassing, voor de administratie.</p>
+    <h2>Je rechten</h2>
+    <p>Je hebt recht op inzage, correctie en verwijdering van je gegevens, en op intrekking van je toestemming. Mail daarvoor naar <a href="mailto:hallo@iwanstepanova.com">hallo@iwanstepanova.com</a>. Ben je het oneens met hoe je gegevens verwerkt worden, dan kun je een klacht indienen bij de Autoriteit Persoonsgegevens.</p>
+  </main>
+</Base>

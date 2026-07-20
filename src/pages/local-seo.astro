@@ -1,0 +1,56 @@
+---
+import Base from '../layouts/Base.astro';
+import PageTop from '../components/PageTop.astro';
+const title = 'Local SEO die je op de kaart zet | Iwan Stepanova';
+const description = 'Local SEO op basis van het verschil tussen in aanmerking komen en gekozen worden. Meten per punt op de kaart, reviews als vooruitlopende indicator, 100+ profielen beheerd.';
+const faq = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Wat is het verschil tussen local SEO en gewone SEO?', acceptedAnswer: { '@type': 'Answer', text: 'Local SEO draait om zichtbaarheid rond een fysieke locatie, in Google Maps en het lokale pakket, en leunt sterk op je Google Bedrijfsprofiel, reviews en consistente bedrijfsgegevens. Gewone SEO richt zich op de klassieke organische resultaten zonder die geografische component.' } },
+    { '@type': 'Question', name: 'Werk je ook voor meerdere vestigingen tegelijk?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Ik heb meer dan honderd Google Bedrijfsprofielen beheerd, vaak voor organisaties met veel vestigingen, met een consistente aanpak zodat het over locaties heen niet rommelig wordt.' } },
+    { '@type': 'Question', name: 'Hoe meet je of local SEO werkt?', acceptedAnswer: { '@type': 'Answer', text: 'Ik meet zichtbaarheid per zoekpunt rond je vestiging, in plaats van naar één gemiddelde positie te kijken. Zo zie je precies waar je onzichtbaar bent en waar je al meedoet, en of het na verbeteringen de goede kant op beweegt.' } }
+  ]
+};
+---
+<Base title={title} description={description} path="/local-seo" breadcrumb="Local SEO">
+  <PageTop label="Local SEO" />
+  <script type="application/ld+json" set:html={JSON.stringify(faq)} />
+  <main class="pg">
+    <div class="u">https://iwanstepanova.com &rsaquo; local-seo</div>
+    <h1>Local SEO die je <span class="grad-txt">op de kaart</span> zet.</h1>
+    <p class="lead">Zichtbaarheid rond een vestiging is niet één positie, het is een raster. En falen doet het meestal op twee heel verschillende manieren.</p>
+    <div class="hr"></div>
+    <p>Voordat je aan losse tips begint, is de vraag welke van de twee problemen je hebt. Want de oplossing verschilt volledig, en dat is precies waar de meeste local SEO de plank misslaat. De ene helft van de bedrijven is nauwelijks zichtbaar op de kaart en heeft een eligibility-probleem. De andere helft is prima zichtbaar maar wordt zelden gekozen, en dat is een heel ander gevecht. Wie die twee door elkaar haalt, draait aan de verkeerde knoppen.</p>
+
+    <h2 class="sr-only">De twee soorten probleem</h2>
+    <div class="duo">
+      <div class="p"><div class="tag">Probleem 1</div><h3>Je komt niet in aanmerking</h3><ul><li>Bijna onzichtbaar op het raster rond je locatie</li><li>Profiel, categorieen of gegevens niet op orde</li><li>Inconsistente NAP-gegevens over het web</li><li>Je doet simpelweg nog niet mee</li></ul></div>
+      <div class="p"><div class="tag">Probleem 2</div><h3>Je wordt niet gekozen</h3><ul><li>Wel zichtbaar, maar zelden aangeklikt</li><li>Reviews en hun trend blijven achter</li><li>Weinig recente of beantwoorde reviews</li><li>Te weinig dat je onderscheidt van de buurman</li></ul></div>
+      <div class="vs">of</div>
+    </div>
+
+    <h2>Ik meet per punt op de kaart</h2>
+    <p>In plaats van naar één gemiddelde positie te kijken, meet ik je zichtbaarheid per zoekpunt rond je vestiging, in een raster over je verzorgingsgebied. Zo zie je precies waar je onzichtbaar bent en waar je al meedoet. Dat maakt het verschil tussen een vaag gevoel dat het beter kan, en een kaart waarop je aanwijst waar de winst zit. Vervolgens werk ik gericht aan die plekken, in plaats van aan een algemeen lijstje dat overal een beetje van pakt.</p>
+
+    <h2>Reviews zijn een vooruitlopende indicator</h2>
+    <p>De meeste bedrijven behandelen reviews als een sluitpost, iets dat achteraf binnenkomt. Ik behandel de trend in je reviews juist als een vooruitlopende indicator van hoe je lokaal gaat presteren. Niet alleen het gemiddelde cijfer, maar de richting: komen er recent meer of minder, en worden ze beantwoord. Die beweging vertelt vaak eerder dan je posities of je omzet welke kant het op gaat, en dus waar je nu moet ingrijpen.</p>
+
+    <blockquote class="pull">Wie eligibility en voorkeur door elkaar haalt, draait aan de verkeerde knoppen.</blockquote>
+
+    <h2>Op schaal, over veel vestigingen</h2>
+    <p>Meer dan honderd Google Bedrijfsprofielen beheerd, vaak voor organisaties met veel vestigingen tegelijk. De uitdaging daar is zelden de kwaliteit van één profiel, maar consistentie over alles heen: dezelfde categorieen, dezelfde gegevens, dezelfde manier van reageren, zodat het geheel klopt en nieuwe vestigingen snel meedoen op de kaart.</p>
+
+    <h2>Waarom dit anders is</h2>
+    <p>Ik hou eligibility en voorkeur strikt uit elkaar, omdat je er anders de verkeerde knoppen voor omzet. Ik meet per punt in plaats van naar een gemiddelde te kijken. En ik lees reviews als een signaal dat vooruitloopt, niet als een rapportcijfer achteraf. Nuchter, meetbaar, en eerlijk over wat werkt.</p>
+
+    <h3 class="sub">Veelgestelde vragen</h3>
+    <div class="paa" style="margin-top:14px">
+      <details><summary>Wat is het verschil tussen local SEO en gewone SEO?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></summary><div class="in">Local SEO draait om zichtbaarheid rond een fysieke locatie, in Google Maps en het lokale pakket, en leunt sterk op je Google Bedrijfsprofiel, reviews en consistente bedrijfsgegevens. Gewone SEO richt zich op de klassieke organische resultaten zonder die geografische component.</div></details>
+      <details><summary>Werk je ook voor meerdere vestigingen tegelijk?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></summary><div class="in">Ja. Ik heb meer dan honderd Google Bedrijfsprofielen beheerd, vaak voor organisaties met veel vestigingen, met een consistente aanpak zodat het over locaties heen niet rommelig wordt.</div></details>
+      <details><summary>Hoe meet je of local SEO werkt?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></summary><div class="in">Ik meet zichtbaarheid per zoekpunt rond je vestiging, in plaats van naar één gemiddelde positie te kijken. Zo zie je precies waar je onzichtbaar bent en waar je al meedoet, en of het na verbeteringen de goede kant op beweegt.</div></details>
+    </div>
+
+    <div class="close"><div class="a"></div><h2>Weten welk van de twee jouw probleem is?</h2><p>Dat is de eerste vraag die ik beantwoord. Daarna weet je meteen aan welke knoppen we moeten draaien.</p><a class="cta-btn" href="/contact">Plan een gesprek</a></div>
+  </main>
+</Base>

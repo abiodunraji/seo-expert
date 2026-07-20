@@ -1,31 +1,12 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Button from '../components/Button.astro';
-import { url } from '../lib/urls';
+import Base from '../layouts/Base.astro';
+import PageTop from '../components/PageTop.astro';
 ---
-
-<BaseLayout
-  title="Pagina niet gevonden"
-  description="De pagina die je zoekt bestaat niet of is verplaatst."
->
-  <section class="flex-1 flex items-center justify-center min-h-[60vh] bg-surface-alt dot-grid">
-    <div class="max-w-xl mx-auto px-4 sm:px-6 text-center py-20 lg:py-28">
-      <span
-        class="font-display italic text-[8rem] lg:text-[10rem] leading-none text-accent/30 select-none block"
-      >
-        404
-      </span>
-      <h1 class="font-sans font-semibold text-3xl lg:text-4xl text-primary mt-2 tracking-tight">
-        Pagina niet gevonden
-      </h1>
-      <p class="font-sans text-neutral-500 mt-4 leading-relaxed">
-        De pagina die je zoekt bestaat niet of is verplaatst. Ga terug naar de homepage of bekijk
-        het dienstenoverzicht.
-      </p>
-      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-        <Button href={url('/')} variant="primary" size="lg">Terug naar home</Button>
-        <Button href={url('/diensten/')} variant="outline" size="lg">Bekijk diensten</Button>
-      </div>
-    </div>
-  </section>
-</BaseLayout>
+<Base title="Pagina niet gevonden | Iwan Stepanova" description="Deze pagina bestaat niet." path="/404">
+  <PageTop label="404" />
+  <main class="pg">
+    <h1>Geen resultaat voor deze <span class="grad-txt">zoekopdracht</span>.</h1>
+    <p class="lead">Deze pagina bestaat niet of is verplaatst. Terug naar de resultaten?</p>
+    <div class="cta-row"><a class="cta-btn" href="/">Naar de homepage</a></div>
+  </main>
+</Base>

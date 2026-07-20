@@ -1,37 +1,23 @@
-# robots.txt for SEO Expert Website
-# Generated: 2026-04-03
-# This file controls how search engine crawlers access your site
-
-# Allow all crawlers full access to public content
+# iwanstepanova.com
 User-agent: *
 Allow: /
 
-# Disallow crawling of private and development directories
-Disallow: /private/
-Disallow: /temp/
-Disallow: /admin/
-Disallow: /api/
-Disallow: /node_modules/
-Disallow: /src/
-Disallow: /dist/
-Disallow: /.astro/
-Disallow: /.github/
-Disallow: /.playwright-mcp/
+# AI-crawlers expliciet toestaan (voor vindbaarheid in AI-resultaten)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
 
-# Disallow crawling of common development/build artifacts
-Disallow: /*.json$
-Disallow: /*.lock$
-Disallow: /*.mjs$
-Disallow: /*.ts$
-
-# Block access to configuration files
-Disallow: /astro.config.mjs
-Disallow: /tailwind.config.mjs
-Disallow: /tsconfig.json
-Disallow: /package.json
-
-# Crawl-delay for polite crawling (optional, remove if not needed)
-# Crawl-delay: 1
-
-# Reference to the XML sitemap
 Sitemap: https://iwanstepanova.com/sitemap.xml

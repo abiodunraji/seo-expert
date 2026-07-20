@@ -1,0 +1,31 @@
+---
+---
+<div class="cookie" id="cookie-banner" hidden>
+  <h2>Cookies</h2>
+  <p>Ik gebruik analytische cookies via Google Analytics om te zien hoe de site gebruikt wordt. Je kiest zelf. Meer lezen kan in de <a href="/privacy">privacyverklaring</a>.</p>
+  <div class="btns">
+    <button class="b p" id="cookie-accept">Accepteren</button>
+    <button class="b" id="cookie-reject">Weigeren</button>
+  </div>
+</div>
+<script is:inline>
+  (function () {
+    function gtag(){dataLayer.push(arguments);}
+    var el = document.getElementById('cookie-banner');
+    var stored = null;
+    try { stored = localStorage.getItem('cookie-consent'); } catch (e) {}
+    if (!stored) { el.hidden = false; }
+    function decide(granted) {
+      try { localStorage.setItem('cookie-consent', granted ? 'granted' : 'denied'); } catch (e) {}
+      gtag('consent', 'update', {
+        ad_storage: granted ? 'granted' : 'denied',
+        ad_user_data: granted ? 'granted' : 'denied',
+        ad_personalization: granted ? 'granted' : 'denied',
+        analytics_storage: granted ? 'granted' : 'denied'
+      });
+      el.hidden = true;
+    }
+    document.getElementById('cookie-accept').addEventListener('click', function(){ decide(true); });
+    document.getElementById('cookie-reject').addEventListener('click', function(){ decide(false); });
+  })();
+</script>
