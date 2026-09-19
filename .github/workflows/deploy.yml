@@ -20,6 +20,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # The sitemap's lastmod dates come from git history at build time;
+          # a shallow clone would date every page at the deploying commit.
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
